@@ -53,7 +53,7 @@ export function ProjectModal({ project, isOpen, onClose, onAction }: ProjectModa
   if (!project) return null;
 
   const getProgress = () => {
-    if (project.stage === 'fundraising' && project.budget && project.raised) {
+    if (project.stage === 'sponsorship' && project.budget && project.raised) {
       return (project.raised / project.budget) * 100;
     }
     return 0;
@@ -321,25 +321,23 @@ Provide a helpful, informative response about this specific project.`,
                 </TabsList>
 
                 <TabsContent value="info" className="flex-1 p-6 mt-0">
-                  {project.stage === 'fundraising' && project.budget && project.raised && (
+                  {project.stage === 'sponsorship' && project.budget && (
                     <div className="space-y-4 mb-6">
-                      <div>
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-sm text-muted-foreground">Progress</span>
-                          <span className="text-sm font-medium text-foreground">{Math.round(getProgress())}%</span>
-                        </div>
-                        <Progress value={getProgress()} className="h-3" />
+                      <div className="p-4 rounded-2xl bg-background">
+                        <p className="text-xs text-muted-foreground mb-1">Total Budget</p>
+                        <p className="text-2xl font-bold text-foreground">{formatCurrency(project.budget)}</p>
                       </div>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="p-4 rounded-2xl bg-background">
-                          <p className="text-xs text-muted-foreground mb-1">Raised</p>
-                          <p className="font-semibold text-foreground">{formatCurrency(project.raised)}</p>
-                        </div>
-                        <div className="p-4 rounded-2xl bg-background">
-                          <p className="text-xs text-muted-foreground mb-1">Goal</p>
-                          <p className="font-semibold text-foreground">{formatCurrency(project.budget)}</p>
-                        </div>
-                      </div>
+                      {project.presentationUrl && (
+                        <a
+                          href={project.presentationUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2 p-3 rounded-xl bg-secondary hover:bg-secondary/80 transition-colors text-foreground font-medium"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          Open Presentation
+                        </a>
+                      )}
                     </div>
                   )}
 
@@ -353,12 +351,12 @@ Provide a helpful, informative response about this specific project.`,
                   <Button
                     className="w-full btn-gradient rounded-2xl h-12 text-base"
                     onClick={() => {
-                      if (project.stage === 'fundraising') onAction(project, 'sponsor');
+                      if (project.stage === 'sponsorship') onAction(project, 'sponsor');
                       else if (project.stage === 'concept') onAction(project, 'architect');
                       else if (project.stage === 'voting') onAction(project, 'vote');
                     }}
                   >
-                    {project.stage === 'fundraising' && 'Become a Sponsor'}
+                    {project.stage === 'sponsorship' && 'Become a Sponsor'}
                     {project.stage === 'concept' && 'Submit as Architect'}
                     {project.stage === 'voting' && 'Cast Your Vote'}
                   </Button>

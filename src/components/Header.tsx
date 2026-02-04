@@ -10,7 +10,7 @@ interface HeaderProps {
 }
 
 const navLinks = [
-  { id: 'fundraising', label: 'Fundraising' },
+  { id: 'sponsorship', label: 'Sponsorship for Construction' },
   { id: 'concept', label: 'Concept Search' },
   { id: 'voting', label: 'Voting' },
 ];

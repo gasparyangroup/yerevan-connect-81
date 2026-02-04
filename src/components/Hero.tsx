@@ -9,7 +9,7 @@ interface HeroProps {
 }
 
 const filters = [
-  { id: 'fundraising' as ProjectStage, label: 'Fundraising', icon: Building2 },
+  { id: 'sponsorship' as ProjectStage, label: 'Sponsorship', icon: Building2 },
   { id: 'concept' as ProjectStage, label: 'Concept Search', icon: Palette },
   { id: 'voting' as ProjectStage, label: 'Voting', icon: Vote },
 ];
