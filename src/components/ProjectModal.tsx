@@ -53,7 +53,7 @@ export function ProjectModal({ project, isOpen, onClose, onAction }: ProjectModa
   if (!project) return null;
 
   const getProgress = () => {
-    if (project.stage === 'fundraising' && project.budget && project.raised) {
+    if (project.stage === 'sponsorship' && project.budget && project.raised) {
       return (project.raised / project.budget) * 100;
     }
     return 0;

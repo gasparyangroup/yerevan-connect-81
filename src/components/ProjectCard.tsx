@@ -23,7 +23,7 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
   const BadgeIcon = badge.icon;
 
   const getProgress = () => {
-    if (project.stage === 'fundraising' && project.budget && project.raised) {
+    if (project.stage === 'sponsorship' && project.budget && project.raised) {
       return (project.raised / project.budget) * 100;
     }
     return 0;
