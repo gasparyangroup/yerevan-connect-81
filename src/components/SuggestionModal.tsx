@@ -45,7 +45,7 @@ export function SuggestionModal({ isOpen, onClose }: SuggestionModalProps) {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg bg-background rounded-3xl p-8 z-50 max-h-[90vh] overflow-y-auto"
+            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-lg bg-background rounded-3xl p-6 sm:p-8 z-50 max-h-[85vh] overflow-y-auto"
           >
             <button
               onClick={onClose}
