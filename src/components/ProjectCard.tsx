@@ -13,7 +13,7 @@ interface ProjectCardProps {
 }
 
 const stageBadgeConfig = {
-  fundraising: { label: 'Fundraising', icon: Users, color: 'bg-primary' },
+  sponsorship: { label: 'Sponsorship', icon: Users, color: 'bg-primary' },
   concept: { label: 'Concept Search', icon: Palette, color: 'bg-accent' },
   voting: { label: 'Voting', icon: Vote, color: 'bg-green-500' },
 };
@@ -73,29 +73,24 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
 
         {/* Dynamic Footer */}
         <div className="pt-4 border-t border-border">
-          {project.stage === 'fundraising' && project.budget && project.raised && (
-            <div className="space-y-3">
-              <Progress value={getProgress()} className="h-2" />
-              <div className="flex items-center justify-between">
-                <div className="text-sm">
-                  <span className="font-semibold text-foreground">
-                    {formatCurrency(project.raised)}
-                  </span>
-                  <span className="text-muted-foreground">
-                    {' '}/ {formatCurrency(project.budget)}
-                  </span>
-                </div>
-                <Button
-                  size="sm"
-                  className="btn-gradient rounded-xl"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onAction(project, 'sponsor');
-                  }}
-                >
-                  Sponsor
-                </Button>
+          {project.stage === 'sponsorship' && project.budget && (
+            <div className="flex items-center justify-between">
+              <div className="text-sm">
+                <span className="text-muted-foreground">Budget: </span>
+                <span className="font-semibold text-foreground">
+                  {formatCurrency(project.budget)}
+                </span>
               </div>
+              <Button
+                size="sm"
+                className="btn-gradient rounded-xl"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onAction(project, 'sponsor');
+                }}
+              >
+                Sponsor
+              </Button>
             </div>
           )}
 

@@ -23,7 +23,7 @@ export function ProjectsGrid({ projects, activeFilter, onViewDetails, onAction }
         >
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
-              {activeFilter === 'fundraising' && 'Projects Seeking Sponsors'}
+              {activeFilter === 'sponsorship' && 'Projects Seeking Sponsors for Construction'}
               {activeFilter === 'concept' && 'Projects Seeking Architects'}
               {activeFilter === 'voting' && 'Projects Open for Voting'}
             </h2>

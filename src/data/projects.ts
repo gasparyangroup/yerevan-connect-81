@@ -1,4 +1,8 @@
-export type ProjectStage = 'fundraising' | 'concept' | 'voting';
+import komitas1 from '@/assets/komitas-1.png';
+import komitas2 from '@/assets/komitas-2.png';
+import komitas3 from '@/assets/komitas-3.png';
+
+export type ProjectStage = 'sponsorship' | 'concept' | 'voting';
 
 export interface VotingOption {
   id: string;
@@ -23,6 +27,7 @@ export interface Project {
   votes?: number;
   votingOptions?: VotingOption[];
   documents?: { name: string; url: string }[];
+  presentationUrl?: string;
 }
 
 export const projects: Project[] = [
@@ -32,23 +37,20 @@ export const projects: Project[] = [
     titleAm: 'Կdelays delays delays delays',
     location: 'Center (Kentron)',
     locationAm: 'Կdelays',
-    description: 'Project includes an amphitheater, artificial stream, food court, and new green zones. This transformative urban renewal will create a vibrant gathering space for residents and visitors alike.',
+    description: 'The project envisions transforming Komitas Square into a vibrant urban destination featuring a modern amphitheater for cultural events, an artificial stream creating a serene atmosphere, diverse food court options, and expansive new green zones. The design incorporates innovative playground structures for children, sculptural installations, contemporary architectural pavilions with distinctive geometric forms, and carefully landscaped areas with native plants. This transformative urban renewal will create a unique gathering space that celebrates Armenian culture while providing modern amenities for residents and visitors alike.',
     descriptionAm: 'Delays delays delays delays delays delays delays delays delays delays delays',
-    stage: 'fundraising',
-    image: 'https://images.unsplash.com/photo-1517732306149-e8f829eb588a?w=800&q=80',
+    stage: 'sponsorship',
+    image: komitas1,
     gallery: [
-      'https://images.unsplash.com/photo-1517732306149-e8f829eb588a?w=800&q=80',
-      'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80',
-      'https://images.unsplash.com/photo-1494522855154-9297ac14b55f?w=800&q=80',
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      komitas1,
+      komitas2,
+      komitas3,
     ],
     budget: 200000000,
-    raised: 45000000,
     documents: [
-      { name: 'Concept (PDF)', url: 'https://drive.google.com/file/d/1UOkpkPxUoKH-hSceGBw1Qc_AYhC0yWF2/view?usp=sharing' },
-      { name: 'Budget Breakdown', url: '#' },
-      { name: 'Technical Specifications', url: '#' },
+      { name: 'Project Presentation', url: 'https://drive.google.com/file/d/1UOkpkPxUoKH-hSceGBw1Qc_AYhC0yWF2/view?usp=drive_link' },
     ],
+    presentationUrl: 'https://drive.google.com/file/d/1UOkpkPxUoKH-hSceGBw1Qc_AYhC0yWF2/view?usp=drive_link',
   },
   {
     id: '2',
@@ -58,14 +60,13 @@ export const projects: Project[] = [
     locationAm: 'Հdelays պ',
     description: 'Expanding the pedestrian zone with new artistic installations, interactive fountains, and sustainable urban furniture.',
     descriptionAm: 'Delays delays delays delays delays delays',
-    stage: 'fundraising',
+    stage: 'sponsorship',
     image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
       'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80',
     ],
     budget: 80000000,
-    raised: 32000000,
   },
   {
     id: '3',

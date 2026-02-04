@@ -11,7 +11,7 @@ import { SuggestionModal } from '@/components/SuggestionModal';
 import { projects, type Project, type ProjectStage } from '@/data/projects';
 
 const Index = () => {
-  const [activeFilter, setActiveFilter] = useState<ProjectStage>('fundraising');
+  const [activeFilter, setActiveFilter] = useState<ProjectStage>('sponsorship');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
