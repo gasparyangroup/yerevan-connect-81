@@ -9,16 +9,16 @@ interface HeroProps {
 }
 
 const filters = [
-  { id: 'sponsorship' as ProjectStage, label: 'Sponsorship', icon: Building2 },
-  { id: 'concept' as ProjectStage, label: 'Concept Search', icon: Palette },
-  { id: 'voting' as ProjectStage, label: 'Voting', icon: Vote },
+  { id: 'sponsorship' as ProjectStage, label: 'Спонсорство', icon: Building2 },
+  { id: 'concept' as ProjectStage, label: 'Поиск концепции', icon: Palette },
+  { id: 'voting' as ProjectStage, label: 'Голосование', icon: Vote },
 ];
 
 const animatedTexts = [
-  'of our dreams',
-  'for people',
-  'together',
-  'step by step',
+  'нашей мечты',
+  'для людей',
+  'вместе',
+  'шаг за шагом',
 ];
 
 export function Hero({ activeFilter, onFilterChange }: HeroProps) {
@@ -112,7 +112,7 @@ export function Hero({ activeFilter, onFilterChange }: HeroProps) {
         >
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Building the city{' '}
+            Строим город{' '}
             <span className="gradient-text inline-block min-w-[200px] sm:min-w-[280px]">
               {displayText}
               <motion.span
@@ -124,8 +124,8 @@ export function Hero({ activeFilter, onFilterChange }: HeroProps) {
           </h1>
           
           <p className="text-lg sm:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Join thousands of citizens in shaping Yerevan's future. Fund projects, 
-            vote on designs, and watch your city transform.
+            Присоединяйтесь к тысячам граждан в формировании будущего Еревана. 
+            Финансируйте проекты, голосуйте за дизайн и наблюдайте за преображением города.
           </p>
 
           {/* Pill Switcher */}

@@ -10,17 +10,14 @@ interface HeaderProps {
 }
 
 const navLinks = [
-  { id: 'sponsorship', label: 'Sponsorship for Construction' },
-  { id: 'concept', label: 'Concept Search' },
-  { id: 'voting', label: 'Voting' },
+  { id: 'sponsorship', label: 'Спонсорство строительства' },
+  { id: 'concept', label: 'Поиск концепции' },
+  { id: 'voting', label: 'Голосование' },
 ];
-
-const languages = ['AM', 'RU', 'EN'];
 
 export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeLang, setActiveLang] = useState('EN');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +50,7 @@ export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) 
                 onClick={onOpenAbout}
                 className="text-xs text-muted-foreground hover:text-primary transition-colors"
               >
-                Urban Projects Platform
+                Платформа городских проектов
               </button>
             </div>
           </div>
@@ -74,34 +71,13 @@ export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) 
 
           {/* Right Section */}
           <div className="flex items-center gap-4">
-            {/* Language Switcher */}
-            <div className="hidden sm:flex items-center gap-1 text-xs">
-              {languages.map((lang, i) => (
-                <span key={lang} className="flex items-center">
-                  <button
-                    onClick={() => setActiveLang(lang)}
-                    className={`transition-colors ${
-                      activeLang === lang
-                        ? 'text-primary font-medium'
-                        : 'text-muted-foreground hover:text-foreground'
-                    }`}
-                  >
-                    {lang}
-                  </button>
-                  {i < languages.length - 1 && (
-                    <span className="text-border mx-1">|</span>
-                  )}
-                </span>
-              ))}
-            </div>
-
             {/* Suggest Button */}
             <Button
               onClick={onOpenSuggest}
               className="hidden sm:flex btn-gradient rounded-2xl gap-2"
             >
               <Lightbulb className="w-4 h-4" />
-              Suggest Idea
+              Предложить идею
             </Button>
 
             {/* Mobile Menu Toggle */}
@@ -137,25 +113,6 @@ export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) 
                   {link.label}
                 </button>
               ))}
-              <div className="flex items-center gap-2 py-2">
-                {languages.map((lang, i) => (
-                  <span key={lang} className="flex items-center">
-                    <button
-                      onClick={() => setActiveLang(lang)}
-                      className={`text-sm ${
-                        activeLang === lang
-                          ? 'text-primary font-medium'
-                          : 'text-muted-foreground'
-                      }`}
-                    >
-                      {lang}
-                    </button>
-                    {i < languages.length - 1 && (
-                      <span className="text-border mx-2">|</span>
-                    )}
-                  </span>
-                ))}
-              </div>
               <Button
                 onClick={() => {
                   onOpenSuggest();
@@ -164,7 +121,7 @@ export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) 
                 className="w-full btn-gradient rounded-2xl gap-2"
               >
                 <Lightbulb className="w-4 h-4" />
-                Suggest Idea
+                Предложить идею
               </Button>
             </div>
           </motion.div>

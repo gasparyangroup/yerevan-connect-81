@@ -33,22 +33,22 @@ export function ContactModal({ isOpen, onClose, project, type }: ContactModalPro
   const getTitle = () => {
     switch (type) {
       case 'sponsor':
-        return 'Become a Sponsor';
+        return 'Стать спонсором';
       case 'architect':
-        return 'Submit as Architect';
+        return 'Подать заявку как архитектор';
       case 'vote':
-        return 'Confirm Your Vote';
+        return 'Подтвердить голос';
     }
   };
 
   const getDescription = () => {
     switch (type) {
       case 'sponsor':
-        return 'Leave your contact details and our team will reach out to discuss sponsorship opportunities.';
+        return 'Оставьте ваши контактные данные, и наша команда свяжется с вами для обсуждения возможностей спонсорства.';
       case 'architect':
-        return 'Interested in contributing your architectural vision? Share your details and we\'ll connect you with the project team.';
+        return 'Хотите поделиться своим архитектурным видением? Оставьте свои данные, и мы свяжем вас с командой проекта.';
       case 'vote':
-        return 'Confirm your identity to cast your vote. Your information helps ensure one vote per citizen.';
+        return 'Подтвердите свою личность для голосования. Ваша информация помогает обеспечить один голос на гражданина.';
     }
   };
 
@@ -86,9 +86,9 @@ export function ContactModal({ isOpen, onClose, project, type }: ContactModalPro
                 <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-8 h-8 text-green-500" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Thank You!</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">Спасибо!</h3>
                 <p className="text-muted-foreground">
-                  We've received your information and will be in touch soon.
+                  Мы получили вашу информацию и скоро свяжемся с вами.
                 </p>
               </motion.div>
             ) : (
@@ -112,14 +112,14 @@ export function ContactModal({ isOpen, onClose, project, type }: ContactModalPro
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <Label htmlFor="name" className="text-foreground">Full Name</Label>
+                    <Label htmlFor="name" className="text-foreground">Полное имя</Label>
                     <div className="relative mt-1.5">
                       <UserIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                       <Input
                         id="name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        placeholder="John Doe"
+                        placeholder="Иван Иванов"
                         className="pl-10 rounded-xl"
                         required
                       />
@@ -127,7 +127,7 @@ export function ContactModal({ isOpen, onClose, project, type }: ContactModalPro
                   </div>
 
                   <div>
-                    <Label htmlFor="phone" className="text-foreground">Phone Number</Label>
+                    <Label htmlFor="phone" className="text-foreground">Номер телефона</Label>
                     <div className="relative mt-1.5">
                       <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                       <Input
@@ -144,7 +144,7 @@ export function ContactModal({ isOpen, onClose, project, type }: ContactModalPro
 
                   <Button type="submit" className="w-full btn-gradient rounded-2xl h-12 gap-2">
                     <Send className="w-4 h-4" />
-                    {type === 'vote' ? 'Submit Vote' : 'Submit'}
+                    {type === 'vote' ? 'Отправить голос' : 'Отправить'}
                   </Button>
                 </form>
               </>

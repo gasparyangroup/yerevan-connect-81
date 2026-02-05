@@ -63,10 +63,10 @@ export function SuggestionModal({ isOpen, onClose }: SuggestionModalProps) {
                 <div className="w-20 h-20 rounded-full gradient-primary flex items-center justify-center mx-auto mb-6 shadow-glow">
                   <CheckCircle className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">Idea Submitted!</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-3">Идея отправлена!</h3>
                 <p className="text-muted-foreground max-w-sm mx-auto">
-                  Thank you for contributing to Yerevan's future. Our team will review your suggestion 
-                  and get back to you soon.
+                  Спасибо за ваш вклад в будущее Еревана. Наша команда рассмотрит ваше предложение 
+                  и скоро свяжется с вами.
                 </p>
               </motion.div>
             ) : (
@@ -76,21 +76,21 @@ export function SuggestionModal({ isOpen, onClose }: SuggestionModalProps) {
                     <Lightbulb className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold text-foreground">Suggest an Idea</h2>
-                    <p className="text-muted-foreground text-sm">Share your vision for a better Yerevan</p>
+                    <h2 className="text-2xl font-bold text-foreground">Предложить идею</h2>
+                    <p className="text-muted-foreground text-sm">Поделитесь своим видением лучшего Еревана</p>
                   </div>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
-                    <Label htmlFor="title" className="text-foreground">Project Title</Label>
+                    <Label htmlFor="title" className="text-foreground">Название проекта</Label>
                     <div className="relative mt-1.5">
                       <FileText className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
                       <Input
                         id="title"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
-                        placeholder="e.g., New Community Garden"
+                        placeholder="например, Новый общественный сад"
                         className="pl-10 rounded-xl"
                         required
                       />
@@ -98,14 +98,14 @@ export function SuggestionModal({ isOpen, onClose }: SuggestionModalProps) {
                   </div>
 
                   <div>
-                    <Label htmlFor="location" className="text-foreground">Proposed Location</Label>
+                    <Label htmlFor="location" className="text-foreground">Предполагаемое местоположение</Label>
                     <div className="relative mt-1.5">
                       <MapPin className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
                       <Input
                         id="location"
                         value={location}
                         onChange={(e) => setLocation(e.target.value)}
-                        placeholder="e.g., Arabkir District"
+                        placeholder="например, район Арабкир"
                         className="pl-10 rounded-xl"
                         required
                       />
@@ -113,12 +113,12 @@ export function SuggestionModal({ isOpen, onClose }: SuggestionModalProps) {
                   </div>
 
                   <div>
-                    <Label htmlFor="description" className="text-foreground">Description</Label>
+                    <Label htmlFor="description" className="text-foreground">Описание</Label>
                     <Textarea
                       id="description"
                       value={description}
                       onChange={(e) => setDescription(e.target.value)}
-                      placeholder="Describe your idea in detail. What problem does it solve? Who will benefit? What resources might be needed?"
+                      placeholder="Опишите вашу идею подробно. Какую проблему она решает? Кому она принесёт пользу? Какие ресурсы могут понадобиться?"
                       className="mt-1.5 rounded-xl min-h-[120px] resize-none"
                       required
                     />
@@ -127,13 +127,13 @@ export function SuggestionModal({ isOpen, onClose }: SuggestionModalProps) {
                   <div className="pt-2">
                     <Button type="submit" className="w-full btn-gradient rounded-2xl h-12 gap-2">
                       <Send className="w-4 h-4" />
-                      Submit Idea
+                      Отправить идею
                     </Button>
                   </div>
                 </form>
 
                 <p className="text-xs text-muted-foreground text-center mt-4">
-                  By submitting, you agree to our community guidelines and terms of service.
+                  Отправляя форму, вы соглашаетесь с правилами сообщества и условиями использования.
                 </p>
               </>
             )}

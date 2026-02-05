@@ -33,12 +33,12 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Komitas Square Improvement',
-    titleAm: 'Կdelays delays delays delays',
-    location: 'Center (Kentron)',
-    locationAm: 'Կdelays',
-    description: 'The project envisions transforming Komitas Square into a vibrant urban destination featuring a modern amphitheater for cultural events, an artificial stream creating a serene atmosphere, diverse food court options, and expansive new green zones. The design incorporates innovative playground structures for children, sculptural installations, contemporary architectural pavilions with distinctive geometric forms, and carefully landscaped areas with native plants. This transformative urban renewal will create a unique gathering space that celebrates Armenian culture while providing modern amenities for residents and visitors alike.',
-    descriptionAm: 'Delays delays delays delays delays delays delays delays delays delays delays',
+    title: 'Благоустройство площади Комитаса',
+    titleAm: 'Կոdelays delays delays',
+    location: 'Центр (Кентрон)',
+    locationAm: 'Կentron',
+    description: 'Проект предусматривает превращение площади Комитаса в яркое городское пространство с современным амфитеатром для культурных мероприятий, искусственным ручьём, создающим умиротворяющую атмосферу, разнообразными точками питания и обширными новыми зелёными зонами. Дизайн включает инновационные игровые конструкции для детей, скульптурные инсталляции, современные архитектурные павильоны с характерными геометрическими формами и тщательно спланированные ландшафтные зоны с местными растениями.',
+    descriptionAm: 'Delays delays delays',
     stage: 'sponsorship',
     image: komitas1,
     gallery: [
@@ -48,18 +48,18 @@ export const projects: Project[] = [
     ],
     budget: 200000000,
     documents: [
-      { name: 'Project Presentation', url: 'https://drive.google.com/file/d/1UOkpkPxUoKH-hSceGBw1Qc_AYhC0yWF2/view?usp=drive_link' },
+      { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/1UOkpkPxUoKH-hSceGBw1Qc_AYhC0yWF2/view?usp=drive_link' },
     ],
     presentationUrl: 'https://drive.google.com/file/d/1UOkpkPxUoKH-hSceGBw1Qc_AYhC0yWF2/view?usp=drive_link',
   },
   {
     id: '2',
-    title: 'Northern Avenue Pedestrian Zone',
-    titleAm: 'Հյdelays delays delays',
-    location: 'Northern Avenue',
-    locationAm: 'Հdelays պ',
-    description: 'Expanding the pedestrian zone with new artistic installations, interactive fountains, and sustainable urban furniture.',
-    descriptionAm: 'Delays delays delays delays delays delays',
+    title: 'Пешеходная зона Северного проспекта',
+    titleAm: 'Հdelay delays',
+    location: 'Северный проспект',
+    locationAm: 'Հ Delay',
+    description: 'Расширение пешеходной зоны с новыми художественными инсталляциями, интерактивными фонтанами и экологичной городской мебелью.',
+    descriptionAm: 'Delays delays',
     stage: 'sponsorship',
     image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
     gallery: [
@@ -70,12 +70,12 @@ export const projects: Project[] = [
   },
   {
     id: '3',
-    title: 'Cascade Lighting Project',
-    titleAm: 'Կdelay delays delays',
-    location: 'Cascade Complex',
-    locationAm: 'Կdelays',
-    description: 'Modern LED installation creating dynamic light shows synchronized with music during evening hours.',
-    descriptionAm: 'Delays delays delays delays delays delays',
+    title: 'Проект освещения Каскада',
+    titleAm: 'Կaскад delays',
+    location: 'Комплекс Каскад',
+    locationAm: 'Կaскад',
+    description: 'Современная LED-инсталляция, создающая динамичные световые шоу, синхронизированные с музыкой в вечернее время.',
+    descriptionAm: 'Delays delays',
     stage: 'concept',
     image: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80',
     gallery: [
@@ -85,12 +85,12 @@ export const projects: Project[] = [
   },
   {
     id: '4',
-    title: 'Circular Park Renovation',
-    titleAm: 'Շdelays պdelays',
-    location: 'Circular Park',
-    locationAm: 'Շdelays պdelays',
-    description: 'Revitalizing the historic Circular Park with new walking paths, children\'s play areas, and outdoor fitness equipment.',
-    descriptionAm: 'Delays delays delays delays delays delays',
+    title: 'Реновация Кольцевого парка',
+    titleAm: 'Շdelay delay',
+    location: 'Кольцевой парк',
+    locationAm: 'Շdelay delay',
+    description: 'Возрождение исторического Кольцевого парка с новыми пешеходными дорожками, детскими игровыми площадками и уличными тренажёрами.',
+    descriptionAm: 'Delays delays',
     stage: 'voting',
     image: 'https://images.unsplash.com/photo-1551038247-3d9af20df552?w=800&q=80',
     gallery: [
@@ -99,18 +99,18 @@ export const projects: Project[] = [
     ],
     votes: 1250,
     votingOptions: [
-      { id: 'a', name: 'Option A: Classic Design', votes: 680, image: 'https://images.unsplash.com/photo-1551038247-3d9af20df552?w=800&q=80' },
-      { id: 'b', name: 'Option B: Modern Design', votes: 570, image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80' },
+      { id: 'a', name: 'Вариант A: Классический дизайн', votes: 680, image: 'https://images.unsplash.com/photo-1551038247-3d9af20df552?w=800&q=80' },
+      { id: 'b', name: 'Вариант B: Современный дизайн', votes: 570, image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80' },
     ],
   },
   {
     id: '5',
-    title: 'Opera Square Redesign',
-    titleAm: 'Օdelays delays',
-    location: 'Opera Square',
-    locationAm: 'Օdelays',
-    description: 'Seeking innovative architectural concepts for transforming Opera Square into a world-class public space.',
-    descriptionAm: 'Delays delays delays',
+    title: 'Редизайн Площади Оперы',
+    titleAm: 'Օпера delays',
+    location: 'Площадь Оперы',
+    locationAm: 'Օпера',
+    description: 'Поиск инновационных архитектурных концепций для превращения Площади Оперы в публичное пространство мирового класса.',
+    descriptionAm: 'Delays delays',
     stage: 'concept',
     image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
     gallery: [
@@ -119,12 +119,12 @@ export const projects: Project[] = [
   },
   {
     id: '6',
-    title: 'Hrazdan Gorge Eco-Trail',
-    titleAm: 'Հdelays delays',
-    location: 'Hrazdan Gorge',
-    locationAm: 'Հdelays',
-    description: 'Creating a sustainable hiking trail with viewpoints, rest areas, and environmental education stations.',
-    descriptionAm: 'Delays delays delays',
+    title: 'Экотропа Разданского ущелья',
+    titleAm: 'Հразdan delays',
+    location: 'Разданское ущелье',
+    locationAm: 'Հразdan',
+    description: 'Создание экологической пешеходной тропы со смотровыми площадками, зонами отдыха и станциями экологического просвещения.',
+    descriptionAm: 'Delays delays',
     stage: 'voting',
     image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
     gallery: [
@@ -133,19 +133,19 @@ export const projects: Project[] = [
     ],
     votes: 890,
     votingOptions: [
-      { id: 'a', name: 'Option A: Minimal Impact', votes: 520, image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80' },
-      { id: 'b', name: 'Option B: Enhanced Facilities', votes: 370, image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80' },
+      { id: 'a', name: 'Вариант A: Минимальное вмешательство', votes: 520, image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80' },
+      { id: 'b', name: 'Вариант B: Расширенная инфраструктура', votes: 370, image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80' },
     ],
   },
 ];
 
 export const formatCurrency = (amount: number): string => {
-  return new Intl.NumberFormat('en-US', {
+  return new Intl.NumberFormat('ru-RU', {
     style: 'decimal',
     maximumFractionDigits: 0,
   }).format(amount) + ' AMD';
 };
 
 export const formatNumber = (num: number): string => {
-  return new Intl.NumberFormat('en-US').format(num);
+  return new Intl.NumberFormat('ru-RU').format(num);
 };

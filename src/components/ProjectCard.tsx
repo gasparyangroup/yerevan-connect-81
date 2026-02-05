@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { MapPin, Users, Palette, Vote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
 import type { Project } from '@/data/projects';
 import { formatCurrency, formatNumber } from '@/data/projects';
 
@@ -13,9 +12,9 @@ interface ProjectCardProps {
 }
 
 const stageBadgeConfig = {
-  sponsorship: { label: 'Sponsorship', icon: Users, color: 'bg-primary' },
-  concept: { label: 'Concept Search', icon: Palette, color: 'bg-accent' },
-  voting: { label: 'Voting', icon: Vote, color: 'bg-green-500' },
+  sponsorship: { label: 'Спонсорство', icon: Users, color: 'bg-primary' },
+  concept: { label: 'Поиск концепции', icon: Palette, color: 'bg-accent' },
+  voting: { label: 'Голосование', icon: Vote, color: 'bg-green-500' },
 };
 
 export function ProjectCard({ project, index, onViewDetails, onAction }: ProjectCardProps) {
@@ -76,7 +75,7 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
           {project.stage === 'sponsorship' && project.budget && (
             <div className="flex items-center justify-between">
               <div className="text-sm">
-                <span className="text-muted-foreground">Budget: </span>
+                <span className="text-muted-foreground">Бюджет: </span>
                 <span className="font-semibold text-foreground">
                   {formatCurrency(project.budget)}
                 </span>
@@ -89,7 +88,7 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
                   onAction(project, 'sponsor');
                 }}
               >
-                Sponsor
+                Спонсировать
               </Button>
             </div>
           )}
@@ -98,7 +97,7 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">
-                  Open for Bids
+                  Открыто для заявок
                 </span>
               </div>
               <Button
@@ -110,7 +109,7 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
                   onAction(project, 'architect');
                 }}
               >
-                I am an Architect
+                Я архитектор
               </Button>
             </div>
           )}
@@ -122,7 +121,7 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
                 <span className="font-semibold text-foreground">
                   {formatNumber(project.votes)}
                 </span>
-                <span className="text-muted-foreground text-sm">votes</span>
+                <span className="text-muted-foreground text-sm">голосов</span>
               </div>
               <Button
                 size="sm"
@@ -132,7 +131,7 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
                   onAction(project, 'vote');
                 }}
               >
-                Vote
+                Голосовать
               </Button>
             </div>
           )}
