@@ -37,33 +37,33 @@ export function AboutModal({ isOpen, onClose }: AboutModalProps) {
                 <span className="text-white font-bold text-xl">Մ</span>
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-foreground">About Մdelays Delays</h2>
-                <p className="text-muted-foreground">Urban Projects Platform</p>
+                <h2 className="text-2xl font-bold text-foreground">О платформе Մer Yerevan</h2>
+                <p className="text-muted-foreground">Платформа городских проектов</p>
               </div>
             </div>
 
             <div className="space-y-4 text-muted-foreground">
               <p>
-                <strong className="text-foreground">Մdelay Երdelays</strong> (Our Yerevan) is a civic technology platform 
-                that connects citizens, sponsors, and architects to transform urban spaces across Armenia's capital.
+                <strong className="text-foreground">Մer Երewan</strong> (Наш Ереван) — это гражданская технологическая платформа, 
+                которая объединяет жителей, спонсоров и архитекторов для преобразования городских пространств столицы Армении.
               </p>
               <p>
-                Our mission is to democratize urban development by giving every citizen a voice in shaping 
-                their city. From funding public art installations to voting on park designs, we believe 
-                that the best ideas for Yerevan come from the people who live here.
+                Наша миссия — демократизировать городское развитие, давая каждому гражданину голос в формировании 
+                своего города. От финансирования публичных арт-инсталляций до голосования за дизайн парков — мы верим, 
+                что лучшие идеи для Еревана исходят от людей, которые здесь живут.
               </p>
               <div className="grid grid-cols-3 gap-4 pt-4">
                 <div className="text-center p-4 rounded-2xl bg-secondary">
                   <p className="text-2xl font-bold gradient-text">50+</p>
-                  <p className="text-xs text-muted-foreground">Projects</p>
+                  <p className="text-xs text-muted-foreground">Проектов</p>
                 </div>
                 <div className="text-center p-4 rounded-2xl bg-secondary">
                   <p className="text-2xl font-bold gradient-text">10K+</p>
-                  <p className="text-xs text-muted-foreground">Citizens</p>
+                  <p className="text-xs text-muted-foreground">Граждан</p>
                 </div>
                 <div className="text-center p-4 rounded-2xl bg-secondary">
                   <p className="text-2xl font-bold gradient-text">₽2B</p>
-                  <p className="text-xs text-muted-foreground">Funded</p>
+                  <p className="text-xs text-muted-foreground">Собрано</p>
                 </div>
               </div>
             </div>

@@ -23,12 +23,12 @@ export function ProjectsGrid({ projects, activeFilter, onViewDetails, onAction }
         >
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
-              {activeFilter === 'sponsorship' && 'Projects Seeking Sponsors for Construction'}
-              {activeFilter === 'concept' && 'Projects Seeking Architects'}
-              {activeFilter === 'voting' && 'Projects Open for Voting'}
+              {activeFilter === 'sponsorship' && 'Проекты, ищущие спонсоров для строительства'}
+              {activeFilter === 'concept' && 'Проекты, ищущие архитекторов'}
+              {activeFilter === 'voting' && 'Проекты, открытые для голосования'}
             </h2>
             <span className="text-muted-foreground">
-              {filteredProjects.length} project{filteredProjects.length !== 1 ? 's' : ''}
+              {filteredProjects.length} проект{filteredProjects.length === 1 ? '' : filteredProjects.length < 5 ? 'а' : 'ов'}
             </span>
           </div>
 
@@ -58,7 +58,7 @@ export function ProjectsGrid({ projects, activeFilter, onViewDetails, onAction }
                 className="text-center py-16"
               >
                 <p className="text-muted-foreground text-lg">
-                  No projects in this category yet.
+                  Пока нет проектов в этой категории.
                 </p>
               </motion.div>
             )}

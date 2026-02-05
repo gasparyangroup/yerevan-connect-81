@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, MapPin, FileText, ExternalLink, ChevronLeft, ChevronRight, Send, Bot, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
 import type { Project } from '@/data/projects';
@@ -43,7 +42,7 @@ export function ProjectModal({ project, isOpen, onClose, onAction }: ProjectModa
       setChatMessages([
         {
           role: 'assistant',
-          content: `Hello! I'm your AI assistant for the "${project.title}" project. Ask me anything about this project, its timeline, budget, or impact on the community.`,
+          content: `Здравствуйте! Я ваш ИИ-помощник по проекту "${project.title}". Задайте мне любой вопрос о проекте, сроках, бюджете или влиянии на сообщество.`,
         },
       ]);
       setSelectedVote(null);
@@ -72,15 +71,15 @@ export function ProjectModal({ project, isOpen, onClose, onAction }: ProjectModa
       setTimeout(() => {
         const aiResponse: ChatMessage = {
           role: 'assistant',
-          content: `Thank you for your question about "${project.title}". This is a placeholder response. To enable AI responses, please add your Gemini API key to the apiKey variable in ProjectModal.tsx.
+          content: `Спасибо за ваш вопрос о "${project.title}". Это тестовый ответ. Чтобы включить ИИ-ответы, добавьте ваш API-ключ Gemini.
 
-Based on the project context:
-- Location: ${project.location}
-- Stage: ${project.stage}
-${project.budget ? `- Budget: ${formatCurrency(project.budget)}` : ''}
-${project.raised ? `- Raised: ${formatCurrency(project.raised)}` : ''}
+На основе контекста проекта:
+- Местоположение: ${project.location}
+- Этап: ${project.stage === 'sponsorship' ? 'Спонсорство' : project.stage === 'concept' ? 'Поиск концепции' : 'Голосование'}
+${project.budget ? `- Бюджет: ${formatCurrency(project.budget)}` : ''}
+${project.raised ? `- Собрано: ${formatCurrency(project.raised)}` : ''}
 
-Feel free to ask more questions!`,
+Задавайте ещё вопросы!`,
         };
         setChatMessages((prev) => [...prev, aiResponse]);
         setIsLoading(false);
@@ -99,7 +98,7 @@ Feel free to ask more questions!`,
               {
                 parts: [
                   {
-                    text: `You are an AI assistant helping users understand the urban project "${project.title}" in ${project.location}, Yerevan. 
+                    text: `You are an AI assistant helping users understand the urban project "${project.title}" in ${project.location}, Yerevan. Respond in Russian.
                     
 Project details:
 - Description: ${project.description}
@@ -110,7 +109,7 @@ ${project.votes ? `- Current votes: ${project.votes}` : ''}
 
 User question: ${message}
 
-Provide a helpful, informative response about this specific project.`,
+Provide a helpful, informative response about this specific project in Russian.`,
                   },
                 ],
               },
@@ -120,14 +119,14 @@ Provide a helpful, informative response about this specific project.`,
       );
 
       const data = await response.json();
-      const aiContent = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, I could not generate a response.';
+      const aiContent = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Извините, не удалось сгенерировать ответ.';
       
       const aiResponse: ChatMessage = { role: 'assistant', content: aiContent };
       setChatMessages((prev) => [...prev, aiResponse]);
     } catch (error) {
       const errorResponse: ChatMessage = {
         role: 'assistant',
-        content: 'Sorry, there was an error processing your request. Please try again.',
+        content: 'Извините, произошла ошибка при обработке вашего запроса. Пожалуйста, попробуйте снова.',
       };
       setChatMessages((prev) => [...prev, errorResponse]);
     } finally {
@@ -247,7 +246,7 @@ Provide a helpful, informative response about this specific project.`,
               {/* Documents */}
               {project.documents && project.documents.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="font-semibold text-foreground mb-3">Documents</h3>
+                  <h3 className="font-semibold text-foreground mb-3">Документы</h3>
                   <div className="space-y-2">
                     {project.documents.map((doc, index) => (
                       <a
@@ -269,7 +268,7 @@ Provide a helpful, informative response about this specific project.`,
               {/* Voting Options */}
               {project.stage === 'voting' && project.votingOptions && (
                 <div className="mb-6">
-                  <h3 className="font-semibold text-foreground mb-3">Vote for your preferred design</h3>
+                  <h3 className="font-semibold text-foreground mb-3">Голосуйте за предпочтительный дизайн</h3>
                   <div className="grid sm:grid-cols-2 gap-4">
                     {project.votingOptions.map((option) => (
                       <button
@@ -286,7 +285,7 @@ Provide a helpful, informative response about this specific project.`,
                         </div>
                         <div className="p-3">
                           <p className="font-medium text-foreground text-sm">{option.name}</p>
-                          <p className="text-xs text-muted-foreground">{formatNumber(option.votes)} votes</p>
+                          <p className="text-xs text-muted-foreground">{formatNumber(option.votes)} голосов</p>
                         </div>
                         {selectedVote === option.id && (
                           <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
@@ -310,13 +309,13 @@ Provide a helpful, informative response about this specific project.`,
                     value="info"
                     className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-6 py-4"
                   >
-                    Info
+                    Информация
                   </TabsTrigger>
                   <TabsTrigger
                     value="ai"
                     className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-6 py-4"
                   >
-                    AI Assistant
+                    ИИ-помощник
                   </TabsTrigger>
                 </TabsList>
 
@@ -324,7 +323,7 @@ Provide a helpful, informative response about this specific project.`,
                   {project.stage === 'sponsorship' && project.budget && (
                     <div className="space-y-4 mb-6">
                       <div className="p-4 rounded-2xl bg-background">
-                        <p className="text-xs text-muted-foreground mb-1">Total Budget</p>
+                        <p className="text-xs text-muted-foreground mb-1">Общий бюджет</p>
                         <p className="text-2xl font-bold text-foreground">{formatCurrency(project.budget)}</p>
                       </div>
                       {project.presentationUrl && (
@@ -335,7 +334,7 @@ Provide a helpful, informative response about this specific project.`,
                           className="flex items-center justify-center gap-2 p-3 rounded-xl bg-secondary hover:bg-secondary/80 transition-colors text-foreground font-medium"
                         >
                           <ExternalLink className="w-4 h-4" />
-                          Open Presentation
+                          Открыть презентацию
                         </a>
                       )}
                     </div>
@@ -343,7 +342,7 @@ Provide a helpful, informative response about this specific project.`,
 
                   {project.stage === 'voting' && project.votes && (
                     <div className="p-4 rounded-2xl bg-background mb-6">
-                      <p className="text-xs text-muted-foreground mb-1">Total Votes</p>
+                      <p className="text-xs text-muted-foreground mb-1">Всего голосов</p>
                       <p className="text-2xl font-bold text-foreground">{formatNumber(project.votes)}</p>
                     </div>
                   )}
@@ -356,9 +355,9 @@ Provide a helpful, informative response about this specific project.`,
                       else if (project.stage === 'voting') onAction(project, 'vote');
                     }}
                   >
-                    {project.stage === 'sponsorship' && 'Become a Sponsor'}
-                    {project.stage === 'concept' && 'Submit as Architect'}
-                    {project.stage === 'voting' && 'Cast Your Vote'}
+                    {project.stage === 'sponsorship' && 'Стать спонсором'}
+                    {project.stage === 'concept' && 'Подать заявку как архитектор'}
+                    {project.stage === 'voting' && 'Проголосовать'}
                   </Button>
                 </TabsContent>
 
@@ -416,7 +415,7 @@ Provide a helpful, informative response about this specific project.`,
                         value={chatInput}
                         onChange={(e) => setChatInput(e.target.value)}
                         onKeyPress={handleKeyPress}
-                        placeholder="Ask about this project..."
+                        placeholder="Спросите о проекте..."
                         className="flex-1 rounded-xl bg-background"
                         disabled={isLoading}
                       />
