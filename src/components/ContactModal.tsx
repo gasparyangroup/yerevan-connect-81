@@ -68,7 +68,7 @@ export function ContactModal({ isOpen, onClose, project, type }: ContactModalPro
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-md bg-background rounded-3xl p-6 sm:p-8 z-[60] max-h-[90vh] overflow-y-auto"
+            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-md bg-background rounded-3xl p-5 sm:p-6 z-[60] max-h-[85vh] overflow-y-auto"
           >
             <button
               onClick={onClose}
@@ -93,28 +93,14 @@ export function ContactModal({ isOpen, onClose, project, type }: ContactModalPro
               </motion.div>
             ) : (
               <>
-                <h2 className="text-2xl font-bold text-foreground mb-2">{getTitle()}</h2>
-                <p className="text-muted-foreground mb-6">{getDescription()}</p>
+                <h2 className="text-xl font-bold text-foreground mb-1">{getTitle()}</h2>
+                <p className="text-sm text-muted-foreground mb-4">{getDescription()}</p>
 
-                {project && (
-                  <div className="flex items-center gap-3 p-3 rounded-2xl bg-secondary mb-6">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-12 h-12 rounded-xl object-cover"
-                    />
-                    <div>
-                      <p className="font-medium text-foreground text-sm">{project.title}</p>
-                      <p className="text-xs text-muted-foreground">{project.location}</p>
-                    </div>
-                  </div>
-                )}
-
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-3">
                   {project && (
                     <div>
-                      <Label htmlFor="project" className="text-foreground">Проект</Label>
-                      <div className="relative mt-1.5">
+                      <Label htmlFor="project" className="text-foreground text-sm">Проект</Label>
+                      <div className="relative mt-1">
                         <FolderOpen className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                         <Input
                           id="project"
@@ -127,8 +113,8 @@ export function ContactModal({ isOpen, onClose, project, type }: ContactModalPro
                   )}
 
                   <div>
-                    <Label htmlFor="name" className="text-foreground">Имя / Компания</Label>
-                    <div className="relative mt-1.5">
+                    <Label htmlFor="name" className="text-foreground text-sm">Имя / Компания</Label>
+                    <div className="relative mt-1">
                       <UserIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                       <Input
                         id="name"
@@ -142,8 +128,8 @@ export function ContactModal({ isOpen, onClose, project, type }: ContactModalPro
                   </div>
 
                   <div>
-                    <Label htmlFor="phone" className="text-foreground">Номер / Telegram</Label>
-                    <div className="relative mt-1.5">
+                    <Label htmlFor="phone" className="text-foreground text-sm">Номер / Telegram</Label>
+                    <div className="relative mt-1">
                       <MessageCircle className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                       <Input
                         id="phone"
@@ -156,7 +142,7 @@ export function ContactModal({ isOpen, onClose, project, type }: ContactModalPro
                     </div>
                   </div>
 
-                  <Button type="submit" className="w-full btn-gradient rounded-2xl h-12 gap-2">
+                  <Button type="submit" className="w-full btn-gradient rounded-2xl h-11 gap-2">
                     <Send className="w-4 h-4" />
                     {type === 'vote' ? 'Отправить голос' : 'Отправить'}
                   </Button>
