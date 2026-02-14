@@ -1,6 +1,10 @@
 import komitas1 from '@/assets/komitas-1.png';
 import komitas2 from '@/assets/komitas-2.png';
 import komitas3 from '@/assets/komitas-3.png';
+import yespace1 from '@/assets/yespace-1.png';
+import yespace2 from '@/assets/yespace-2.png';
+import yespace3 from '@/assets/yespace-3.png';
+import yespace4 from '@/assets/yespace-4.png';
 
 export type ProjectStage = 'sponsorship' | 'concept' | 'voting';
 
@@ -136,6 +140,28 @@ export const projects: Project[] = [
       { id: 'a', name: 'Вариант A: Минимальное вмешательство', votes: 520, image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80' },
       { id: 'b', name: 'Вариант B: Расширенная инфраструктура', votes: 370, image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80' },
     ],
+  },
+  {
+    id: '7',
+    title: 'Yespace',
+    titleAm: 'Yespace',
+    location: 'Перекрёсток Московяна и Баграмяна',
+    locationAm: 'Մoscovyan և Baghramyan խաdelays',
+    description: 'Концепция от TL бюро. Проект благоустройства перекрёстка Московяна и Баграмяна с созданием современного общественного пространства, зелёных зон, пешеходных дорожек и арт-объектов.',
+    descriptionAm: 'TL бюро концеация',
+    stage: 'sponsorship',
+    image: yespace1,
+    gallery: [
+      yespace1,
+      yespace2,
+      yespace3,
+      yespace4,
+    ],
+    budget: 1000000,
+    documents: [
+      { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/15A4pMJA9ZumPqfilrWFYVFLGJt8UEtr4/view?usp=sharing' },
+    ],
+    presentationUrl: 'https://drive.google.com/file/d/15A4pMJA9ZumPqfilrWFYVFLGJt8UEtr4/view?usp=sharing',
   },
 ];
 
