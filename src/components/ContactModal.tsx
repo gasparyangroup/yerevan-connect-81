@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Phone, User as UserIcon, Send, CheckCircle } from 'lucide-react';
+import { X, MessageCircle, User as UserIcon, Send, CheckCircle, FolderOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -111,15 +111,30 @@ export function ContactModal({ isOpen, onClose, project, type }: ContactModalPro
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {project && (
+                    <div>
+                      <Label htmlFor="project" className="text-foreground">Проект</Label>
+                      <div className="relative mt-1.5">
+                        <FolderOpen className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                        <Input
+                          id="project"
+                          value={project.title}
+                          className="pl-10 rounded-xl"
+                          disabled
+                        />
+                      </div>
+                    </div>
+                  )}
+
                   <div>
-                    <Label htmlFor="name" className="text-foreground">Полное имя</Label>
+                    <Label htmlFor="name" className="text-foreground">Имя / Компания</Label>
                     <div className="relative mt-1.5">
                       <UserIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                       <Input
                         id="name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        placeholder="Иван Иванов"
+                        placeholder="Иван Иванов / ООО Компания"
                         className="pl-10 rounded-xl"
                         required
                       />
@@ -127,15 +142,14 @@ export function ContactModal({ isOpen, onClose, project, type }: ContactModalPro
                   </div>
 
                   <div>
-                    <Label htmlFor="phone" className="text-foreground">Номер телефона</Label>
+                    <Label htmlFor="phone" className="text-foreground">Номер / Telegram</Label>
                     <div className="relative mt-1.5">
-                      <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                      <MessageCircle className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                       <Input
                         id="phone"
-                        type="tel"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        placeholder="+374 XX XXX XXX"
+                        placeholder="+374 XX XXX XXX или @username"
                         className="pl-10 rounded-xl"
                         required
                       />
