@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 interface SuggestionModalProps {
   isOpen: boolean;
@@ -16,6 +17,7 @@ export function SuggestionModal({ isOpen, onClose }: SuggestionModalProps) {
   const [location, setLocation] = useState('');
   const [description, setDescription] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const { t } = useLanguage();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,11 +65,8 @@ export function SuggestionModal({ isOpen, onClose }: SuggestionModalProps) {
                 <div className="w-20 h-20 rounded-full gradient-primary flex items-center justify-center mx-auto mb-6 shadow-glow">
                   <CheckCircle className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">Идея отправлена!</h3>
-                <p className="text-muted-foreground max-w-sm mx-auto">
-                  Спасибо за ваш вклад в будущее Еревана. Наша команда рассмотрит ваше предложение 
-                  и скоро свяжется с вами.
-                </p>
+                <h3 className="text-2xl font-bold text-foreground mb-3">{t('ideaSubmitted')}</h3>
+                <p className="text-muted-foreground max-w-sm mx-auto">{t('ideaSubmittedMessage')}</p>
               </motion.div>
             ) : (
               <>
@@ -76,21 +75,21 @@ export function SuggestionModal({ isOpen, onClose }: SuggestionModalProps) {
                     <Lightbulb className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold text-foreground">Предложить идею</h2>
-                    <p className="text-muted-foreground text-sm">Поделитесь своим видением лучшего Еревана</p>
+                    <h2 className="text-2xl font-bold text-foreground">{t('suggestTitle')}</h2>
+                    <p className="text-muted-foreground text-sm">{t('suggestSubtitle')}</p>
                   </div>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
-                    <Label htmlFor="title" className="text-foreground">Название проекта</Label>
+                    <Label htmlFor="title" className="text-foreground">{t('projectName')}</Label>
                     <div className="relative mt-1.5">
                       <FileText className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
                       <Input
                         id="title"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
-                        placeholder="например, Новый общественный сад"
+                        placeholder={t('projectNamePlaceholder')}
                         className="pl-10 rounded-xl"
                         required
                       />
@@ -98,14 +97,14 @@ export function SuggestionModal({ isOpen, onClose }: SuggestionModalProps) {
                   </div>
 
                   <div>
-                    <Label htmlFor="location" className="text-foreground">Предполагаемое местоположение</Label>
+                    <Label htmlFor="location" className="text-foreground">{t('suggestLocation')}</Label>
                     <div className="relative mt-1.5">
                       <MapPin className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
                       <Input
                         id="location"
                         value={location}
                         onChange={(e) => setLocation(e.target.value)}
-                        placeholder="например, район Арабкир"
+                        placeholder={t('suggestLocationPlaceholder')}
                         className="pl-10 rounded-xl"
                         required
                       />
@@ -113,12 +112,12 @@ export function SuggestionModal({ isOpen, onClose }: SuggestionModalProps) {
                   </div>
 
                   <div>
-                    <Label htmlFor="description" className="text-foreground">Описание</Label>
+                    <Label htmlFor="description" className="text-foreground">{t('description')}</Label>
                     <Textarea
                       id="description"
                       value={description}
                       onChange={(e) => setDescription(e.target.value)}
-                      placeholder="Опишите вашу идею подробно. Какую проблему она решает? Кому она принесёт пользу? Какие ресурсы могут понадобиться?"
+                      placeholder={t('descriptionPlaceholder')}
                       className="mt-1.5 rounded-xl min-h-[120px] resize-none"
                       required
                     />
@@ -127,14 +126,12 @@ export function SuggestionModal({ isOpen, onClose }: SuggestionModalProps) {
                   <div className="pt-2">
                     <Button type="submit" className="w-full btn-gradient rounded-2xl h-12 gap-2">
                       <Send className="w-4 h-4" />
-                      Отправить идею
+                      {t('sendIdea')}
                     </Button>
                   </div>
                 </form>
 
-                <p className="text-xs text-muted-foreground text-center mt-4">
-                  Отправляя форму, вы соглашаетесь с правилами сообщества и условиями использования.
-                </p>
+                <p className="text-xs text-muted-foreground text-center mt-4">{t('termsNote')}</p>
               </>
             )}
           </motion.div>

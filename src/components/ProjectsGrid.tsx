@@ -1,15 +1,17 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ProjectCard } from './ProjectCard';
+import { useLanguage } from '@/i18n/LanguageContext';
 import type { Project, ProjectStage } from '@/data/projects';
 
 interface ProjectsGridProps {
   projects: Project[];
   activeFilter: ProjectStage;
   onViewDetails: (project: Project) => void;
-  onAction: (project: Project, action: 'sponsor' | 'architect' | 'vote') => void;
+  onAction: (project: Project, action: 'sponsor' | 'architect') => void;
 }
 
 export function ProjectsGrid({ projects, activeFilter, onViewDetails, onAction }: ProjectsGridProps) {
+  const { t } = useLanguage();
   const filteredProjects = projects.filter((p) => p.stage === activeFilter);
 
   return (
@@ -23,12 +25,11 @@ export function ProjectsGrid({ projects, activeFilter, onViewDetails, onAction }
         >
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
-              {activeFilter === 'sponsorship' && 'Проекты, ищущие спонсоров для строительства'}
-              {activeFilter === 'concept' && 'Проекты, ищущие архитекторов'}
-              {activeFilter === 'voting' && 'Проекты, открытые для голосования'}
+              {activeFilter === 'sponsorship' && t('projectsSponsorshipHeading')}
+              {activeFilter === 'concept' && t('projectsConceptHeading')}
             </h2>
             <span className="text-muted-foreground">
-              {filteredProjects.length} проект{filteredProjects.length === 1 ? '' : filteredProjects.length < 5 ? 'а' : 'ов'}
+              {filteredProjects.length} {t('projectCount')}
             </span>
           </div>
 
@@ -57,9 +58,7 @@ export function ProjectsGrid({ projects, activeFilter, onViewDetails, onAction }
                 animate={{ opacity: 1 }}
                 className="text-center py-16"
               >
-                <p className="text-muted-foreground text-lg">
-                  Пока нет проектов в этой категории.
-                </p>
+                <p className="text-muted-foreground text-lg">{t('noProjects')}</p>
               </motion.div>
             )}
           </AnimatePresence>

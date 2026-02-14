@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Lightbulb } from 'lucide-react';
+import { Menu, X, Lightbulb, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/i18n/LanguageContext';
+import type { Language } from '@/i18n/translations';
 
 interface HeaderProps {
   onOpenAbout: () => void;
@@ -9,15 +11,21 @@ interface HeaderProps {
   onNavigate: (section: string) => void;
 }
 
-const navLinks = [
-  { id: 'sponsorship', label: 'Спонсорство строительства' },
-  { id: 'concept', label: 'Поиск концепции' },
-  { id: 'voting', label: 'Голосование' },
+const languages: { id: Language; label: string }[] = [
+  { id: 'am', label: 'AM' },
+  { id: 'ru', label: 'RU' },
+  { id: 'en', label: 'EN' },
 ];
 
 export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t, lang, setLang } = useLanguage();
+
+  const navLinks = [
+    { id: 'sponsorship', label: t('navSponsorship') },
+    { id: 'concept', label: t('navConcept') },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,12 +53,12 @@ export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) 
               <span className="text-primary-foreground font-bold text-lg">Մ</span>
             </div>
             <div className="hidden sm:block">
-              <h1 className="font-bold text-lg text-foreground">Մdelays Երdelays</h1>
+              <h1 className="font-bold text-lg text-foreground">{t('brandName')}</h1>
               <button
                 onClick={onOpenAbout}
                 className="text-xs text-muted-foreground hover:text-primary transition-colors"
               >
-                Платформа городских проектов
+                {t('platformSubtitle')}
               </button>
             </div>
           </div>
@@ -70,14 +78,31 @@ export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) 
           </nav>
 
           {/* Right Section */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
+            {/* Language Switcher */}
+            <div className="flex items-center gap-1 bg-secondary rounded-full p-1">
+              {languages.map((l) => (
+                <button
+                  key={l.id}
+                  onClick={() => setLang(l.id)}
+                  className={`px-2.5 py-1 rounded-full text-xs font-medium transition-all ${
+                    lang === l.id
+                      ? 'bg-primary text-primary-foreground shadow-sm'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  {l.label}
+                </button>
+              ))}
+            </div>
+
             {/* Suggest Button */}
             <Button
               onClick={onOpenSuggest}
               className="hidden sm:flex btn-gradient rounded-2xl gap-2"
             >
               <Lightbulb className="w-4 h-4" />
-              Предложить идею
+              {t('suggestIdea')}
             </Button>
 
             {/* Mobile Menu Toggle */}
@@ -121,7 +146,7 @@ export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) 
                 className="w-full btn-gradient rounded-2xl gap-2"
               >
                 <Lightbulb className="w-4 h-4" />
-                Предложить идею
+                {t('suggestIdea')}
               </Button>
             </div>
           </motion.div>

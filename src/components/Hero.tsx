@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Building2, Palette, Vote } from 'lucide-react';
+import { Building2, Palette } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 import type { ProjectStage } from '@/data/projects';
 
 interface HeroProps {
@@ -8,27 +9,22 @@ interface HeroProps {
   onFilterChange: (filter: ProjectStage) => void;
 }
 
-const filters = [
-  { id: 'sponsorship' as ProjectStage, label: 'Спонсорство', icon: Building2 },
-  { id: 'concept' as ProjectStage, label: 'Поиск концепции', icon: Palette },
-  { id: 'voting' as ProjectStage, label: 'Голосование', icon: Vote },
-];
-
-const animatedTexts = [
-  'нашей мечты',
-  'для людей',
-  'вместе',
-  'шаг за шагом',
-];
-
 export function Hero({ activeFilter, onFilterChange }: HeroProps) {
+  const { t } = useLanguage();
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
+  const animatedTexts = [t('heroAnimated1'), t('heroAnimated2'), t('heroAnimated3'), t('heroAnimated4')];
+
+  const filters = [
+    { id: 'sponsorship' as ProjectStage, label: t('navSponsorship'), icon: Building2 },
+    { id: 'concept' as ProjectStage, label: t('navConcept'), icon: Palette },
+  ];
+
   useEffect(() => {
     const currentFullText = animatedTexts[currentTextIndex];
-    
+
     const timeout = setTimeout(() => {
       if (!isDeleting) {
         if (displayText.length < currentFullText.length) {
@@ -54,8 +50,7 @@ export function Hero({ activeFilter, onFilterChange }: HeroProps) {
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-yerevan-light via-background to-background" />
-        
-        {/* Animated particles/shapes */}
+
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
@@ -64,42 +59,20 @@ export function Hero({ activeFilter, onFilterChange }: HeroProps) {
               x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
               y: Math.random() * 600,
             }}
-            animate={{
-              y: [null, -100],
-              opacity: [0.2, 0.5, 0.2],
-            }}
-            transition={{
-              duration: 5 + Math.random() * 5,
-              repeat: Infinity,
-              delay: Math.random() * 5,
-            }}
+            animate={{ y: [null, -100], opacity: [0.2, 0.5, 0.2] }}
+            transition={{ duration: 5 + Math.random() * 5, repeat: Infinity, delay: Math.random() * 5 }}
           />
         ))}
-        
-        {/* Floating geometric shapes */}
+
         <motion.div
           className="absolute top-1/4 left-1/4 w-32 h-32 rounded-3xl bg-gradient-to-br from-primary/10 to-accent/10 blur-xl"
-          animate={{
-            y: [0, -30, 0],
-            rotate: [0, 10, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+          animate={{ y: [0, -30, 0], rotate: [0, 10, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div
           className="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full bg-gradient-to-br from-accent/10 to-primary/10 blur-xl"
-          animate={{
-            y: [0, 30, 0],
-            rotate: [0, -10, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+          animate={{ y: [0, 30, 0], rotate: [0, -10, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
         />
       </div>
 
@@ -110,9 +83,8 @@ export function Hero({ activeFilter, onFilterChange }: HeroProps) {
           transition={{ duration: 0.8 }}
           className="text-center max-w-4xl mx-auto"
         >
-          {/* Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Строим город{' '}
+            {t('heroTitle')}{' '}
             <span className="gradient-text inline-block min-w-[200px] sm:min-w-[280px]">
               {displayText}
               <motion.span
@@ -122,13 +94,11 @@ export function Hero({ activeFilter, onFilterChange }: HeroProps) {
               />
             </span>
           </h1>
-          
+
           <p className="text-lg sm:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Присоединяйтесь к тысячам граждан в формировании будущего Еревана. 
-            Финансируйте проекты, голосуйте за дизайн и наблюдайте за преображением города.
+            {t('heroSubtitle')}
           </p>
 
-          {/* Pill Switcher */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -138,15 +108,13 @@ export function Hero({ activeFilter, onFilterChange }: HeroProps) {
             {filters.map((filter) => {
               const Icon = filter.icon;
               const isActive = activeFilter === filter.id;
-              
+
               return (
                 <button
                   key={filter.id}
                   onClick={() => onFilterChange(filter.id)}
                   className={`relative px-4 sm:px-6 py-3 rounded-full text-sm sm:text-base font-medium transition-all duration-300 flex items-center gap-2 ${
-                    isActive
-                      ? 'text-white'
-                      : 'text-muted-foreground hover:text-foreground'
+                    isActive ? 'text-white' : 'text-muted-foreground hover:text-foreground'
                   }`}
                 >
                   {isActive && (
@@ -165,7 +133,6 @@ export function Hero({ activeFilter, onFilterChange }: HeroProps) {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
