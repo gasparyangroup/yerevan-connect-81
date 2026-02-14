@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 interface AboutModalProps {
   isOpen: boolean;
@@ -7,6 +8,8 @@ interface AboutModalProps {
 }
 
 export function AboutModal({ isOpen, onClose }: AboutModalProps) {
+  const { t } = useLanguage();
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -37,33 +40,26 @@ export function AboutModal({ isOpen, onClose }: AboutModalProps) {
                 <span className="text-white font-bold text-xl">Մ</span>
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-foreground">О платформе Մer Yerevan</h2>
-                <p className="text-muted-foreground">Платформа городских проектов</p>
+                <h2 className="text-2xl font-bold text-foreground">{t('aboutTitle')}</h2>
+                <p className="text-muted-foreground">{t('aboutSubtitle')}</p>
               </div>
             </div>
 
             <div className="space-y-4 text-muted-foreground">
-              <p>
-                <strong className="text-foreground">Մer Երewan</strong> (Наш Ереван) — это гражданская технологическая платформа, 
-                которая объединяет жителей, спонсоров и архитекторов для преобразования городских пространств столицы Армении.
-              </p>
-              <p>
-                Наша миссия — демократизировать городское развитие, давая каждому гражданину голос в формировании 
-                своего города. От финансирования публичных арт-инсталляций до голосования за дизайн парков — мы верим, 
-                что лучшие идеи для Еревана исходят от людей, которые здесь живут.
-              </p>
+              <p>{t('aboutDesc1')}</p>
+              <p>{t('aboutDesc2')}</p>
               <div className="grid grid-cols-3 gap-4 pt-4">
                 <div className="text-center p-4 rounded-2xl bg-secondary">
                   <p className="text-2xl font-bold gradient-text">50+</p>
-                  <p className="text-xs text-muted-foreground">Проектов</p>
+                  <p className="text-xs text-muted-foreground">{t('projects')}</p>
                 </div>
                 <div className="text-center p-4 rounded-2xl bg-secondary">
                   <p className="text-2xl font-bold gradient-text">10K+</p>
-                  <p className="text-xs text-muted-foreground">Граждан</p>
+                  <p className="text-xs text-muted-foreground">{t('citizens')}</p>
                 </div>
                 <div className="text-center p-4 rounded-2xl bg-secondary">
                   <p className="text-2xl font-bold gradient-text">₽2B</p>
-                  <p className="text-xs text-muted-foreground">Собрано</p>
+                  <p className="text-xs text-muted-foreground">{t('raised')}</p>
                 </div>
               </div>
             </div>

@@ -2,7 +2,6 @@ import { useState, useRef } from 'react';
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { ProjectsGrid } from '@/components/ProjectsGrid';
-import { MapSection } from '@/components/MapSection';
 import { Footer } from '@/components/Footer';
 import { ProjectModal } from '@/components/ProjectModal';
 import { AboutModal } from '@/components/AboutModal';
@@ -17,7 +16,7 @@ const Index = () => {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
   const [isSuggestionModalOpen, setIsSuggestionModalOpen] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
-  const [contactType, setContactType] = useState<'sponsor' | 'architect' | 'vote'>('sponsor');
+  const [contactType, setContactType] = useState<'sponsor' | 'architect'>('sponsor');
 
   const projectsRef = useRef<HTMLDivElement>(null);
 
@@ -31,7 +30,7 @@ const Index = () => {
     setIsProjectModalOpen(true);
   };
 
-  const handleAction = (project: Project, action: 'sponsor' | 'architect' | 'vote') => {
+  const handleAction = (project: Project, action: 'sponsor' | 'architect') => {
     setSelectedProject(project);
     setContactType(action);
     setIsContactModalOpen(true);
@@ -56,11 +55,8 @@ const Index = () => {
         />
       </div>
 
-      <MapSection projects={projects} onSelectProject={handleViewDetails} />
-
       <Footer />
 
-      {/* Modals */}
       <ProjectModal
         project={selectedProject}
         isOpen={isProjectModalOpen}

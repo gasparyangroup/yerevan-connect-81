@@ -4,17 +4,17 @@ import { X, MapPin, FileText, ExternalLink, ChevronLeft, ChevronRight, Send, Bot
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
+import { useLanguage } from '@/i18n/LanguageContext';
 import type { Project } from '@/data/projects';
-import { formatCurrency, formatNumber } from '@/data/projects';
+import { formatCurrency } from '@/data/projects';
 
 interface ProjectModalProps {
   project: Project | null;
   isOpen: boolean;
   onClose: () => void;
-  onAction: (project: Project, action: 'sponsor' | 'architect' | 'vote') => void;
+  onAction: (project: Project, action: 'sponsor' | 'architect') => void;
 }
 
-// Placeholder API key for Gemini
 const apiKey = '';
 
 interface ChatMessage {
@@ -27,8 +27,8 @@ export function ProjectModal({ project, isOpen, onClose, onAction }: ProjectModa
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
   const [chatInput, setChatInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [selectedVote, setSelectedVote] = useState<string | null>(null);
   const chatEndRef = useRef<HTMLDivElement>(null);
+  const { t, lang } = useLanguage();
 
   useEffect(() => {
     if (chatEndRef.current) {
@@ -38,25 +38,22 @@ export function ProjectModal({ project, isOpen, onClose, onAction }: ProjectModa
 
   useEffect(() => {
     if (isOpen && project) {
+      const title = lang === 'en' ? project.titleEn : lang === 'am' ? project.titleAm : project.title;
       setSelectedImage(0);
       setChatMessages([
         {
           role: 'assistant',
-          content: `Здравствуйте! Я ваш ИИ-помощник по проекту "${project.title}". Задайте мне любой вопрос о проекте, сроках, бюджете или влиянии на сообщество.`,
+          content: `${t('aiGreeting')} "${title}".`,
         },
       ]);
-      setSelectedVote(null);
     }
   }, [isOpen, project]);
 
   if (!project) return null;
 
-  const getProgress = () => {
-    if (project.stage === 'sponsorship' && project.budget && project.raised) {
-      return (project.raised / project.budget) * 100;
-    }
-    return 0;
-  };
+  const title = lang === 'en' ? project.titleEn : lang === 'am' ? project.titleAm : project.title;
+  const location = lang === 'en' ? project.locationEn : lang === 'am' ? project.locationAm : project.location;
+  const description = lang === 'en' ? project.descriptionEn : lang === 'am' ? project.descriptionAm : project.description;
 
   const handleAIChat = async (message: string) => {
     if (!message.trim() || isLoading) return;
@@ -66,20 +63,11 @@ export function ProjectModal({ project, isOpen, onClose, onAction }: ProjectModa
     setChatInput('');
     setIsLoading(true);
 
-    // If no API key, show placeholder response
     if (!apiKey) {
       setTimeout(() => {
         const aiResponse: ChatMessage = {
           role: 'assistant',
-          content: `Спасибо за ваш вопрос о "${project.title}". Это тестовый ответ. Чтобы включить ИИ-ответы, добавьте ваш API-ключ Gemini.
-
-На основе контекста проекта:
-- Местоположение: ${project.location}
-- Этап: ${project.stage === 'sponsorship' ? 'Спонсорство' : project.stage === 'concept' ? 'Поиск концепции' : 'Голосование'}
-${project.budget ? `- Бюджет: ${formatCurrency(project.budget)}` : ''}
-${project.raised ? `- Собрано: ${formatCurrency(project.raised)}` : ''}
-
-Задавайте ещё вопросы!`,
+          content: `Thank you for your question about "${title}". This is a demo response.\n\n- Location: ${location}\n- Stage: ${project.stage === 'sponsorship' ? t('navSponsorship') : t('navConcept')}\n${project.budget ? `- ${t('budget')}: ${formatCurrency(project.budget)}` : ''}`,
         };
         setChatMessages((prev) => [...prev, aiResponse]);
         setIsLoading(false);
@@ -94,41 +82,19 @@ ${project.raised ? `- Собрано: ${formatCurrency(project.raised)}` : ''}
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            contents: [
-              {
-                parts: [
-                  {
-                    text: `You are an AI assistant helping users understand the urban project "${project.title}" in ${project.location}, Yerevan. Respond in Russian.
-                    
-Project details:
-- Description: ${project.description}
-- Stage: ${project.stage}
-${project.budget ? `- Budget: ${formatCurrency(project.budget)}` : ''}
-${project.raised ? `- Raised so far: ${formatCurrency(project.raised)}` : ''}
-${project.votes ? `- Current votes: ${project.votes}` : ''}
-
-User question: ${message}
-
-Provide a helpful, informative response about this specific project in Russian.`,
-                  },
-                ],
-              },
-            ],
+            contents: [{
+              parts: [{
+                text: `You are an AI assistant for "${project.title}" in ${project.location}, Yerevan. Respond in ${lang === 'ru' ? 'Russian' : lang === 'am' ? 'Armenian' : 'English'}.\n\nProject: ${project.description}\nStage: ${project.stage}\n${project.budget ? `Budget: ${formatCurrency(project.budget)}` : ''}\n\nUser: ${message}`,
+              }],
+            }],
           }),
         }
       );
-
       const data = await response.json();
-      const aiContent = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Извините, не удалось сгенерировать ответ.';
-      
-      const aiResponse: ChatMessage = { role: 'assistant', content: aiContent };
-      setChatMessages((prev) => [...prev, aiResponse]);
-    } catch (error) {
-      const errorResponse: ChatMessage = {
-        role: 'assistant',
-        content: 'Извините, произошла ошибка при обработке вашего запроса. Пожалуйста, попробуйте снова.',
-      };
-      setChatMessages((prev) => [...prev, errorResponse]);
+      const aiContent = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, could not generate a response.';
+      setChatMessages((prev) => [...prev, { role: 'assistant', content: aiContent }]);
+    } catch {
+      setChatMessages((prev) => [...prev, { role: 'assistant', content: 'An error occurred. Please try again.' }]);
     } finally {
       setIsLoading(false);
     }
@@ -141,19 +107,13 @@ Provide a helpful, informative response about this specific project in Russian.`
     }
   };
 
-  const nextImage = () => {
-    setSelectedImage((prev) => (prev + 1) % project.gallery.length);
-  };
-
-  const prevImage = () => {
-    setSelectedImage((prev) => (prev - 1 + project.gallery.length) % project.gallery.length);
-  };
+  const nextImage = () => setSelectedImage((prev) => (prev + 1) % project.gallery.length);
+  const prevImage = () => setSelectedImage((prev) => (prev - 1 + project.gallery.length) % project.gallery.length);
 
   return (
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -162,7 +122,6 @@ Provide a helpful, informative response about this specific project in Russian.`
             className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
           />
 
-          {/* Modal */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -170,7 +129,6 @@ Provide a helpful, informative response about this specific project in Russian.`
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
             className="fixed inset-4 md:inset-8 lg:inset-12 bg-background rounded-3xl overflow-hidden z-50 flex flex-col lg:flex-row"
           >
-            {/* Close button */}
             <button
               onClick={onClose}
               className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-background/80 backdrop-blur flex items-center justify-center text-foreground hover:bg-background transition-colors shadow-lg"
@@ -178,9 +136,8 @@ Provide a helpful, informative response about this specific project in Russian.`
               <X className="w-5 h-5" />
             </button>
 
-            {/* Left Column - Content */}
+            {/* Left Column */}
             <div className="flex-1 overflow-y-auto p-6 lg:p-8">
-              {/* Main Image with Gallery */}
               <div className="relative aspect-video rounded-2xl overflow-hidden mb-4">
                 <AnimatePresence mode="wait">
                   <motion.img
@@ -189,39 +146,30 @@ Provide a helpful, informative response about this specific project in Russian.`
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     src={project.gallery[selectedImage] || project.image}
-                    alt={project.title}
+                    alt={title}
                     className="w-full h-full object-cover"
                   />
                 </AnimatePresence>
 
                 {project.gallery.length > 1 && (
                   <>
-                    <button
-                      onClick={prevImage}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/80 backdrop-blur flex items-center justify-center text-foreground hover:bg-background transition-colors"
-                    >
+                    <button onClick={prevImage} className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/80 backdrop-blur flex items-center justify-center text-foreground hover:bg-background transition-colors">
                       <ChevronLeft className="w-5 h-5" />
                     </button>
-                    <button
-                      onClick={nextImage}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/80 backdrop-blur flex items-center justify-center text-foreground hover:bg-background transition-colors"
-                    >
+                    <button onClick={nextImage} className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/80 backdrop-blur flex items-center justify-center text-foreground hover:bg-background transition-colors">
                       <ChevronRight className="w-5 h-5" />
                     </button>
                   </>
                 )}
               </div>
 
-              {/* Gallery Thumbnails */}
               {project.gallery.length > 1 && (
                 <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
                   {project.gallery.map((img, index) => (
                     <button
                       key={index}
                       onClick={() => setSelectedImage(index)}
-                      className={`flex-shrink-0 w-20 h-14 rounded-lg overflow-hidden border-2 transition-colors ${
-                        selectedImage === index ? 'border-primary' : 'border-transparent'
-                      }`}
+                      className={`flex-shrink-0 w-20 h-14 rounded-lg overflow-hidden border-2 transition-colors ${selectedImage === index ? 'border-primary' : 'border-transparent'}`}
                     >
                       <img src={img} alt="" className="w-full h-full object-cover" />
                     </button>
@@ -229,24 +177,18 @@ Provide a helpful, informative response about this specific project in Russian.`
                 </div>
               )}
 
-              {/* Project Info */}
               <div className="flex items-center gap-2 text-muted-foreground mb-3">
                 <MapPin className="w-4 h-4" />
-                <span>{project.location}</span>
+                <span>{location}</span>
               </div>
 
-              <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                {project.title}
-              </h2>
+              <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">{title}</h2>
 
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                {project.description}
-              </p>
+              <p className="text-muted-foreground mb-6 leading-relaxed">{description}</p>
 
-              {/* Documents */}
               {project.documents && project.documents.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="font-semibold text-foreground mb-3">Документы</h3>
+                  <h3 className="font-semibold text-foreground mb-3">{t('documents')}</h3>
                   <div className="space-y-2">
                     {project.documents.map((doc, index) => (
                       <a
@@ -264,58 +206,17 @@ Provide a helpful, informative response about this specific project in Russian.`
                   </div>
                 </div>
               )}
-
-              {/* Voting Options */}
-              {project.stage === 'voting' && project.votingOptions && (
-                <div className="mb-6">
-                  <h3 className="font-semibold text-foreground mb-3">Голосуйте за предпочтительный дизайн</h3>
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    {project.votingOptions.map((option) => (
-                      <button
-                        key={option.id}
-                        onClick={() => setSelectedVote(option.id)}
-                        className={`relative rounded-2xl overflow-hidden border-2 transition-all ${
-                          selectedVote === option.id
-                            ? 'border-green-500 ring-2 ring-green-500/20'
-                            : 'border-border hover:border-primary/50'
-                        }`}
-                      >
-                        <div className="aspect-video">
-                          <img src={option.image} alt={option.name} className="w-full h-full object-cover" />
-                        </div>
-                        <div className="p-3">
-                          <p className="font-medium text-foreground text-sm">{option.name}</p>
-                          <p className="text-xs text-muted-foreground">{formatNumber(option.votes)} голосов</p>
-                        </div>
-                        {selectedVote === option.id && (
-                          <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                            <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                          </div>
-                        )}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
 
             {/* Right Column - Sidebar */}
             <div className="w-full lg:w-96 border-t lg:border-t-0 lg:border-l border-border bg-secondary/30 flex flex-col">
               <Tabs defaultValue="info" className="flex flex-col h-full">
                 <TabsList className="w-full justify-start rounded-none border-b border-border bg-transparent p-0">
-                  <TabsTrigger
-                    value="info"
-                    className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-6 py-4"
-                  >
-                    Информация
+                  <TabsTrigger value="info" className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-6 py-4">
+                    {t('info')}
                   </TabsTrigger>
-                  <TabsTrigger
-                    value="ai"
-                    className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-6 py-4"
-                  >
-                    ИИ-помощник
+                  <TabsTrigger value="ai" className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-6 py-4">
+                    {t('aiAssistant')}
                   </TabsTrigger>
                 </TabsList>
 
@@ -323,7 +224,7 @@ Provide a helpful, informative response about this specific project in Russian.`
                   {project.stage === 'sponsorship' && project.budget && (
                     <div className="space-y-4 mb-6">
                       <div className="p-4 rounded-2xl bg-background">
-                        <p className="text-xs text-muted-foreground mb-1">Общий бюджет</p>
+                        <p className="text-xs text-muted-foreground mb-1">{t('totalBudget')}</p>
                         <p className="text-2xl font-bold text-foreground">{formatCurrency(project.budget)}</p>
                       </div>
                       {project.presentationUrl && (
@@ -334,16 +235,9 @@ Provide a helpful, informative response about this specific project in Russian.`
                           className="flex items-center justify-center gap-2 p-3 rounded-xl bg-secondary hover:bg-secondary/80 transition-colors text-foreground font-medium"
                         >
                           <ExternalLink className="w-4 h-4" />
-                          Открыть презентацию
+                          {t('openPresentation')}
                         </a>
                       )}
-                    </div>
-                  )}
-
-                  {project.stage === 'voting' && project.votes && (
-                    <div className="p-4 rounded-2xl bg-background mb-6">
-                      <p className="text-xs text-muted-foreground mb-1">Всего голосов</p>
-                      <p className="text-2xl font-bold text-foreground">{formatNumber(project.votes)}</p>
                     </div>
                   )}
 
@@ -352,41 +246,21 @@ Provide a helpful, informative response about this specific project in Russian.`
                     onClick={() => {
                       if (project.stage === 'sponsorship') onAction(project, 'sponsor');
                       else if (project.stage === 'concept') onAction(project, 'architect');
-                      else if (project.stage === 'voting') onAction(project, 'vote');
                     }}
                   >
-                    {project.stage === 'sponsorship' && 'Стать спонсором'}
-                    {project.stage === 'concept' && 'Подать заявку как архитектор'}
-                    {project.stage === 'voting' && 'Проголосовать'}
+                    {project.stage === 'sponsorship' && t('becomeSponsor')}
+                    {project.stage === 'concept' && t('applyArchitect')}
                   </Button>
                 </TabsContent>
 
                 <TabsContent value="ai" className="flex-1 flex flex-col mt-0 min-h-0">
-                  {/* Chat Messages */}
                   <div className="flex-1 overflow-y-auto p-4 space-y-4">
                     {chatMessages.map((msg, index) => (
-                      <div
-                        key={index}
-                        className={`flex gap-3 ${msg.role === 'user' ? 'flex-row-reverse' : ''}`}
-                      >
-                        <div
-                          className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
-                            msg.role === 'assistant' ? 'bg-primary' : 'bg-secondary'
-                          }`}
-                        >
-                          {msg.role === 'assistant' ? (
-                            <Bot className="w-4 h-4 text-white" />
-                          ) : (
-                            <User className="w-4 h-4 text-foreground" />
-                          )}
+                      <div key={index} className={`flex gap-3 ${msg.role === 'user' ? 'flex-row-reverse' : ''}`}>
+                        <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${msg.role === 'assistant' ? 'bg-primary' : 'bg-secondary'}`}>
+                          {msg.role === 'assistant' ? <Bot className="w-4 h-4 text-white" /> : <User className="w-4 h-4 text-foreground" />}
                         </div>
-                        <div
-                          className={`max-w-[80%] p-3 rounded-2xl text-sm ${
-                            msg.role === 'assistant'
-                              ? 'bg-secondary text-foreground'
-                              : 'bg-primary text-white'
-                          }`}
-                        >
+                        <div className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.role === 'assistant' ? 'bg-secondary text-foreground' : 'bg-primary text-white'}`}>
                           <p className="whitespace-pre-wrap">{msg.content}</p>
                         </div>
                       </div>
@@ -408,14 +282,13 @@ Provide a helpful, informative response about this specific project in Russian.`
                     <div ref={chatEndRef} />
                   </div>
 
-                  {/* Chat Input */}
                   <div className="p-4 border-t border-border">
                     <div className="flex gap-2">
                       <Input
                         value={chatInput}
                         onChange={(e) => setChatInput(e.target.value)}
                         onKeyPress={handleKeyPress}
-                        placeholder="Спросите о проекте..."
+                        placeholder={t('askAboutProject')}
                         className="flex-1 rounded-xl bg-background"
                         disabled={isLoading}
                       />
