@@ -141,6 +141,28 @@ export const projects: Project[] = [
       { id: 'b', name: 'Вариант B: Расширенная инфраструктура', votes: 370, image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80' },
     ],
   },
+  {
+    id: '7',
+    title: 'Yespace',
+    titleAm: 'Yespace',
+    location: 'Перекрёсток Московяна и Баграмяна',
+    locationAm: 'Մoscovyan և Baghramyan խաdelays',
+    description: 'Концепция от TL бюро. Проект благоустройства перекрёстка Московяна и Баграмяна с созданием современного общественного пространства, зелёных зон, пешеходных дорожек и арт-объектов.',
+    descriptionAm: 'TL бюро концеация',
+    stage: 'sponsorship',
+    image: yespace1,
+    gallery: [
+      yespace1,
+      yespace2,
+      yespace3,
+      yespace4,
+    ],
+    budget: 1000000,
+    documents: [
+      { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/15A4pMJA9ZumPqfilrWFYVFLGJt8UEtr4/view?usp=sharing' },
+    ],
+    presentationUrl: 'https://drive.google.com/file/d/15A4pMJA9ZumPqfilrWFYVFLGJt8UEtr4/view?usp=sharing',
+  },
 ];
 
 export const formatCurrency = (amount: number): string => {
