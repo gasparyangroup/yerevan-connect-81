@@ -1,6 +1,10 @@
 import komitas1 from '@/assets/komitas-1.png';
 import komitas2 from '@/assets/komitas-2.png';
 import komitas3 from '@/assets/komitas-3.png';
+import yespace1 from '@/assets/yespace-1.png';
+import yespace2 from '@/assets/yespace-2.png';
+import yespace3 from '@/assets/yespace-3.png';
+import yespace4 from '@/assets/yespace-4.png';
 
 export type ProjectStage = 'sponsorship' | 'concept' | 'voting';
 
