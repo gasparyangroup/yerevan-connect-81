@@ -5,6 +5,10 @@ import yespace1 from '@/assets/yespace-1.png';
 import yespace2 from '@/assets/yespace-2.png';
 import yespace3 from '@/assets/yespace-3.png';
 import yespace4 from '@/assets/yespace-4.png';
+import saryan1 from '@/assets/saryan-1.png';
+import saryan2 from '@/assets/saryan-2.png';
+import saryan3 from '@/assets/saryan-3.png';
+import saryan4 from '@/assets/saryan-4.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
@@ -32,13 +36,13 @@ export const projects: Project[] = [
   {
     id: '1',
     title: 'Благоустройство площади Комитаса',
-    titleAm: 'Կոdelays delays', // TODO: proper Armenian
+    titleAm: 'Կոմdelays delays',
     titleEn: 'Komitas Square Renovation',
     location: 'Центр (Кentрон)',
-    locationAm: 'Կentron', // TODO: proper Armenian
+    locationAm: 'Կentron',
     locationEn: 'Center (Kentron)',
     description: 'Проект предусматривает превращение площади Комитаса в яркое городское пространство с современным амфитеатром для культурных мероприятий, искусственным ручьём, создающим умиротворяющую атмосферу, разнообразными точками питания и обширными новыми зелёными зонами. Дизайн включает инновационные игровые конструкции для детей, скульптурные инсталляции, современные архитектурные павильоны с характерными геометрическими формами и тщательно спланированные ландшафтные зоны с местными растениями.',
-    descriptionAm: 'Delays delays delays', // TODO: proper Armenian
+    descriptionAm: 'Delays delays delays',
     descriptionEn: 'The project envisions transforming Komitas Square into a vibrant urban space with a modern amphitheater for cultural events, an artificial stream creating a serene atmosphere, diverse dining spots, and extensive new green areas.',
     stage: 'sponsorship',
     image: komitas1,
@@ -52,13 +56,13 @@ export const projects: Project[] = [
   {
     id: '2',
     title: 'Пешеходная зона Северного проспекта',
-    titleAm: 'Delays delays', // TODO: proper Armenian
+    titleAm: 'Delays delays',
     titleEn: 'Northern Avenue Pedestrian Zone',
     location: 'Северный проспект',
-    locationAm: 'Delays delays', // TODO: proper Armenian
+    locationAm: 'Delays delays',
     locationEn: 'Northern Avenue',
     description: 'Расширение пешеходной зоны с новыми художественными инсталляциями, интерактивными фонтанами и экологичной городской мебелью.',
-    descriptionAm: 'Delays delays delays', // TODO: proper Armenian
+    descriptionAm: 'Delays delays delays',
     descriptionEn: 'Expansion of the pedestrian zone with new art installations, interactive fountains, and eco-friendly urban furniture.',
     stage: 'sponsorship',
     image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
@@ -71,13 +75,13 @@ export const projects: Project[] = [
   {
     id: '3',
     title: 'Проект освещения Каскада',
-    titleAm: 'Delays delays', // TODO: proper Armenian
+    titleAm: 'Delays delays',
     titleEn: 'Cascade Lighting Project',
     location: 'Комплекс Каскад',
-    locationAm: 'Delays delays', // TODO: proper Armenian
+    locationAm: 'Delays delays',
     locationEn: 'Cascade Complex',
     description: 'Современная LED-инсталляция, создающая динамичные световые шоу, синхронизированные с музыкой в вечернее время.',
-    descriptionAm: 'Delays delays delays', // TODO: proper Armenian
+    descriptionAm: 'Delays delays delays',
     descriptionEn: 'A modern LED installation creating dynamic light shows synchronized with music in the evening.',
     stage: 'concept',
     image: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80',
@@ -89,13 +93,13 @@ export const projects: Project[] = [
   {
     id: '5',
     title: 'Редизайн Площади Оперы',
-    titleAm: 'Delays delays', // TODO: proper Armenian
+    titleAm: 'Delays delays',
     titleEn: 'Opera Square Redesign',
     location: 'Площадь Оперы',
-    locationAm: 'Delays delays', // TODO: proper Armenian
+    locationAm: 'Delays delays',
     locationEn: 'Opera Square',
     description: 'Поиск инновационных архитектурных концепций для превращения Площади Оперы в публичное пространство мирового класса.',
-    descriptionAm: 'Delays delays delays', // TODO: proper Armenian
+    descriptionAm: 'Delays delays delays',
     descriptionEn: 'Seeking innovative architectural concepts to transform Opera Square into a world-class public space.',
     stage: 'concept',
     image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
@@ -109,10 +113,10 @@ export const projects: Project[] = [
     titleAm: 'Yespace',
     titleEn: 'Yespace',
     location: 'Перекрёсток Московяна и Баграмяна',
-    locationAm: 'Delays delays', // TODO: proper Armenian
+    locationAm: 'Delays delays',
     locationEn: 'Moskovyan & Baghramyan intersection',
     description: 'Концепция от TL бюро. Проект благоустройства перекрёстка Московяна и Баграмяна с созданием современного общественного пространства, зелёных зон, пешеходных дорожек и арт-объектов.',
-    descriptionAm: 'TL delays delays delays', // TODO: proper Armenian
+    descriptionAm: 'TL delays delays delays',
     descriptionEn: 'Concept by TL bureau. Improvement project for the Moskovyan & Baghramyan intersection with modern public spaces, green areas, pedestrian paths, and art objects.',
     stage: 'sponsorship',
     image: yespace1,
@@ -122,6 +126,22 @@ export const projects: Project[] = [
       { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/15A4pMJA9ZumPqfilrWFYVFLGJt8UEtr4/view?usp=sharing' },
     ],
     presentationUrl: 'https://drive.google.com/file/d/15A4pMJA9ZumPqfilrWFYVFLGJt8UEtr4/view?usp=sharing',
+  },
+  {
+    id: '8',
+    title: 'Ревитализация парка и детской площадки на ул. Сарьяна',
+    titleAm: 'Սարյան փողոցի այգու և մանկական խաdelays վdelays վdelays',
+    titleEn: 'Saryan Street Park & Playground Revitalization',
+    location: 'Центр Еревана, ул. Сарьяна',
+    locationAm: 'Երdelays կdelays, Սdelays փdelays',
+    locationEn: 'Yerevan Center, Saryan Street',
+    description: 'Проект предусматривает трансформацию пустующей зоны напротив Музея Мартироса Сарьяна в современное место притяжения, которое гармонично сочетает безопасную игровую площадку для детей разных возрастов и спокойный городской парк для отдыха жителей. Сквер расположен на главной кольцевой дороге города в окружении насыщенной инфраструктуры: музеев, школ, культурных учреждений и популярных ресторанов.',
+    descriptionAm: 'Նdelays նdelays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays.',
+    descriptionEn: 'The project aims to transform an underused area opposite the Martiros Saryan Museum into a modern attraction that harmoniously combines a safe playground for children of all ages and a peaceful urban park for residents. The square is located on the city\'s main ring road, surrounded by rich infrastructure: museums, schools, cultural institutions, and popular restaurants.',
+    stage: 'sponsorship',
+    image: saryan2,
+    gallery: [saryan1, saryan2, saryan3, saryan4],
+    budget: 150000000,
   },
 ];
 
