@@ -23,6 +23,12 @@ export interface Project {
   description: string;
   descriptionAm: string;
   descriptionEn: string;
+  problem?: string;
+  problemAm?: string;
+  problemEn?: string;
+  goal?: string;
+  goalAm?: string;
+  goalEn?: string;
   stage: ProjectStage;
   image: string;
   gallery: string[];
@@ -130,14 +136,20 @@ export const projects: Project[] = [
   {
     id: '8',
     title: 'Ревитализация парка и детской площадки на ул. Сарьяна',
-    titleAm: 'Սարյան փողոցի այգու և մանկական խաdelays վdelays վdelays',
+    titleAm: 'Սaryan փողоci այgy և mankakan xaghalategi verakangnowm',
     titleEn: 'Saryan Street Park & Playground Revitalization',
     location: 'Центр Еревана, ул. Сарьяна',
-    locationAm: 'Երdelays կdelays, Սdelays փdelays',
+    locationAm: 'Երевани կentron, Saryan poghoc',
     locationEn: 'Yerevan Center, Saryan Street',
     description: 'Проект предусматривает трансформацию пустующей зоны напротив Музея Мартироса Сарьяна в современное место притяжения, которое гармонично сочетает безопасную игровую площадку для детей разных возрастов и спокойный городской парк для отдыха жителей. Сквер расположен на главной кольцевой дороге города в окружении насыщенной инфраструктуры: музеев, школ, культурных учреждений и популярных ресторанов.',
-    descriptionAm: 'Նdelays նdelays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays.',
+    descriptionAm: 'Նախagicn naxatesoum e datark gotown dimaci Martiros Saryani tangaran-i verapoxel жаманакакиц grayich vayri, vor nermashxarhayin kerpovm hamateghum e tarber tarikhi yerexaneri hamar anapah xaghalateg ev kaghaqi bnakichneri hamar xagagh kaghakayin aygi.',
     descriptionEn: 'The project aims to transform an underused area opposite the Martiros Saryan Museum into a modern attraction that harmoniously combines a safe playground for children of all ages and a peaceful urban park for residents. The square is located on the city\'s main ring road, surrounded by rich infrastructure: museums, schools, cultural institutions, and popular restaurants.',
+    problem: 'Несмотря на выгодное расположение на одной из самых оживленных улиц города, в данный момент пространство не воспринимается как полноценная зона отдыха и имеет ряд урбанистических проблем.',
+    problemAm: 'Չnayats kaghaqi amenaashxuyj poghocnerich meki vra nelyashx teghadrutyun, nerkayoums taratsutyun ch yndunvum ibrev liaznazhor hangsti gotown ev owni mi shark urbanistakan khndirner.',
+    problemEn: 'Despite its prime location on one of the busiest streets in the city, the space is currently not perceived as a proper recreation area and has a number of urban issues.',
+    goal: 'Трансформировать пустующую зону в современное место притяжения, которое гармонично сочетает в себе две функции: безопасную игровую площадку для детей разных возрастов и спокойный городской парк для отдыха жителей.',
+    goalAm: 'Datark gotowny verapoxel жаманакакиц grayich vayri, vor nermashxarhayin kerpovm hamateghum e yerku gortsarruytiwn: tarber tarikhi yerexaneri hamar anapah xaghalateg ev bnakichneri hangsti hamar xagagh kaghakayin aygi.',
+    goalEn: 'Transform the vacant area into a modern attraction that harmoniously combines two functions: a safe playground for children of all ages and a peaceful urban park for residents.',
     stage: 'sponsorship',
     image: saryan2,
     gallery: [saryan1, saryan2, saryan3, saryan4],

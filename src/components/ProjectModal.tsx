@@ -54,6 +54,8 @@ export function ProjectModal({ project, isOpen, onClose, onAction }: ProjectModa
   const title = lang === 'en' ? project.titleEn : lang === 'am' ? project.titleAm : project.title;
   const location = lang === 'en' ? project.locationEn : lang === 'am' ? project.locationAm : project.location;
   const description = lang === 'en' ? project.descriptionEn : lang === 'am' ? project.descriptionAm : project.description;
+  const problem = lang === 'en' ? project.problemEn : lang === 'am' ? project.problemAm : project.problem;
+  const goal = lang === 'en' ? project.goalEn : lang === 'am' ? project.goalAm : project.goal;
 
   const handleAIChat = async (message: string) => {
     if (!message.trim() || isLoading) return;
@@ -185,6 +187,20 @@ export function ProjectModal({ project, isOpen, onClose, onAction }: ProjectModa
               <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">{title}</h2>
 
               <p className="text-muted-foreground mb-6 leading-relaxed">{description}</p>
+
+              {problem && (
+                <div className="mb-4">
+                  <h3 className="font-semibold text-foreground mb-2">{t('problem')}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{problem}</p>
+                </div>
+              )}
+
+              {goal && (
+                <div className="mb-6">
+                  <h3 className="font-semibold text-foreground mb-2">{t('goal')}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{goal}</p>
+                </div>
+              )}
 
               {project.documents && project.documents.length > 0 && (
                 <div className="mb-6">

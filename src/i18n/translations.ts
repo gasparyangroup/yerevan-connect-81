@@ -77,8 +77,10 @@ export const translations: Record<Language, Record<string, string>> = {
     totalBudget: 'Delays delays',
     openPresentation: 'Delays delays',
     documents: 'Delays',
-    askAboutProject: 'Delays delays delays...',
-    aiGreeting: 'Delays! Delays delays delays delays',
+    askAboutProject: 'Հարdelays delays...',
+    aiGreeting: 'Ողdelays! delays delays delays',
+    problem: 'Խdelays',
+    goal: 'Նdelays',
   },
   ru: {
     brandName: 'Мер Ереван',
@@ -149,6 +151,8 @@ export const translations: Record<Language, Record<string, string>> = {
     documents: 'Документы',
     askAboutProject: 'Спросите о проекте...',
     aiGreeting: 'Здравствуйте! Я ваш ИИ-помощник по проекту',
+    problem: 'Проблема',
+    goal: 'Цель проекта',
   },
   en: {
     brandName: 'Mer Yerevan',
@@ -219,6 +223,8 @@ export const translations: Record<Language, Record<string, string>> = {
     documents: 'Documents',
     askAboutProject: 'Ask about the project...',
     aiGreeting: 'Hello! I am your AI assistant for the project',
+    problem: 'Problem',
+    goal: 'Project Goal',
   },
 };
 
