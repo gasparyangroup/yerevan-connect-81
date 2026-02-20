@@ -9,6 +9,11 @@ import saryan1 from '@/assets/saryan-1.png';
 import saryan2 from '@/assets/saryan-2.png';
 import saryan3 from '@/assets/saryan-3.png';
 import saryan4 from '@/assets/saryan-4.png';
+import park2750_1 from '@/assets/park2750-1.png';
+import park2750_2 from '@/assets/park2750-2.png';
+import park2750_3 from '@/assets/park2750-3.png';
+import park2750_4 from '@/assets/park2750-4.png';
+import park2750_5 from '@/assets/park2750-5.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
@@ -61,22 +66,19 @@ export const projects: Project[] = [
   },
   {
     id: '2',
-    title: 'Пешеходная зона Северного проспекта',
-    titleAm: 'Delays delays',
-    titleEn: 'Northern Avenue Pedestrian Zone',
-    location: 'Северный проспект',
-    locationAm: 'Delays delays',
-    locationEn: 'Northern Avenue',
-    description: 'Расширение пешеходной зоны с новыми художественными инсталляциями, интерактивными фонтанами и экологичной городской мебелью.',
-    descriptionAm: 'Delays delays delays',
-    descriptionEn: 'Expansion of the pedestrian zone with new art installations, interactive fountains, and eco-friendly urban furniture.',
+    title: 'Ревитализация парка 2750-летия Еревана',
+    titleAm: 'Երևանի 2750-ամյակի այգու վերակենդdelays',
+    titleEn: '2750th Anniversary Park Revitalization',
+    location: 'Центр Еревана',
+    locationAm: 'Երևdelays կentron',
+    locationEn: 'Yerevan Center',
+    description: 'Этот проект представляет собой современную концепцию ревитализации парка имени 2750-летия Еревана. Основная идея заключается в создании многофункционального, открытого пространства, которое сочетает в себе уважение к истории города и современные архитектурные решения. Данный проект превращает транзитную зону в полноценное общественное пространство. Использование легких металлических или деревянных конструкций для навесов и павильонов придает парку «воздушный» и современный вид, не перегружая исторический центр города.',
+    descriptionAm: 'Այdelay նaxagicn nerkayacnoum e Yerevani 2750-amyaki aygu verakenddanowman жаманакакиц hayecakarg.',
+    descriptionEn: 'This project presents a modern concept for the revitalization of the 2750th Anniversary of Yerevan Park. The main idea is to create a multifunctional, open space that combines respect for the city\'s history with modern architectural solutions. The project transforms a transit zone into a full-fledged public space. The use of lightweight metal or wooden structures for canopies and pavilions gives the park an "airy" and modern look without overwhelming the historic city center.',
     stage: 'sponsorship',
-    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
-      'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80',
-    ],
-    budget: 80000000,
+    image: park2750_2,
+    gallery: [park2750_1, park2750_2, park2750_3, park2750_4, park2750_5],
+    budget: 300000000,
   },
   {
     id: '3',
