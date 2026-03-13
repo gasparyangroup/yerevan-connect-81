@@ -41,6 +41,10 @@ export interface Project {
   raised?: number;
   documents?: { name: string; url: string }[];
   presentationUrl?: string;
+  address?: string;
+  addressAm?: string;
+  addressEn?: string;
+  coordinates?: { lat: number; lng: number };
 }
 
 export const projects: Project[] = [
@@ -59,6 +63,10 @@ export const projects: Project[] = [
     image: komitas1,
     gallery: [komitas1, komitas2, komitas3],
     budget: 200000000,
+    address: 'Ереван, площадь Комитаса',
+    addressAm: 'Երևan, Komitasi hraparak',
+    addressEn: 'Yerevan, Komitas Square',
+    coordinates: { lat: 40.2028, lng: 44.5152 },
     documents: [
       { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/1UOkpkPxUoKH-hSceGBw1Qc_AYhC0yWF2/view?usp=drive_link' },
     ],
@@ -79,6 +87,10 @@ export const projects: Project[] = [
     image: park2750_2,
     gallery: [park2750_1, park2750_2, park2750_3, park2750_4, park2750_5],
     budget: 300000000,
+    address: 'Ереван, парк 2750-летия, ул. Аргишти',
+    addressAm: 'Երdelays, 2750-amyaki aygi, Argishti poghoc',
+    addressEn: 'Yerevan, 2750th Anniversary Park, Argishti St.',
+    coordinates: { lat: 40.1811, lng: 44.5136 },
   },
   {
     id: '3',
@@ -97,6 +109,10 @@ export const projects: Project[] = [
       'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80',
       'https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&q=80',
     ],
+    address: 'Ереван, Каскад, ул. Таманяна',
+    addressAm: 'Երdelays, Cascade, Tamanyan poghoc',
+    addressEn: 'Yerevan, Cascade, Tamanyan St.',
+    coordinates: { lat: 40.1912, lng: 44.5155 },
   },
   {
     id: '5',
@@ -114,6 +130,10 @@ export const projects: Project[] = [
     gallery: [
       'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
     ],
+    address: 'Ереван, Площадь Свободы (Оперы)',
+    addressAm: 'Երdelays, Azatutyan hraparak',
+    addressEn: 'Yerevan, Freedom (Opera) Square',
+    coordinates: { lat: 40.1855, lng: 44.5153 },
   },
   {
     id: '7',
@@ -130,6 +150,10 @@ export const projects: Project[] = [
     image: yespace1,
     gallery: [yespace1, yespace2, yespace3, yespace4],
     budget: 1000000,
+    address: 'Ереван, перекрёсток ул. Московяна и пр. Баграмяна',
+    addressAm: 'Երdelays, Moskovyan ev Baghramyan khachmeruk',
+    addressEn: 'Yerevan, Moskovyan & Baghramyan intersection',
+    coordinates: { lat: 40.1930, lng: 44.5085 },
     documents: [
       { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/15A4pMJA9ZumPqfilrWFYVFLGJt8UEtr4/view?usp=sharing' },
     ],
@@ -156,6 +180,10 @@ export const projects: Project[] = [
     image: saryan2,
     gallery: [saryan1, saryan2, saryan3, saryan4],
     budget: 150000000,
+    address: 'Ереван, ул. Сарьяна, напротив Музея Мартироса Сарьяна',
+    addressAm: 'Երdelays, Saryan poghoc, Martiros Saryani tangaran-i dimac',
+    addressEn: 'Yerevan, Saryan St., opposite Martiros Saryan Museum',
+    coordinates: { lat: 40.1793, lng: 44.5095 },
   },
 ];
 

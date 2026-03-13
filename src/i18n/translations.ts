@@ -81,6 +81,9 @@ export const translations: Record<Language, Record<string, string>> = {
     aiGreeting: 'Ողdelays! delays delays delays',
     problem: 'Խdelays',
     goal: 'Նdelays',
+    mapTitle: 'Ծdelays քdelays',
+    mapSubtitle: 'Delays delays delays delays delays delays',
+    viewOnMap: 'Delays delays',
   },
   ru: {
     brandName: 'Мер Ереван',
@@ -153,6 +156,9 @@ export const translations: Record<Language, Record<string, string>> = {
     aiGreeting: 'Здравствуйте! Я ваш ИИ-помощник по проекту',
     problem: 'Проблема',
     goal: 'Цель проекта',
+    mapTitle: 'Карта проектов',
+    mapSubtitle: 'Нажмите на метку, чтобы узнать больше о проекте',
+    viewOnMap: 'Подробнее',
   },
   en: {
     brandName: 'Mer Yerevan',
@@ -225,6 +231,9 @@ export const translations: Record<Language, Record<string, string>> = {
     aiGreeting: 'Hello! I am your AI assistant for the project',
     problem: 'Problem',
     goal: 'Project Goal',
+    mapTitle: 'Project Map',
+    mapSubtitle: 'Click on a marker to learn more about a project',
+    viewOnMap: 'View Details',
   },
 };
 
