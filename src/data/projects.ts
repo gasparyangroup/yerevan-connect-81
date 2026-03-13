@@ -180,6 +180,10 @@ export const projects: Project[] = [
     image: saryan2,
     gallery: [saryan1, saryan2, saryan3, saryan4],
     budget: 150000000,
+    address: 'Ереван, ул. Сарьяна, напротив Музея Мартироса Сарьяна',
+    addressAm: 'Երdelays, Saryan poghoc, Martiros Saryani tangaran-i dimac',
+    addressEn: 'Yerevan, Saryan St., opposite Martiros Saryan Museum',
+    coordinates: { lat: 40.1793, lng: 44.5095 },
   },
 ];
 
