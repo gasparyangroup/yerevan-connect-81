@@ -81,6 +81,9 @@ export const translations: Record<Language, Record<string, string>> = {
     aiGreeting: 'Ողdelays! delays delays delays',
     problem: 'Խdelays',
     goal: 'Նdelays',
+    mapTitle: 'Ծdelays քdelays',
+    mapSubtitle: 'Delays delays delays delays delays delays',
+    viewOnMap: 'Delays delays',
   },
   ru: {
     brandName: 'Мер Ереван',
