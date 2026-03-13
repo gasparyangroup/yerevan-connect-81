@@ -156,6 +156,9 @@ export const translations: Record<Language, Record<string, string>> = {
     aiGreeting: 'Здравствуйте! Я ваш ИИ-помощник по проекту',
     problem: 'Проблема',
     goal: 'Цель проекта',
+    mapTitle: 'Карта проектов',
+    mapSubtitle: 'Нажмите на метку, чтобы узнать больше о проекте',
+    viewOnMap: 'Подробнее',
   },
   en: {
     brandName: 'Mer Yerevan',
