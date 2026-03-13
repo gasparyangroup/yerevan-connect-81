@@ -63,6 +63,10 @@ export const projects: Project[] = [
     image: komitas1,
     gallery: [komitas1, komitas2, komitas3],
     budget: 200000000,
+    address: 'Ереван, площадь Комитаса',
+    addressAm: 'Երևan, Komitasi hraparak',
+    addressEn: 'Yerevan, Komitas Square',
+    coordinates: { lat: 40.2028, lng: 44.5152 },
     documents: [
       { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/1UOkpkPxUoKH-hSceGBw1Qc_AYhC0yWF2/view?usp=drive_link' },
     ],
