@@ -56,6 +56,11 @@ const Index = () => {
         />
       </div>
 
+      <MapSection
+        projects={projects}
+        onViewDetails={handleViewDetails}
+      />
+
       <Footer />
 
       <ProjectModal

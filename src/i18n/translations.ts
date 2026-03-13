@@ -231,6 +231,9 @@ export const translations: Record<Language, Record<string, string>> = {
     aiGreeting: 'Hello! I am your AI assistant for the project',
     problem: 'Problem',
     goal: 'Project Goal',
+    mapTitle: 'Project Map',
+    mapSubtitle: 'Click on a marker to learn more about a project',
+    viewOnMap: 'View Details',
   },
 };
 
