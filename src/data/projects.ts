@@ -150,6 +150,10 @@ export const projects: Project[] = [
     image: yespace1,
     gallery: [yespace1, yespace2, yespace3, yespace4],
     budget: 1000000,
+    address: 'Ереван, перекрёсток ул. Московяна и пр. Баграмяна',
+    addressAm: 'Երdelays, Moskovyan ev Baghramyan khachmeruk',
+    addressEn: 'Yerevan, Moskovyan & Baghramyan intersection',
+    coordinates: { lat: 40.1930, lng: 44.5085 },
     documents: [
       { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/15A4pMJA9ZumPqfilrWFYVFLGJt8UEtr4/view?usp=sharing' },
     ],
