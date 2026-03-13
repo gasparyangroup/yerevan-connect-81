@@ -109,6 +109,10 @@ export const projects: Project[] = [
       'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80',
       'https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&q=80',
     ],
+    address: 'Ереван, Каскад, ул. Таманяна',
+    addressAm: 'Երdelays, Cascade, Tamanyan poghoc',
+    addressEn: 'Yerevan, Cascade, Tamanyan St.',
+    coordinates: { lat: 40.1912, lng: 44.5155 },
   },
   {
     id: '5',
