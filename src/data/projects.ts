@@ -130,6 +130,10 @@ export const projects: Project[] = [
     gallery: [
       'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
     ],
+    address: 'Ереван, Площадь Свободы (Оперы)',
+    addressAm: 'Երdelays, Azatutyan hraparak',
+    addressEn: 'Yerevan, Freedom (Opera) Square',
+    coordinates: { lat: 40.1855, lng: 44.5153 },
   },
   {
     id: '7',
