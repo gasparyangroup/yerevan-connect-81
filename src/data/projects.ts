@@ -41,6 +41,10 @@ export interface Project {
   raised?: number;
   documents?: { name: string; url: string }[];
   presentationUrl?: string;
+  address?: string;
+  addressAm?: string;
+  addressEn?: string;
+  coordinates?: { lat: number; lng: number };
 }
 
 export const projects: Project[] = [
