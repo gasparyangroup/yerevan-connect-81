@@ -37,6 +37,7 @@ export const translations: Record<Language, Record<string, string>> = {
     namePlaceholder: 'Delays Delays / Delays Delays',
     phonePlaceholder: '+374 XX XXX XXX delays @username',
     send: 'Delays',
+    writeInTelegram: 'Delays Telegram-delays',
     thankYou: 'Delays!',
     weWillContact: 'Delays delays delays delays delays.',
     // Suggestion Modal
