@@ -38,6 +38,9 @@ export interface Project {
   image: string;
   gallery: string[];
   budget?: number;
+  displayBudget?: string;
+  budgetLabel?: string;
+  buttonLabel?: string;
   raised?: number;
   documents?: { name: string; url: string }[];
   presentationUrl?: string;
