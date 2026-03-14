@@ -52,9 +52,7 @@ export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) 
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center shadow-glow">
-              <span className="text-primary-foreground font-bold text-lg">Մ</span>
-            </div>
+            <img src={logoImg} alt="Մer Yerevan" className="w-10 h-10 rounded-xl shadow-glow object-cover" />
             <div className="hidden sm:block">
               <h1 className="font-bold text-lg text-foreground">{t('brandName')}</h1>
               <button
