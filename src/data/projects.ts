@@ -14,6 +14,13 @@ import park2750_2 from '@/assets/park2750-2.png';
 import park2750_3 from '@/assets/park2750-3.png';
 import park2750_4 from '@/assets/park2750-4.png';
 import park2750_5 from '@/assets/park2750-5.png';
+import tpagrichner1 from '@/assets/tpagrichner-1.png';
+import tpagrichner2 from '@/assets/tpagrichner-2.png';
+import tpagrichner3 from '@/assets/tpagrichner-3.png';
+import tpagrichner4 from '@/assets/tpagrichner-4.png';
+import tpagrichner5 from '@/assets/tpagrichner-5.png';
+import tpagrichner6 from '@/assets/tpagrichner-6.png';
+import tpagrichner7 from '@/assets/tpagrichner-7.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
