@@ -173,7 +173,7 @@ export function ProjectModal({ project, isOpen, onClose, onAction }: ProjectModa
                 onClick={() => setSelectedImage(index)}
                 className={`flex-shrink-0 w-20 h-14 rounded-lg overflow-hidden border-2 transition-colors ${selectedImage === index ? 'border-primary' : 'border-transparent'}`}>
                 
-                      <img src={img} alt="" className="w-full h-full object-cover" />
+                      
                     </button>
               )}
                 </div>
