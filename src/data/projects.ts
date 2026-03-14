@@ -210,7 +210,7 @@ export const projects: Project[] = [
     location: 'ул. Тпагричнери 15',
     locationAm: 'Թdelay 15',
     locationEn: 'Tpagrichneri St. 15',
-    description: 'Создание общественной площадки для детей и взрослых.',
+    description: 'Готовый рабочий проект от бюро Miryang общественной площадки для детей и взрослых.',
     descriptionAm: 'Երdelays delays delays',
     descriptionEn: 'Creation of a public area for children and adults.',
     stage: 'sponsorship',
