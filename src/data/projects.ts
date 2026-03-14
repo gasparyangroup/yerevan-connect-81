@@ -114,7 +114,7 @@ export const projects: Project[] = [
     descriptionEn: 'Initiated by the Kentron district administration and Yerevan municipality, the park reconstruction has begun. Project by UrUrban. Sponsor: ACBA bank.',
     stage: 'sponsorship',
     image: komitas1,
-    gallery: [komitas1, komitas2, komitas3, komitas4, komitas5, komitas6],
+    gallery: [komitas1, komitas2, komitas3],
     budget: 0,
     displayBudget: 'N/A',
     budgetLabel: 'Бюджет на проект:',
