@@ -22,6 +22,7 @@ export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t, lang, setLang } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
 
   const navLinks = [
     { id: 'sponsorship', label: t('navSponsorship') },
