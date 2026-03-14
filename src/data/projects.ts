@@ -60,6 +60,10 @@ import republic4 from '@/assets/republic-4.png';
 import republic5 from '@/assets/republic-5.png';
 import republic6 from '@/assets/republic-6.png';
 import republic7 from '@/assets/republic-7.png';
+import kirakosyan1 from '@/assets/kirakosyan-1.png';
+import kirakosyan2 from '@/assets/kirakosyan-2.png';
+import kirakosyan3 from '@/assets/kirakosyan-3.png';
+import kirakosyan4 from '@/assets/kirakosyan-4.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
