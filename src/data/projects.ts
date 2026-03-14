@@ -444,6 +444,27 @@ export const projects: Project[] = [
     coordinates: { lat: 40.180530, lng: 44.528273 },
     presentationUrl: 'https://drive.google.com/file/d/12Lx_0ySvmH1ze0A7t_TAs6fOBh6dQufT/view?usp=sharing',
   },
+  {
+    id: '12',
+    title: 'Карманный парк на ул. Абовяна',
+    titleAm: 'Գրпаնային այգի Աбовяն փողоцum',
+    titleEn: 'Pocket Park on Abovyan Street',
+    location: 'Ереван, ул. Абовяна',
+    locationAm: 'Երևан, Աбовyan փողоц',
+    locationEn: 'Yerevan, Abovyan St.',
+    description: 'Концепт карманного парка от Electric Architects.',
+    descriptionAm: 'Գրпаնային այգու кonцепт Electric Architects-ից:',
+    descriptionEn: 'Pocket park concept by Electric Architects.',
+    stage: 'concept',
+    image: abovyan4,
+    gallery: [abovyan1, abovyan2, abovyan3, abovyan4, abovyan5, abovyan6],
+    budget: 0,
+    displayBudget: 'N/A',
+    address: 'Ереван, ул. Абовяна',
+    addressAm: 'Երևan, Աбовyan փогоц',
+    addressEn: 'Yerevan, Abovyan St.',
+    coordinates: { lat: 40.183910, lng: 44.519329 },
+  },
 ];
 
 export const formatCurrency = (amount: number): string => {
