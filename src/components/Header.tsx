@@ -4,6 +4,7 @@ import { Menu, X, Lightbulb, Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/i18n/LanguageContext';
 import type { Language } from '@/i18n/translations';
+import { useTheme } from '@/hooks/useTheme';
 
 interface HeaderProps {
   onOpenAbout: () => void;
