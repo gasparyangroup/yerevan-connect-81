@@ -1,4 +1,5 @@
 import operaCover from '@/assets/opera-cover.png';
+import moskovyanCover from '@/assets/moskovyan-cover.png';
 import saryanPlot1 from '@/assets/saryan-plot-1.jpg';
 import komitasCover from '@/assets/komitas-cover.png';
 import komitas1 from '@/assets/komitas-1.png';
@@ -368,7 +369,7 @@ export const projects: Project[] = [
     descriptionAm: 'Moskovyan boulvari verakangman hayecakarg Electric Architects-ic',
     descriptionEn: 'Moscow Boulevard reconstruction concept by Electric Architects',
     stage: 'sponsorship',
-    image: moskovyan1,
+    image: moskovyanCover,
     gallery: [moskovyan1, moskovyan2, moskovyan3, moskovyan4, moskovyan5, moskovyan6, moskovyan7],
     displayBudget: 'N/A',
     budgetLabel: 'Бюджет на стройку:',
