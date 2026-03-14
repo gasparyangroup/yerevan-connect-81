@@ -53,6 +53,13 @@ import moskovyan4 from '@/assets/moskovyan-4.png';
 import moskovyan5 from '@/assets/moskovyan-5.png';
 import moskovyan6 from '@/assets/moskovyan-6.png';
 import moskovyan7 from '@/assets/moskovyan-7.png';
+import republic1 from '@/assets/republic-1.png';
+import republic2 from '@/assets/republic-2.png';
+import republic3 from '@/assets/republic-3.png';
+import republic4 from '@/assets/republic-4.png';
+import republic5 from '@/assets/republic-5.png';
+import republic6 from '@/assets/republic-6.png';
+import republic7 from '@/assets/republic-7.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
