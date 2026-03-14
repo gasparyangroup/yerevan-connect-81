@@ -21,6 +21,11 @@ import tpagrichner4 from '@/assets/tpagrichner-4.png';
 import tpagrichner5 from '@/assets/tpagrichner-5.png';
 import tpagrichner6 from '@/assets/tpagrichner-6.png';
 import tpagrichner7 from '@/assets/tpagrichner-7.png';
+import cascade1 from '@/assets/cascade-1.png';
+import cascade2 from '@/assets/cascade-2.png';
+import cascade3 from '@/assets/cascade-3.png';
+import cascade4 from '@/assets/cascade-4.png';
+import cascade5 from '@/assets/cascade-5.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
