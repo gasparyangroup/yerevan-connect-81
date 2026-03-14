@@ -106,7 +106,7 @@ export const translations: Record<Language, Record<string, string>> = {
     budget: 'Бюджет',
     sponsor: 'Спонсировать',
     openForBids: 'Открыто для заявок',
-    iAmArchitect: 'Я архитектор',
+    iAmArchitect: 'Предложить концепт',
     noProjects: 'Пока нет проектов в этой категории.',
     becomeSponsor: 'Стать спонсором',
     applyArchitect: 'Подать заявку как архитектор',
