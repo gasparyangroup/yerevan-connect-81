@@ -155,7 +155,7 @@ export const projects: Project[] = [
     address: 'Ереван, парк 2750-летия, ул. Аргишти',
     addressAm: 'Երdelays, 2750-amyaki aygi, Argishti poghoc',
     addressEn: 'Yerevan, 2750th Anniversary Park, Argishti St.',
-    coordinates: { lat: 40.1811, lng: 44.5136 },
+    coordinates: { lat: 40.177032, lng: 44.511579 },
   },
   {
     id: '3',
