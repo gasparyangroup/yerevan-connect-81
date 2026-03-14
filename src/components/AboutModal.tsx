@@ -51,15 +51,15 @@ export function AboutModal({ isOpen, onClose }: AboutModalProps) {
                 <p>{t('aboutDesc2')}</p>
                 <div className="grid grid-cols-3 gap-4 pt-4">
                   <div className="text-center p-4 rounded-2xl bg-secondary">
-                    <p className="text-2xl font-bold gradient-text">50+</p>
+                    <p className="text-2xl font-bold gradient-text">10+</p>
                     <p className="text-xs text-muted-foreground">{t('projects')}</p>
                   </div>
                   <div className="text-center p-4 rounded-2xl bg-secondary">
-                    <p className="text-2xl font-bold gradient-text">10K+</p>
+                    <p className="text-2xl font-bold gradient-text">100+</p>
                     <p className="text-xs text-muted-foreground">{t('citizens')}</p>
                   </div>
                   <div className="text-center p-4 rounded-2xl bg-secondary">
-                    <p className="text-2xl font-bold gradient-text">₽2B</p>
+                    <p className="text-2xl font-bold gradient-text">100 mln+</p>
                     <p className="text-xs text-muted-foreground">{t('raised')}</p>
                   </div>
                 </div>
