@@ -60,6 +60,10 @@ import republic4 from '@/assets/republic-4.png';
 import republic5 from '@/assets/republic-5.png';
 import republic6 from '@/assets/republic-6.png';
 import republic7 from '@/assets/republic-7.png';
+import kirakosyan1 from '@/assets/kirakosyan-1.png';
+import kirakosyan2 from '@/assets/kirakosyan-2.png';
+import kirakosyan3 from '@/assets/kirakosyan-3.png';
+import kirakosyan4 from '@/assets/kirakosyan-4.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
@@ -415,6 +419,29 @@ export const projects: Project[] = [
     addressEn: 'Yerevan, Republic Square Metro',
     coordinates: { lat: 40.178301, lng: 44.515972 },
     presentationUrl: 'https://drive.google.com/file/d/1J9z3klmBtAiQDYfcAOyn-rWp4PRJGFQ-/view?usp=sharing',
+  },
+  {
+    id: '16',
+    title: 'Реконструкция сквера перед школой им. Киракосяна',
+    titleAm: 'Կիրակdelays',
+    titleEn: 'Reconstruction of the Square near Kirakosyan School',
+    location: 'ул. Чаренца',
+    locationAm: 'Չdelays',
+    locationEn: 'Charents St.',
+    description: 'Концепт сквера у школы им. Киракосяна от Electric Architects.',
+    descriptionAm: 'Կdelays',
+    descriptionEn: 'Square concept near Kirakosyan School by Electric Architects.',
+    stage: 'sponsorship',
+    image: kirakosyan1,
+    gallery: [kirakosyan1, kirakosyan2, kirakosyan3, kirakosyan4],
+    displayBudget: 'N/A',
+    budgetLabel: 'Бюджет:',
+    buttonLabel: 'Стать Спонсором',
+    address: 'Ереван, ул. Чаренца',
+    addressAm: 'Երևdelays',
+    addressEn: 'Yerevan, Charents St.',
+    coordinates: { lat: 40.180530, lng: 44.528273 },
+    presentationUrl: 'https://drive.google.com/file/d/12Lx_0ySvmH1ze0A7t_TAs6fOBh6dQufT/view?usp=sharing',
   },
 ];
 
