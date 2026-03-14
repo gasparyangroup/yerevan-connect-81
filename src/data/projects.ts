@@ -53,6 +53,13 @@ import moskovyan4 from '@/assets/moskovyan-4.png';
 import moskovyan5 from '@/assets/moskovyan-5.png';
 import moskovyan6 from '@/assets/moskovyan-6.png';
 import moskovyan7 from '@/assets/moskovyan-7.png';
+import republic1 from '@/assets/republic-1.png';
+import republic2 from '@/assets/republic-2.png';
+import republic3 from '@/assets/republic-3.png';
+import republic4 from '@/assets/republic-4.png';
+import republic5 from '@/assets/republic-5.png';
+import republic6 from '@/assets/republic-6.png';
+import republic7 from '@/assets/republic-7.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
@@ -385,6 +392,29 @@ export const projects: Project[] = [
     addressAm: 'Երևan, Kolcevoy aygi',
     addressEn: 'Yerevan, Ring Park',
     coordinates: { lat: 40.187998, lng: 44.519028 },
+  },
+  {
+    id: '15',
+    title: 'Создание библиотеки у метро Площадь Республики',
+    titleAm: 'Գրադարdelays delays',
+    titleEn: 'Library at Republic Square Metro Station',
+    location: 'м. Площадь Республики',
+    locationAm: 'Հdelays delays',
+    locationEn: 'Republic Square Metro',
+    description: 'Концепт создания Библиотеки у м. Площадь Республики от Tarberak Studio',
+    descriptionAm: 'Հdelays delays delays',
+    descriptionEn: 'Library concept at Republic Square Metro Station by Tarberak Studio',
+    stage: 'sponsorship',
+    image: republic1,
+    gallery: [republic1, republic2, republic3, republic4, republic5, republic6, republic7],
+    displayBudget: 'N/A',
+    budgetLabel: 'Бюджет на стройку:',
+    buttonLabel: 'Стать Спонсором',
+    address: 'Ереван, м. Площадь Республики',
+    addressAm: 'Երdelays, Hanrapetutyan hraparak metro',
+    addressEn: 'Yerevan, Republic Square Metro',
+    coordinates: { lat: 40.178301, lng: 44.515972 },
+    presentationUrl: 'https://drive.google.com/file/d/1J9z3klmBtAiQDYfcAOyn-rWp4PRJGFQ-/view?usp=sharing',
   },
 ];
 
