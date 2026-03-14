@@ -18,7 +18,7 @@ export function Hero({ activeFilter, onFilterChange }: HeroProps) {
   const animatedTexts = [t('heroAnimated1'), t('heroAnimated2'), t('heroAnimated3'), t('heroAnimated4')];
 
   const filters = [
-    { id: 'sponsorship' as ProjectStage, label: t('navSponsorship'), icon: Building2 },
+    { id: 'sponsorship' as ProjectStage, label: t('navSponsorshipHero'), icon: Building2 },
     { id: 'concept' as ProjectStage, label: t('navConcept'), icon: Palette },
   ];
 
