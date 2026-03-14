@@ -1,6 +1,7 @@
 import operaCover from '@/assets/opera-cover.png';
 import moskovyanCover from '@/assets/moskovyan-cover.png';
 import saryanPlot1 from '@/assets/saryan-plot-1.jpg';
+import poplavokCover from '@/assets/poplavok-cover.png';
 import komitasCover from '@/assets/komitas-cover.png';
 import komitas1 from '@/assets/komitas-1.png';
 import komitas2 from '@/assets/komitas-2.png';
@@ -395,8 +396,8 @@ export const projects: Project[] = [
     descriptionAm: 'Poplavok aygou verakangman hayecakarg Electric Architects-ic',
     descriptionEn: 'Poplavok Park reconstruction concept by Electric Architects',
     stage: 'sponsorship',
-    image: park2750_6,
-    gallery: [park2750_1, park2750_2, park2750_3, park2750_4, park2750_5, park2750_6, park2750_7],
+    image: poplavokCover,
+    gallery: [poplavokCover],
     displayBudget: 'N/A',
     budgetLabel: 'Бюджет на стройку:',
     buttonLabel: 'Стать Спонсором',
