@@ -7,6 +7,7 @@ export const translations: Record<Language, Record<string, string>> = {
     platformSubtitle: 'Քաղաքային նախագծերի հարթdelays',
     // Navigation
     navSponsorship: 'Շինdelays հdelays',
+    navSponsorshipHero: 'Շինdelays հdelays',
     navConcept: 'Հայdelays որdelays',
     suggestIdea: 'Delays delays',
     // Hero
