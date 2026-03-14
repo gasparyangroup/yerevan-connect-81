@@ -65,6 +65,12 @@ import kirakosyan1 from '@/assets/kirakosyan-1.png';
 import kirakosyan2 from '@/assets/kirakosyan-2.png';
 import kirakosyan3 from '@/assets/kirakosyan-3.png';
 import kirakosyan4 from '@/assets/kirakosyan-4.png';
+import abovyan1 from '@/assets/abovyan-1.png';
+import abovyan2 from '@/assets/abovyan-2.png';
+import abovyan3 from '@/assets/abovyan-3.png';
+import abovyan4 from '@/assets/abovyan-4.png';
+import abovyan5 from '@/assets/abovyan-5.png';
+import abovyan6 from '@/assets/abovyan-6.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
