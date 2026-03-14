@@ -1,3 +1,4 @@
+import operaCover from '@/assets/opera-cover.png';
 import komitasCover from '@/assets/komitas-cover.png';
 import komitas1 from '@/assets/komitas-1.png';
 import komitas2 from '@/assets/komitas-2.png';
@@ -182,21 +183,19 @@ export const projects: Project[] = [
     title: 'Редизайн Площади Оперы',
     titleAm: 'Delays delays',
     titleEn: 'Opera Square Redesign',
-    location: 'Площадь Оперы',
-    locationAm: 'Delays delays',
-    locationEn: 'Opera Square',
+    location: 'Площадь Свободы',
+    locationAm: 'Ազdelays',
+    locationEn: 'Freedom Square',
     description: 'Поиск инновационных архитектурных концепций для превращения Площади Оперы в публичное пространство мирового класса.',
     descriptionAm: 'Delays delays delays',
     descriptionEn: 'Seeking innovative architectural concepts to transform Opera Square into a world-class public space.',
     stage: 'concept',
-    image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
-    ],
+    image: operaCover,
+    gallery: [operaCover],
     address: 'Ереван, Площадь Свободы (Оперы)',
     addressAm: 'Երdelays, Azatutyan hraparak',
     addressEn: 'Yerevan, Freedom (Opera) Square',
-    coordinates: { lat: 40.1855, lng: 44.5153 },
+    coordinates: { lat: 40.185328, lng: 44.515046 },
   },
   {
     id: '7',
