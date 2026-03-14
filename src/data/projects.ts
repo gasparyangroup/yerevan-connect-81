@@ -14,6 +14,8 @@ import park2750_2 from '@/assets/park2750-2.png';
 import park2750_3 from '@/assets/park2750-3.png';
 import park2750_4 from '@/assets/park2750-4.png';
 import park2750_5 from '@/assets/park2750-5.png';
+import park2750_6 from '@/assets/park2750-6.png';
+import park2750_7 from '@/assets/park2750-7.png';
 import tpagrichner1 from '@/assets/tpagrichner-1.png';
 import tpagrichner2 from '@/assets/tpagrichner-2.png';
 import tpagrichner3 from '@/assets/tpagrichner-3.png';
@@ -361,6 +363,28 @@ export const projects: Project[] = [
       { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/1wFCINSVdMH4-nfuzAzWguiycA32M1thP/view?usp=sharing' },
     ],
     presentationUrl: 'https://drive.google.com/file/d/1wFCINSVdMH4-nfuzAzWguiycA32M1thP/view?usp=sharing',
+  },
+  {
+    id: '14',
+    title: 'Реконструкция парка Поплавок',
+    titleAm: 'Պoպлавок այգու վерակonstrukcia',
+    titleEn: 'Poplavok Park Reconstruction',
+    location: 'Ереван, Кольцевой парк',
+    locationAm: 'Երևan, Kolcevoy aygi',
+    locationEn: 'Yerevan, Ring Park',
+    description: 'Концепт реконструкции парка Поплавок от Electric Architects',
+    descriptionAm: 'Poplavok aygou verakangman hayecakarg Electric Architects-ic',
+    descriptionEn: 'Poplavok Park reconstruction concept by Electric Architects',
+    stage: 'sponsorship',
+    image: park2750_6,
+    gallery: [park2750_1, park2750_2, park2750_3, park2750_4, park2750_5, park2750_6, park2750_7],
+    displayBudget: 'N/A',
+    budgetLabel: 'Бюджет на стройку:',
+    buttonLabel: 'Стать Спонсором',
+    address: 'Ереван, Кольцевой парк',
+    addressAm: 'Երևan, Kolcevoy aygi',
+    addressEn: 'Yerevan, Ring Park',
+    coordinates: { lat: 40.187998, lng: 44.519028 },
   },
 ];
 
