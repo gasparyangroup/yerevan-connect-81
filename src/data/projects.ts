@@ -44,6 +44,13 @@ import puppet6 from '@/assets/puppet-6.png';
 import puppet7 from '@/assets/puppet-7.png';
 import puppet8 from '@/assets/puppet-8.png';
 import puppet9 from '@/assets/puppet-9.png';
+import moskovyan1 from '@/assets/moskovyan-1.png';
+import moskovyan2 from '@/assets/moskovyan-2.png';
+import moskovyan3 from '@/assets/moskovyan-3.png';
+import moskovyan4 from '@/assets/moskovyan-4.png';
+import moskovyan5 from '@/assets/moskovyan-5.png';
+import moskovyan6 from '@/assets/moskovyan-6.png';
+import moskovyan7 from '@/assets/moskovyan-7.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
