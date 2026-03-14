@@ -7,6 +7,7 @@ export const translations: Record<Language, Record<string, string>> = {
     platformSubtitle: 'Քաղաքային նախագծերի հարթdelays',
     // Navigation
     navSponsorship: 'Շինdelays հdelays',
+    navSponsorshipHero: 'Շինdelays հdelays',
     navConcept: 'Հայdelays որdelays',
     suggestIdea: 'Delays delays',
     // Hero
@@ -86,13 +87,14 @@ export const translations: Record<Language, Record<string, string>> = {
     viewOnMap: 'Delays delays',
   },
   ru: {
-    brandName: 'Мер Ереван',
+    brandName: 'Наш Ереван',
     platformSubtitle: 'Платформа городских проектов',
-    navSponsorship: 'Спонсорство строительства',
+    navSponsorship: 'Поиск спонсора ',
+    navSponsorshipHero: 'Поиск спонсоров',
     navConcept: 'Поиск концепции',
     suggestIdea: 'Предложить идею',
     heroTitle: 'Строим город',
-    heroSubtitle: 'Присоединяйтесь к тысячам граждан в формировании будущего Еревана. Финансируйте проекты и наблюдайте за преображением города.',
+    heroSubtitle: 'Предлагаем идеи. Выбираем концепции. Привлекаем спонсоров. Наблюдаем за преображением нашего города.',
     heroAnimated1: 'нашей мечты',
     heroAnimated2: 'для людей',
     heroAnimated3: 'вместе',
@@ -164,6 +166,7 @@ export const translations: Record<Language, Record<string, string>> = {
     brandName: 'Mer Yerevan',
     platformSubtitle: 'Urban Projects Platform',
     navSponsorship: 'Construction Sponsorship',
+    navSponsorshipHero: 'Construction Sponsorship',
     navConcept: 'Concept Search',
     suggestIdea: 'Suggest an Idea',
     heroTitle: 'Building the city',
