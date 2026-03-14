@@ -118,6 +118,7 @@ export const translations: Record<Language, Record<string, string>> = {
     namePlaceholder: 'Иван Иванов / ООО Компания',
     phonePlaceholder: '+374 XX XXX XXX или @username',
     send: 'Отправить',
+    writeInTelegram: 'Написать в Telegram',
     thankYou: 'Спасибо!',
     weWillContact: 'Мы получили вашу информацию и скоро свяжемся с вами.',
     suggestTitle: 'Предложить идею',
