@@ -24,7 +24,7 @@ export const translations: Record<Language, Record<string, string>> = {
     budget: 'Delays',
     sponsor: 'Delays',
     openForBids: 'Delays delays delays',
-    iAmArchitect: 'Delays delays',
+    iAmArchitect: 'Առաջարկել կոնցեպտ',
     noProjects: 'Delays delays delays delays delays.',
     // Contact Modal
     becomeSponsor: 'Delays delays',
