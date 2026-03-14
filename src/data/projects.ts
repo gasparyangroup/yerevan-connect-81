@@ -178,6 +178,7 @@ export const projects: Project[] = [
     descriptionAm: 'Delays delays delays',
     descriptionEn: 'A modern LED installation creating dynamic light shows synchronized with music in the evening.',
     stage: 'concept',
+    buttonLabel: 'Предложить',
     image: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80',
