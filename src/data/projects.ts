@@ -44,6 +44,13 @@ import puppet6 from '@/assets/puppet-6.png';
 import puppet7 from '@/assets/puppet-7.png';
 import puppet8 from '@/assets/puppet-8.png';
 import puppet9 from '@/assets/puppet-9.png';
+import moskovyan1 from '@/assets/moskovyan-1.png';
+import moskovyan2 from '@/assets/moskovyan-2.png';
+import moskovyan3 from '@/assets/moskovyan-3.png';
+import moskovyan4 from '@/assets/moskovyan-4.png';
+import moskovyan5 from '@/assets/moskovyan-5.png';
+import moskovyan6 from '@/assets/moskovyan-6.png';
+import moskovyan7 from '@/assets/moskovyan-7.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
@@ -328,6 +335,32 @@ export const projects: Project[] = [
       { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/1hY5oHWQokUoEcqpF6u50kQKokIRGUTrQ/view?usp=sharing' },
     ],
     presentationUrl: 'https://drive.google.com/file/d/1hY5oHWQokUoEcqpF6u50kQKokIRGUTrQ/view?usp=sharing',
+  },
+  {
+    id: '13',
+    title: 'Реконструкция парка Московян',
+    titleAm: 'Մoskovyan այгու վերակonstrukcia',
+    titleEn: 'Moskovyan Park Reconstruction',
+    location: 'ул. Геворга Кочара',
+    locationAm: 'Gevorg Kochar poghoc',
+    locationEn: 'Gevorg Kochar St.',
+    description: 'Концепт реконструкции Московского Бульвара от Electric Architects',
+    descriptionAm: 'Moskovyan boulvari verakangman hayecakarg Electric Architects-ic',
+    descriptionEn: 'Moscow Boulevard reconstruction concept by Electric Architects',
+    stage: 'sponsorship',
+    image: moskovyan1,
+    gallery: [moskovyan1, moskovyan2, moskovyan3, moskovyan4, moskovyan5, moskovyan6, moskovyan7],
+    displayBudget: 'N/A',
+    budgetLabel: 'Бюджет на стройку:',
+    buttonLabel: 'Спонсор найден',
+    address: 'Ереван, ул. Геворга Кочара',
+    addressAm: 'Երևan, Gevorg Kochar poghoc',
+    addressEn: 'Yerevan, Gevorg Kochar St.',
+    coordinates: { lat: 40.189295, lng: 44.520153 },
+    documents: [
+      { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/1wFCINSVdMH4-nfuzAzWguiycA32M1thP/view?usp=sharing' },
+    ],
+    presentationUrl: 'https://drive.google.com/file/d/1wFCINSVdMH4-nfuzAzWguiycA32M1thP/view?usp=sharing',
   },
 ];
 
