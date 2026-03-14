@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Lightbulb, Globe } from 'lucide-react';
+import { Menu, X, Lightbulb, Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/i18n/LanguageContext';
 import type { Language } from '@/i18n/translations';
+import { useTheme } from '@/hooks/useTheme';
 
 interface HeaderProps {
   onOpenAbout: () => void;
@@ -21,6 +22,7 @@ export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t, lang, setLang } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
 
   const navLinks = [
     { id: 'sponsorship', label: t('navSponsorship') },
@@ -95,6 +97,15 @@ export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) 
                 </button>
               ))}
             </div>
+
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-secondary text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
+            </button>
 
             {/* Suggest Button */}
             <Button
