@@ -166,6 +166,7 @@ export const translations: Record<Language, Record<string, string>> = {
     brandName: 'Mer Yerevan',
     platformSubtitle: 'Urban Projects Platform',
     navSponsorship: 'Construction Sponsorship',
+    navSponsorshipHero: 'Construction Sponsorship',
     navConcept: 'Concept Search',
     suggestIdea: 'Suggest an Idea',
     heroTitle: 'Building the city',
