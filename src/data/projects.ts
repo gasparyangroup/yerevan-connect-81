@@ -26,6 +26,15 @@ import cascade2 from '@/assets/cascade-2.png';
 import cascade3 from '@/assets/cascade-3.png';
 import cascade4 from '@/assets/cascade-4.png';
 import cascade5 from '@/assets/cascade-5.png';
+import razdan1 from '@/assets/razdan-1.png';
+import razdan2 from '@/assets/razdan-2.png';
+import razdan3 from '@/assets/razdan-3.png';
+import razdan4 from '@/assets/razdan-4.png';
+import razdan5 from '@/assets/razdan-5.png';
+import razdan6 from '@/assets/razdan-6.png';
+import razdan7 from '@/assets/razdan-7.png';
+import razdan8 from '@/assets/razdan-8.png';
+import razdan9 from '@/assets/razdan-9.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
@@ -258,6 +267,32 @@ export const projects: Project[] = [
       { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/1-sNJXLXnRNL4VJqT6CL0ujkgwMhKBag4/view?usp=sharing' },
     ],
     presentationUrl: 'https://drive.google.com/file/d/1-sNJXLXnRNL4VJqT6CL0ujkgwMhKBag4/view?usp=sharing',
+  },
+  {
+    id: '11',
+    title: 'Создание парка Раздан',
+    titleAm: 'Ռազդան այգու ստեղծում',
+    titleEn: 'Razdan Park Creation',
+    location: 'Разданское ущелье',
+    locationAm: 'Ռazdan kirandzav',
+    locationEn: 'Razdan Gorge',
+    description: 'Концепт создания парка у Разданского ущелья от Proforma Studio',
+    descriptionAm: 'Ռazdan kirandzavi mot aygu steghtsman hayecakarg Proforma Studio-ic',
+    descriptionEn: 'Park creation concept at Razdan Gorge by Proforma Studio',
+    stage: 'sponsorship',
+    image: razdan1,
+    gallery: [razdan1, razdan2, razdan3, razdan4, razdan5, razdan6, razdan7, razdan8, razdan9],
+    displayBudget: 'N/A',
+    budgetLabel: 'Бюджет на стройку:',
+    buttonLabel: 'Стать Спонсором',
+    address: 'Ереван, Разданское ущелье',
+    addressAm: 'Երևan, Razdan kirandzav',
+    addressEn: 'Yerevan, Razdan Gorge',
+    coordinates: { lat: 40.177166, lng: 44.501214 },
+    documents: [
+      { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/1VCRlCnSR5yNLUdG6xysW6oOY9uqbCUPv/view?usp=sharing' },
+    ],
+    presentationUrl: 'https://drive.google.com/file/d/1VCRlCnSR5yNLUdG6xysW6oOY9uqbCUPv/view?usp=sharing',
   },
 ];
 
