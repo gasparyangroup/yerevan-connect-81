@@ -404,7 +404,7 @@ export const projects: Project[] = [
     descriptionEn: 'Poplavok Park reconstruction concept by Electric Architects',
     stage: 'sponsorship',
     image: poplavokCover,
-    gallery: [poplavokCover],
+    gallery: [poplavokCover, poplavok1, poplavok2, poplavok3, poplavok4, poplavok5, poplavok6, poplavok7],
     displayBudget: 'N/A',
     budgetLabel: 'Бюджет на стройку:',
     buttonLabel: 'Стать Спонсором',
