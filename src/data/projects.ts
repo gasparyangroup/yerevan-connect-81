@@ -1,3 +1,4 @@
+import komitasCover from '@/assets/komitas-cover.png';
 import komitas1 from '@/assets/komitas-1.png';
 import komitas2 from '@/assets/komitas-2.png';
 import komitas3 from '@/assets/komitas-3.png';
