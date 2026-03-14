@@ -1,4 +1,5 @@
 import operaCover from '@/assets/opera-cover.png';
+import saryanPlot1 from '@/assets/saryan-plot-1.jpg';
 import komitasCover from '@/assets/komitas-cover.png';
 import komitas1 from '@/assets/komitas-1.png';
 import komitas2 from '@/assets/komitas-2.png';
@@ -469,6 +470,27 @@ export const projects: Project[] = [
     addressAm: 'Երևan, Աбовyan փогоц',
     addressEn: 'Yerevan, Abovyan St.',
     coordinates: { lat: 40.183910, lng: 44.519329 },
+  },
+  {
+    id: '13',
+    title: 'Пятачок Сарьяна',
+    titleAm: 'Սարyan փողоцի հրապարակик',
+    titleEn: 'Saryan Street Plot',
+    location: 'ул. Сарьяна',
+    locationAm: 'Սարyan փողоц',
+    locationEn: 'Saryan St.',
+    description: 'Поиск концепции для освобожденного участка на ул. Сарьяна.',
+    descriptionAm: 'Սարyan փողоцում ազատված տարածադրի համар кonцепции որоnум:',
+    descriptionEn: 'Concept search for a cleared plot on Saryan Street.',
+    stage: 'concept',
+    image: saryanPlot1,
+    gallery: [saryanPlot1],
+    budget: 0,
+    displayBudget: 'N/A',
+    address: 'Ереван, ул. Сарьяна',
+    addressAm: 'Երևan, Սարyan փողоц',
+    addressEn: 'Yerevan, Saryan St.',
+    coordinates: { lat: 40.183238, lng: 44.504611 },
   },
 ];
 
