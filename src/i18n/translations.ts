@@ -37,6 +37,7 @@ export const translations: Record<Language, Record<string, string>> = {
     namePlaceholder: 'Delays Delays / Delays Delays',
     phonePlaceholder: '+374 XX XXX XXX delays @username',
     send: 'Delays',
+    writeInTelegram: 'Delays Telegram-delays',
     thankYou: 'Delays!',
     weWillContact: 'Delays delays delays delays delays.',
     // Suggestion Modal
@@ -117,6 +118,7 @@ export const translations: Record<Language, Record<string, string>> = {
     namePlaceholder: 'Иван Иванов / ООО Компания',
     phonePlaceholder: '+374 XX XXX XXX или @username',
     send: 'Отправить',
+    writeInTelegram: 'Написать в Telegram',
     thankYou: 'Спасибо!',
     weWillContact: 'Мы получили вашу информацию и скоро свяжемся с вами.',
     suggestTitle: 'Предложить идею',
@@ -193,6 +195,7 @@ export const translations: Record<Language, Record<string, string>> = {
     namePlaceholder: 'John Doe / Company LLC',
     phonePlaceholder: '+374 XX XXX XXX or @username',
     send: 'Submit',
+    writeInTelegram: 'Write in Telegram',
     thankYou: 'Thank you!',
     weWillContact: 'We received your information and will contact you soon.',
     suggestTitle: 'Suggest an Idea',
