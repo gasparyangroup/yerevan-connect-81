@@ -67,9 +67,13 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
           {project.stage === 'sponsorship' && project.budget && (
             <div className="flex items-center justify-between">
               <div className="text-sm">
-                <span className="text-muted-foreground">{t('budget')}: </span>
+                <span className="text-muted-foreground">
+                  {project.budgetLabel || t('budget')}:{" "}
+                </span>
                 <span className="font-semibold text-foreground">
-                  {formatCurrency(project.budget)}
+                  {project.displayBudget !== undefined
+                    ? project.displayBudget
+                    : formatCurrency(project.budget)}
                 </span>
               </div>
               <Button
@@ -80,7 +84,7 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
                   onAction(project, 'sponsor');
                 }}
               >
-                {t('sponsor')}
+                {project.buttonLabel || t('sponsor')}
               </Button>
             </div>
           )}

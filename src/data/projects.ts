@@ -38,6 +38,9 @@ export interface Project {
   image: string;
   gallery: string[];
   budget?: number;
+  displayBudget?: string;
+  budgetLabel?: string;
+  buttonLabel?: string;
   raised?: number;
   documents?: { name: string; url: string }[];
   presentationUrl?: string;
@@ -56,13 +59,16 @@ export const projects: Project[] = [
     location: 'Центр Еревана',
     locationAm: 'Կentron',
     locationEn: 'Center (Kentron)',
-    description: 'Проект предусматривает превращение площади Комитаса в яркое городское пространство с современным амфитеатром для культурных мероприятий, искусственным ручьём, создающим умиротворяющую атмосферу, разнообразными точками питания и обширными новыми зелёными зонами. Дизайн включает инновационные игровые конструкции для детей, скульптурные инсталляции, современные архитектурные павильоны с характерными геометрическими формами и тщательно спланированные ландшафтные зоны с местными растениями.',
+    description: 'Проект от UrUrban предусматривает превращение площади Комитаса в яркое городское пространство с современным амфитеатром для культурных мероприятий, искусственным ручьём, создающим умиротворяющую атмосферу, разнообразными точками питания и обширными новыми зелёными зонами. Дизайн включает инновационные игровые конструкции для детей, скульптурные инсталляции, современные архитектурные павильоны с характерными геометрическими формами и тщательно спланированные ландшафтные зоны с местными растениями.',
     descriptionAm: 'Delays delays delays',
     descriptionEn: 'The project envisions transforming Komitas Square into a vibrant urban space with a modern amphitheater for cultural events, an artificial stream creating a serene atmosphere, diverse dining spots, and extensive new green areas.',
     stage: 'sponsorship',
     image: komitas1,
     gallery: [komitas1, komitas2, komitas3],
     budget: 200000000,
+    displayBudget: 'N/A',
+    budgetLabel: 'Бюджет на проект:',
+    buttonLabel: 'Спонсор найден',
     address: 'Ереван, площадь Комитаса',
     addressAm: 'Երևan, Komitasi hraparak',
     addressEn: 'Yerevan, Komitas Square',
@@ -150,6 +156,7 @@ export const projects: Project[] = [
     image: yespace1,
     gallery: [yespace1, yespace2, yespace3, yespace4],
     budget: 1000000,
+    buttonLabel: 'Стать Спонсором',
     address: 'Ереван, перекрёсток ул. Московяна и пр. Баграмяна',
     addressAm: 'Երdelays, Moskovyan ev Baghramyan khachmeruk',
     addressEn: 'Yerevan, Moskovyan & Baghramyan intersection',
@@ -180,6 +187,9 @@ export const projects: Project[] = [
     image: saryan2,
     gallery: [saryan1, saryan2, saryan3, saryan4],
     budget: 150000000,
+    displayBudget: '',
+    budgetLabel: 'Бюджет на стройку:',
+    buttonLabel: 'Спонсор найден',
     address: 'Ереван, ул. Сарьяна, напротив Музея Мартироса Сарьяна',
     addressAm: 'Երdelays, Saryan poghoc, Martiros Saryani tangaran-i dimac',
     addressEn: 'Yerevan, Saryan St., opposite Martiros Saryan Museum',
