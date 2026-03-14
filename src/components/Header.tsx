@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import logoImg from '@/assets/logo.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Lightbulb, Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
