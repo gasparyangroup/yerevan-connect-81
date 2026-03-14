@@ -202,6 +202,32 @@ export const projects: Project[] = [
     addressEn: 'Yerevan, Saryan St., opposite Martiros Saryan Museum',
     coordinates: { lat: 40.1793, lng: 44.5095 },
   },
+  {
+    id: '9',
+    title: 'Реконструкция двора ул. Тпагричнери 15',
+    titleAm: 'Թdelays delays',
+    titleEn: 'Courtyard Reconstruction at Tpagrichneri 15',
+    location: 'ул. Тпагричнери 15',
+    locationAm: 'Թdelay 15',
+    locationEn: 'Tpagrichneri St. 15',
+    description: 'Создание общественной площадки для детей и взрослых.',
+    descriptionAm: 'Երdelays delays delays',
+    descriptionEn: 'Creation of a public area for children and adults.',
+    stage: 'sponsorship',
+    image: tpagrichner2,
+    gallery: [tpagrichner1, tpagrichner2, tpagrichner3, tpagrichner4, tpagrichner5, tpagrichner6, tpagrichner7],
+    budget: 75000000,
+    budgetLabel: 'Бюджет на стройку:',
+    buttonLabel: 'Стать Спонсором',
+    address: 'Ереван, ул. Тпагричнери 15',
+    addressAm: 'Երdelays, Tpagrichneri 15',
+    addressEn: 'Yerevan, Tpagrichneri St. 15',
+    coordinates: { lat: 40.177382, lng: 44.521778 },
+    documents: [
+      { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/1TXaApSoEGvjgK9KUjvTzRUiOE55YPX5s/view?usp=sharing' },
+    ],
+    presentationUrl: 'https://drive.google.com/file/d/1TXaApSoEGvjgK9KUjvTzRUiOE55YPX5s/view?usp=sharing',
+  },
 ];
 
 export const formatCurrency = (amount: number): string => {
