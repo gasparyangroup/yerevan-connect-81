@@ -461,7 +461,7 @@ export const projects: Project[] = [
     description: 'Концепт карманного парка от Electric Architects.',
     descriptionAm: 'Գրпаնային այգու кonцепт Electric Architects-ից:',
     descriptionEn: 'Pocket park concept by Electric Architects.',
-    stage: 'concept',
+    stage: 'sponsorship',
     image: abovyan4,
     gallery: [abovyan1, abovyan2, abovyan3, abovyan4, abovyan5, abovyan6],
     budget: 0,
