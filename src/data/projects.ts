@@ -303,6 +303,32 @@ export const projects: Project[] = [
     ],
     presentationUrl: 'https://drive.google.com/file/d/1VCRlCnSR5yNLUdG6xysW6oOY9uqbCUPv/view?usp=sharing',
   },
+  {
+    id: '12',
+    title: 'Реконструкция двора Кукольного Театра',
+    titleAm: 'Տիкнիкаyin tatroni baki verakangnowm',
+    titleEn: 'Puppet Theater Courtyard Reconstruction',
+    location: 'пр. Саят-Новы 6',
+    locationAm: 'Sayat-Novi 6',
+    locationEn: 'Sayat-Nova Ave. 6',
+    description: 'Концепт реконструкции двора от Suyn Agency',
+    descriptionAm: 'Baki verakangman hayecakarg Suyn Agency-ic',
+    descriptionEn: 'Courtyard reconstruction concept by Suyn Agency',
+    stage: 'sponsorship',
+    image: puppet1,
+    gallery: [puppet1, puppet2, puppet3, puppet4, puppet5, puppet6, puppet7, puppet8, puppet9],
+    budget: 1000000,
+    budgetLabel: 'Бюджет на проектирование:',
+    buttonLabel: 'Стать Спонсором',
+    address: 'Ереван, пр. Саят-Новы 6',
+    addressAm: 'Երևan, Sayat-Novi 6',
+    addressEn: 'Yerevan, Sayat-Nova Ave. 6',
+    coordinates: { lat: 40.183654, lng: 44.517993 },
+    documents: [
+      { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/1hY5oHWQokUoEcqpF6u50kQKokIRGUTrQ/view?usp=sharing' },
+    ],
+    presentationUrl: 'https://drive.google.com/file/d/1hY5oHWQokUoEcqpF6u50kQKokIRGUTrQ/view?usp=sharing',
+  },
 ];
 
 export const formatCurrency = (amount: number): string => {
