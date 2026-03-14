@@ -1,3 +1,4 @@
+import komitasCover from '@/assets/komitas-cover.png';
 import komitas1 from '@/assets/komitas-1.png';
 import komitas2 from '@/assets/komitas-2.png';
 import komitas3 from '@/assets/komitas-3.png';
@@ -113,8 +114,8 @@ export const projects: Project[] = [
     descriptionAm: 'Կentronի վdelays delays delays',
     descriptionEn: 'Initiated by the Kentron district administration and Yerevan municipality, the park reconstruction has begun. Project by UrUrban. Sponsor: ACBA bank.',
     stage: 'sponsorship',
-    image: komitas1,
-    gallery: [komitas1, komitas2, komitas3],
+    image: komitasCover,
+    gallery: [komitasCover, komitas1, komitas2, komitas3],
     budget: 0,
     displayBudget: 'N/A',
     budgetLabel: 'Бюджет на проект:',
