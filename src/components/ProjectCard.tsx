@@ -64,7 +64,7 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
         </p>
 
         <div className="pt-4 border-t border-border">
-          {project.stage === 'sponsorship' && project.budget && (
+          {project.stage === 'sponsorship' && (project.budget || project.displayBudget !== undefined) && (
             <div className="flex items-center justify-between">
               <div className="text-sm">
                 <span className="text-muted-foreground">
