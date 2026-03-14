@@ -78,7 +78,7 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
               </div>
               <Button
                 size="sm"
-                className="btn-gradient rounded-xl"
+                className={`rounded-xl ${project.buttonLabel === 'Спонсор найден' ? 'bg-emerald-600 hover:bg-emerald-700 text-white' : 'btn-gradient'}`}
                 onClick={(e) => {
                   e.stopPropagation();
                   onAction(project, 'sponsor');
