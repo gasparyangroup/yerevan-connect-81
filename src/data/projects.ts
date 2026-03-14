@@ -268,6 +268,32 @@ export const projects: Project[] = [
     ],
     presentationUrl: 'https://drive.google.com/file/d/1-sNJXLXnRNL4VJqT6CL0ujkgwMhKBag4/view?usp=sharing',
   },
+  {
+    id: '11',
+    title: 'Создание парка Раздан',
+    titleAm: 'Ռազդան այգու ստեղծում',
+    titleEn: 'Razdan Park Creation',
+    location: 'Разданское ущелье',
+    locationAm: 'Ռazdan kirandzav',
+    locationEn: 'Razdan Gorge',
+    description: 'Концепт создания парка у Разданского ущелья от Proforma Studio',
+    descriptionAm: 'Ռazdan kirandzavi mot aygu steghtsman hayecakarg Proforma Studio-ic',
+    descriptionEn: 'Park creation concept at Razdan Gorge by Proforma Studio',
+    stage: 'sponsorship',
+    image: razdan1,
+    gallery: [razdan1, razdan2, razdan3, razdan4, razdan5, razdan6, razdan7, razdan8, razdan9],
+    displayBudget: 'N/A',
+    budgetLabel: 'Бюджет на стройку:',
+    buttonLabel: 'Стать Спонсором',
+    address: 'Ереван, Разданское ущелье',
+    addressAm: 'Երևan, Razdan kirandzav',
+    addressEn: 'Yerevan, Razdan Gorge',
+    coordinates: { lat: 40.177166, lng: 44.501214 },
+    documents: [
+      { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/1VCRlCnSR5yNLUdG6xysW6oOY9uqbCUPv/view?usp=sharing' },
+    ],
+    presentationUrl: 'https://drive.google.com/file/d/1VCRlCnSR5yNLUdG6xysW6oOY9uqbCUPv/view?usp=sharing',
+  },
 ];
 
 export const formatCurrency = (amount: number): string => {
