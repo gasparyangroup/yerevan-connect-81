@@ -1,4 +1,5 @@
 import operaCover from '@/assets/opera-cover.png';
+import moskovyanCover from '@/assets/moskovyan-cover.png';
 import saryanPlot1 from '@/assets/saryan-plot-1.jpg';
 import komitasCover from '@/assets/komitas-cover.png';
 import komitas1 from '@/assets/komitas-1.png';
