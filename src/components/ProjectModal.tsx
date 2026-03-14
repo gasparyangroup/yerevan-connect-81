@@ -1,26 +1,10 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, MapPin, FileText, ExternalLink, ChevronLeft, ChevronRight, Send, Bot, User } from 'lucide-react';
+import { X, MapPin, FileText, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Input } from '@/components/ui/input';
 import { useLanguage } from '@/i18n/LanguageContext';
 import type { Project } from '@/data/projects';
 import { formatCurrency } from '@/data/projects';
-
-interface ProjectModalProps {
-  project: Project | null;
-  isOpen: boolean;
-  onClose: () => void;
-  onAction: (project: Project, action: 'sponsor' | 'architect') => void;
-}
-
-const apiKey = '';
-
-interface ChatMessage {
-  role: 'user' | 'assistant';
-  content: string;
-}
 
 export function ProjectModal({ project, isOpen, onClose, onAction }: ProjectModalProps) {
   const [selectedImage, setSelectedImage] = useState(0);
