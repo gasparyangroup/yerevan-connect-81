@@ -217,7 +217,7 @@ export const projects: Project[] = [
     address: 'Ереван, перекрёсток ул. Московяна и пр. Баграмяна',
     addressAm: 'Երdelays, Moskovyan ev Baghramyan khachmeruk',
     addressEn: 'Yerevan, Moskovyan & Baghramyan intersection',
-    coordinates: { lat: 40.1930, lng: 44.5085 },
+    coordinates: { lat: 40.188448, lng: 44.513771 },
     documents: [
       { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/15A4pMJA9ZumPqfilrWFYVFLGJt8UEtr4/view?usp=sharing' },
     ],
