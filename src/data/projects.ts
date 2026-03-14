@@ -35,6 +35,15 @@ import razdan6 from '@/assets/razdan-6.png';
 import razdan7 from '@/assets/razdan-7.png';
 import razdan8 from '@/assets/razdan-8.png';
 import razdan9 from '@/assets/razdan-9.png';
+import puppet1 from '@/assets/puppet-1.png';
+import puppet2 from '@/assets/puppet-2.png';
+import puppet3 from '@/assets/puppet-3.png';
+import puppet4 from '@/assets/puppet-4.png';
+import puppet5 from '@/assets/puppet-5.png';
+import puppet6 from '@/assets/puppet-6.png';
+import puppet7 from '@/assets/puppet-7.png';
+import puppet8 from '@/assets/puppet-8.png';
+import puppet9 from '@/assets/puppet-9.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
@@ -293,6 +302,32 @@ export const projects: Project[] = [
       { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/1VCRlCnSR5yNLUdG6xysW6oOY9uqbCUPv/view?usp=sharing' },
     ],
     presentationUrl: 'https://drive.google.com/file/d/1VCRlCnSR5yNLUdG6xysW6oOY9uqbCUPv/view?usp=sharing',
+  },
+  {
+    id: '12',
+    title: 'Реконструкция двора Кукольного Театра',
+    titleAm: 'Տիкнիкаyin tatroni baki verakangnowm',
+    titleEn: 'Puppet Theater Courtyard Reconstruction',
+    location: 'пр. Саят-Новы 6',
+    locationAm: 'Sayat-Novi 6',
+    locationEn: 'Sayat-Nova Ave. 6',
+    description: 'Концепт реконструкции двора от Suyn Agency',
+    descriptionAm: 'Baki verakangman hayecakarg Suyn Agency-ic',
+    descriptionEn: 'Courtyard reconstruction concept by Suyn Agency',
+    stage: 'sponsorship',
+    image: puppet1,
+    gallery: [puppet1, puppet2, puppet3, puppet4, puppet5, puppet6, puppet7, puppet8, puppet9],
+    budget: 1000000,
+    budgetLabel: 'Бюджет на проектирование:',
+    buttonLabel: 'Стать Спонсором',
+    address: 'Ереван, пр. Саят-Новы 6',
+    addressAm: 'Երևan, Sayat-Novi 6',
+    addressEn: 'Yerevan, Sayat-Nova Ave. 6',
+    coordinates: { lat: 40.183654, lng: 44.517993 },
+    documents: [
+      { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/1hY5oHWQokUoEcqpF6u50kQKokIRGUTrQ/view?usp=sharing' },
+    ],
+    presentationUrl: 'https://drive.google.com/file/d/1hY5oHWQokUoEcqpF6u50kQKokIRGUTrQ/view?usp=sharing',
   },
 ];
 
