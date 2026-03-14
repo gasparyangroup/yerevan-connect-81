@@ -35,6 +35,15 @@ import razdan6 from '@/assets/razdan-6.png';
 import razdan7 from '@/assets/razdan-7.png';
 import razdan8 from '@/assets/razdan-8.png';
 import razdan9 from '@/assets/razdan-9.png';
+import puppet1 from '@/assets/puppet-1.png';
+import puppet2 from '@/assets/puppet-2.png';
+import puppet3 from '@/assets/puppet-3.png';
+import puppet4 from '@/assets/puppet-4.png';
+import puppet5 from '@/assets/puppet-5.png';
+import puppet6 from '@/assets/puppet-6.png';
+import puppet7 from '@/assets/puppet-7.png';
+import puppet8 from '@/assets/puppet-8.png';
+import puppet9 from '@/assets/puppet-9.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
