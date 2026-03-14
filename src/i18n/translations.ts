@@ -99,7 +99,7 @@ export const translations: Record<Language, Record<string, string>> = {
     heroAnimated2: 'для людей',
     heroAnimated3: 'вместе',
     heroAnimated4: 'шаг за шагом',
-    projectsSponsorshipHeading: 'Проекты, ищущие спонсоров для строительства',
+    projectsSponsorshipHeading: 'Проекты для спонсоров ',
     projectsConceptHeading: 'Проекты, ищущие архитекторов',
     projectCount: 'проектов',
     budget: 'Бюджет',
