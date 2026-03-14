@@ -228,6 +228,32 @@ export const projects: Project[] = [
     ],
     presentationUrl: 'https://drive.google.com/file/d/1TXaApSoEGvjgK9KUjvTzRUiOE55YPX5s/view?usp=sharing',
   },
+  {
+    id: '10',
+    title: 'Ремонт баскетбольной площадки и двора у Каскада',
+    titleAm: 'Կասկادի մոտ բbasketboli xaghalategi ev baki veranoroogowm',
+    titleEn: 'Basketball Court & Courtyard Renovation near Cascade',
+    location: 'ул. Исаакяна',
+    locationAm: 'Իsakyan poghoc',
+    locationEn: 'Isaakyan St.',
+    description: 'Концепт реконструкции двора и баскетбольной площадки от Khachaturian Architects',
+    descriptionAm: 'Baki ev basketboli xaghalategi verakangman hayecakarg Khachaturian Architects-ic',
+    descriptionEn: 'Courtyard and basketball court reconstruction concept by Khachaturian Architects',
+    stage: 'sponsorship',
+    image: cascade1,
+    gallery: [cascade1, cascade2, cascade3, cascade4, cascade5],
+    budget: 82000000,
+    budgetLabel: 'Бюджет на стройку:',
+    buttonLabel: 'Стать Спонсором',
+    address: 'Ереван, ул. Исаакяна',
+    addressAm: 'Երևan, Isakyan poghoc',
+    addressEn: 'Yerevan, Isaakyan St.',
+    coordinates: { lat: 40.189081, lng: 44.516462 },
+    documents: [
+      { name: 'Презентация проекта', url: 'https://drive.google.com/file/d/1-sNJXLXnRNL4VJqT6CL0ujkgwMhKBag4/view?usp=sharing' },
+    ],
+    presentationUrl: 'https://drive.google.com/file/d/1-sNJXLXnRNL4VJqT6CL0ujkgwMhKBag4/view?usp=sharing',
+  },
 ];
 
 export const formatCurrency = (amount: number): string => {
