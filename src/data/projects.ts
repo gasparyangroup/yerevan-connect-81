@@ -250,7 +250,7 @@ export const projects: Project[] = [
     address: 'Ереван, ул. Сарьяна, напротив Музея Мартироса Сарьяна',
     addressAm: 'Երdelays, Saryan poghoc, Martiros Saryani tangaran-i dimac',
     addressEn: 'Yerevan, Saryan St., opposite Martiros Saryan Museum',
-    coordinates: { lat: 40.1793, lng: 44.5095 },
+    coordinates: { lat: 40.187160, lng: 44.509186 },
   },
   {
     id: '9',
