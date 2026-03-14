@@ -207,7 +207,7 @@ export const translations: Record<Language, Record<string, string>> = {
     ideaSubmitted: 'Idea submitted!',
     ideaSubmittedMessage: 'Thank you for your contribution to the future of Yerevan. Our team will review your proposal and get back to you soon.',
     termsNote: 'By submitting this form, you agree to the community guidelines and terms of use.',
-    aboutTitle: 'About Mer Yerevan',
+    aboutTitle: 'About the platform',
     aboutSubtitle: 'Urban Projects Platform',
     aboutDesc1: 'Mer Yerevan (Our Yerevan) is a civic technology platform that connects residents, sponsors, and architects to transform the urban spaces of Armenia\'s capital.',
     aboutDesc2: 'Our mission is to democratize urban development, giving every citizen a voice in shaping their city.',
