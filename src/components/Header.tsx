@@ -98,6 +98,15 @@ export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) 
               ))}
             </div>
 
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-secondary text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
+            </button>
+
             {/* Suggest Button */}
             <Button
               onClick={onOpenSuggest}
