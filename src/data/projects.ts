@@ -161,7 +161,7 @@ export const projects: Project[] = [
   },
   {
     id: '8',
-    title: 'Ревитализация парка и детской площадки на ул. Сарьяна',
+    title: 'Создание карманного парка и детской площадки на ул. Сарьяна',
     titleAm: 'Սaryan փողоci այgy և mankakan xaghalategi verakangnowm',
     titleEn: 'Saryan Street Park & Playground Revitalization',
     location: 'Центр Еревана, ул. Сарьяна',
