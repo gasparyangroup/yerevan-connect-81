@@ -156,6 +156,7 @@ export const projects: Project[] = [
     image: yespace1,
     gallery: [yespace1, yespace2, yespace3, yespace4],
     budget: 1000000,
+    buttonLabel: 'Стать Спонсором',
     address: 'Ереван, перекрёсток ул. Московяна и пр. Баграмяна',
     addressAm: 'Երdelays, Moskovyan ev Baghramyan khachmeruk',
     addressEn: 'Yerevan, Moskovyan & Baghramyan intersection',
