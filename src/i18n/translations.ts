@@ -243,6 +243,8 @@ export const translations: Record<Language, Record<string, string>> = {
     goal: 'Project Goal',
     mapTitle: 'Project Map',
     mapSubtitle: 'Click on a marker to learn more about a project',
+    mapLegendSponsorship: 'Seeking Sponsor',
+    mapLegendConcept: 'Seeking Concept',
     viewOnMap: 'View Details',
   },
 };

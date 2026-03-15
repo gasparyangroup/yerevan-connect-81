@@ -58,7 +58,17 @@ export function MapSection({ projects, onViewDetails }: MapSectionProps) {
     <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-foreground mb-3">{t('mapTitle')}</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">{t('mapSubtitle')}</p>
+        <p className="text-muted-foreground max-w-2xl mx-auto mb-4">{t('mapSubtitle')}</p>
+        <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center gap-2">
+            <span className="w-4 h-4 rounded-full bg-primary inline-block" />
+            <span className="text-sm text-muted-foreground">{t('mapLegendSponsorship')}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-4 h-4 rounded-full bg-accent inline-block" />
+            <span className="text-sm text-muted-foreground">{t('mapLegendConcept')}</span>
+          </div>
+        </div>
       </div>
 
       <div className="rounded-3xl overflow-hidden shadow-card border border-border" style={{ height: '500px' }}>
