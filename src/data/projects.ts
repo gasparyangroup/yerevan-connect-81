@@ -82,6 +82,12 @@ import abovyan3 from '@/assets/abovyan-3.png';
 import abovyan4 from '@/assets/abovyan-4.png';
 import abovyan5 from '@/assets/abovyan-5.png';
 import abovyan6 from '@/assets/abovyan-6.png';
+import razdanSport1 from '@/assets/razdan-sport-1.jpg';
+import razdanSport2 from '@/assets/razdan-sport-2.jpg';
+import razdanSport3 from '@/assets/razdan-sport-3.jpg';
+import razdanSport4 from '@/assets/razdan-sport-4.jpg';
+import razdanSport5 from '@/assets/razdan-sport-5.jpg';
+import razdanSport6 from '@/assets/razdan-sport-6.jpg';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
@@ -501,6 +507,28 @@ export const projects: Project[] = [
     addressAm: 'Երևan, Սարyan փողоц',
     addressEn: 'Yerevan, Saryan St.',
     coordinates: { lat: 40.183238, lng: 44.504611 },
+  },
+  {
+    id: '17',
+    title: 'Создание новой спортивной зоны в Разданском ущелье',
+    titleAm: 'Նор սպортային գdelays Հrazdan ձorum',
+    titleEn: 'New Sports Zone in Hrazdan Gorge',
+    location: 'Разданское ущелье',
+    locationAm: 'Հrazdan ձor',
+    locationEn: 'Hrazdan Gorge',
+    description: 'Готовый рабочий проект новой зоны для досуга в Разданском ущелье от Storaket.',
+    descriptionAm: 'Հrazdan ձorum norakarouyc hangsti gotown Storaket-ic.',
+    descriptionEn: 'A ready-made project for a new leisure zone in Hrazdan Gorge by Storaket.',
+    stage: 'sponsorship',
+    image: razdanSport1,
+    gallery: [razdanSport1, razdanSport2, razdanSport3, razdanSport4, razdanSport5, razdanSport6],
+    budget: 200000000,
+    budgetLabel: 'Бюджет на стройку:',
+    buttonLabel: 'Стать Спонсором',
+    address: 'Ереван, Разданское ущелье',
+    addressAm: 'Երևan, Հrazdan ձor',
+    addressEn: 'Yerevan, Hrazdan Gorge',
+    coordinates: { lat: 40.206016, lng: 44.490689 },
   },
 ];
 
