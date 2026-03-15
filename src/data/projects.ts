@@ -167,6 +167,7 @@ export const projects: Project[] = [
     image: park2750_1,
     gallery: [park2750_1, park2750_2, park2750_3, park2750_4, park2750_5],
     budget: 300000000,
+    displayBudget: 'N/A AMD',
     address: 'Ереван, парк 2750-летия, ул. Аргишти',
     addressAm: 'Երdelays, 2750-amyaki aygi, Argishti poghoc',
     addressEn: 'Yerevan, 2750th Anniversary Park, Argishti St.',
