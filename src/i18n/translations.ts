@@ -85,6 +85,8 @@ export const translations: Record<Language, Record<string, string>> = {
     goal: 'Նdelays',
     mapTitle: 'Ծdelays քdelays',
     mapSubtitle: 'Delays delays delays delays delays delays',
+    mapLegendSponsorship: 'Շdelays հdelays',
+    mapLegendConcept: 'Հdelays որdelays',
     viewOnMap: 'Delays delays',
   },
   ru: {
@@ -162,6 +164,8 @@ export const translations: Record<Language, Record<string, string>> = {
     goal: 'Цель проекта',
     mapTitle: 'Карта проектов',
     mapSubtitle: 'Нажмите на метку, чтобы узнать больше о проекте',
+    mapLegendSponsorship: 'Ищем спонсора',
+    mapLegendConcept: 'Ищем концепт',
     viewOnMap: 'Подробнее',
   },
   en: {
@@ -239,6 +243,8 @@ export const translations: Record<Language, Record<string, string>> = {
     goal: 'Project Goal',
     mapTitle: 'Project Map',
     mapSubtitle: 'Click on a marker to learn more about a project',
+    mapLegendSponsorship: 'Seeking Sponsor',
+    mapLegendConcept: 'Seeking Concept',
     viewOnMap: 'View Details',
   },
 };
