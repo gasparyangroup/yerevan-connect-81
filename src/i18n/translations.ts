@@ -164,6 +164,8 @@ export const translations: Record<Language, Record<string, string>> = {
     goal: 'Цель проекта',
     mapTitle: 'Карта проектов',
     mapSubtitle: 'Нажмите на метку, чтобы узнать больше о проекте',
+    mapLegendSponsorship: 'Ищем спонсора',
+    mapLegendConcept: 'Ищем концепт',
     viewOnMap: 'Подробнее',
   },
   en: {
