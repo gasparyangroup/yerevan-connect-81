@@ -82,6 +82,12 @@ import abovyan3 from '@/assets/abovyan-3.png';
 import abovyan4 from '@/assets/abovyan-4.png';
 import abovyan5 from '@/assets/abovyan-5.png';
 import abovyan6 from '@/assets/abovyan-6.png';
+import razdanSport1 from '@/assets/razdan-sport-1.jpg';
+import razdanSport2 from '@/assets/razdan-sport-2.jpg';
+import razdanSport3 from '@/assets/razdan-sport-3.jpg';
+import razdanSport4 from '@/assets/razdan-sport-4.jpg';
+import razdanSport5 from '@/assets/razdan-sport-5.jpg';
+import razdanSport6 from '@/assets/razdan-sport-6.jpg';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
