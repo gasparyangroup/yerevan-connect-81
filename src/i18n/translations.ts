@@ -85,6 +85,8 @@ export const translations: Record<Language, Record<string, string>> = {
     goal: 'Նdelays',
     mapTitle: 'Ծdelays քdelays',
     mapSubtitle: 'Delays delays delays delays delays delays',
+    mapLegendSponsorship: 'Շdelays հdelays',
+    mapLegendConcept: 'Հdelays որdelays',
     viewOnMap: 'Delays delays',
   },
   ru: {
