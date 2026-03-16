@@ -276,6 +276,8 @@ export const projects: Project[] = [
     gallery: [tpagrichner1, tpagrichner2, tpagrichner3, tpagrichner4, tpagrichner5, tpagrichner6, tpagrichner7],
     budget: 75000000,
     budgetLabel: '\u0411\u044E\u0434\u0436\u0435\u0442 \u043D\u0430 \u0441\u0442\u0440\u043E\u0439\u043A\u0443:',
+    budgetLabelAm: '\u0547\u056B\u0576\u0561\u0580\u0561\u0580\u0578\u0582\u0569\u0575\u0561\u0576 \u0562\u0575\u0578\u0582\u057B\u0565\u055D',
+    budgetLabelEn: 'Construction budget:',
     buttonLabel: '\u0421\u0442\u0430\u0442\u044C \u0421\u043F\u043E\u043D\u0441\u043E\u0440\u043E\u043C',
     buttonLabelAm: '\u0540\u0578\u057E\u0561\u0576\u0561\u057E\u0578\u0580\u0565\u056C',
     buttonLabelEn: 'Become a Sponsor',
