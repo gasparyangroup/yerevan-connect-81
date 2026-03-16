@@ -115,6 +115,8 @@ export interface Project {
   displayBudget?: string;
   budgetLabel?: string;
   buttonLabel?: string;
+  buttonLabelAm?: string;
+  buttonLabelEn?: string;
   raised?: number;
   documents?: { name: string; url: string }[];
   presentationUrl?: string;

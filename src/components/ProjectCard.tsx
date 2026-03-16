@@ -107,7 +107,7 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
                   onAction(project, 'architect');
                 }}
               >
-                {project.buttonLabel || t('iAmArchitect')}
+                {buttonLabel || t('iAmArchitect')}
               </Button>
             </div>
           )}
