@@ -477,6 +477,8 @@ export const projects: Project[] = [
     gallery: [kirakosyan1, kirakosyan2, kirakosyan3, kirakosyan4],
     displayBudget: 'N/A',
     budgetLabel: '\u0411\u044E\u0434\u0436\u0435\u0442:',
+    budgetLabelAm: '\u0532\u0575\u0578\u0582\u057B\u0565\u055D',
+    budgetLabelEn: 'Budget:',
     buttonLabel: '\u0421\u0442\u0430\u0442\u044C \u0421\u043F\u043E\u043D\u0441\u043E\u0440\u043E\u043C',
     address: '\u0415\u0440\u0435\u0432\u0430\u043D, \u0443\u043B. \u0427\u0430\u0440\u0435\u043D\u0446\u0430',
     addressAm: '\u0535\u0580\u0587\u0561\u0576, \u0549\u0561\u0580\u0565\u0576\u0581\u056B \u0583\u0578\u0572\u0578\u0581',
