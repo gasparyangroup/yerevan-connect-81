@@ -26,6 +26,8 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
   const title = lang === 'en' ? project.titleEn : lang === 'am' ? project.titleAm : project.title;
   const location = lang === 'en' ? project.locationEn : lang === 'am' ? project.locationAm : project.location;
   const description = lang === 'en' ? project.descriptionEn : lang === 'am' ? project.descriptionAm : project.description;
+  const buttonLabel = lang === 'en' ? project.buttonLabelEn : lang === 'am' ? project.buttonLabelAm : project.buttonLabel;
+  const isSponsorFound = project.buttonLabel === '\u0421\u043F\u043E\u043D\u0441\u043E\u0440 \u043D\u0430\u0439\u0434\u0435\u043D';
 
   return (
     <motion.article
