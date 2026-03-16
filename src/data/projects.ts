@@ -396,6 +396,8 @@ export const projects: Project[] = [
     gallery: [moskovyan1, moskovyan2, moskovyan3, moskovyan4, moskovyan5, moskovyan6, moskovyan7],
     displayBudget: 'N/A',
     budgetLabel: '\u0411\u044E\u0434\u0436\u0435\u0442 \u043D\u0430 \u0441\u0442\u0440\u043E\u0439\u043A\u0443:',
+    budgetLabelAm: '\u0547\u056B\u0576\u0561\u0580\u0561\u0580\u0578\u0582\u0569\u0575\u0561\u0576 \u0562\u0575\u0578\u0582\u057B\u0565\u055D',
+    budgetLabelEn: 'Construction budget:',
     buttonLabel: '\u0421\u043F\u043E\u043D\u0441\u043E\u0440 \u043D\u0430\u0439\u0434\u0435\u043D',
     buttonLabelAm: '\u0540\u0578\u057E\u0561\u0576\u0561\u057E\u0578\u0580 \u056F\u0561',
     buttonLabelEn: 'Sponsor Found',
