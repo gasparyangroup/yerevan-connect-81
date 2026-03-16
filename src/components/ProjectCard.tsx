@@ -80,13 +80,13 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
               </div>
               <Button
                 size="sm"
-                className={`rounded-xl ${project.buttonLabel === 'Спонсор найден' ? 'bg-emerald-600 hover:bg-emerald-700 text-white' : 'btn-gradient'}`}
+                className={`rounded-xl ${isSponsorFound ? 'bg-emerald-600 hover:bg-emerald-700 text-white' : 'btn-gradient'}`}
                 onClick={(e) => {
                   e.stopPropagation();
                   onAction(project, 'sponsor');
                 }}
               >
-                {project.buttonLabel || t('sponsor')}
+                {buttonLabel || t('sponsor')}
               </Button>
             </div>
           )}
