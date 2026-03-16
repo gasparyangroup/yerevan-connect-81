@@ -27,6 +27,7 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
   const location = lang === 'en' ? project.locationEn : lang === 'am' ? project.locationAm : project.location;
   const description = lang === 'en' ? project.descriptionEn : lang === 'am' ? project.descriptionAm : project.description;
   const buttonLabel = lang === 'en' ? project.buttonLabelEn : lang === 'am' ? project.buttonLabelAm : project.buttonLabel;
+  const budgetLabel = lang === 'en' ? project.budgetLabelEn : lang === 'am' ? project.budgetLabelAm : project.budgetLabel;
   const isSponsorFound = project.buttonLabel === '\u0421\u043F\u043E\u043D\u0441\u043E\u0440 \u043D\u0430\u0439\u0434\u0435\u043D';
 
   return (
@@ -70,7 +71,7 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
             <div className="flex items-center justify-between">
               <div className="text-sm">
                 <span className="text-muted-foreground">
-                  {project.budgetLabel || t('budget')}:{" "}
+                  {budgetLabel || t('budget')}:{" "}
                 </span>
                 <span className="font-semibold text-foreground">
                   {project.displayBudget !== undefined
