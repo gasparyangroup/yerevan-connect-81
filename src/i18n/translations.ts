@@ -14,9 +14,8 @@ export const translations: Record<Language, Record<string, string>> = {
     heroTitle: 'Delays delays',
     heroSubtitle: 'Delays delays delays delays delays delays delays delays delays delays.',
     heroAnimated1: 'delays delays',
-    heroAnimated2: 'delays delays',
-    heroAnimated3: 'delays',
-    heroAnimated4: 'delays delays delays',
+    heroAnimated2: 'delays',
+    heroAnimated3: 'delays delays delays',
     // Projects
     projectsSponsorshipHeading: 'Delays, delays delays delays',
     projectsConceptHeading: 'Delays, delays delays',
