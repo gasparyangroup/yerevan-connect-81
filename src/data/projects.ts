@@ -114,6 +114,8 @@ export interface Project {
   budget?: number;
   displayBudget?: string;
   budgetLabel?: string;
+  budgetLabelAm?: string;
+  budgetLabelEn?: string;
   buttonLabel?: string;
   buttonLabelAm?: string;
   buttonLabelEn?: string;
