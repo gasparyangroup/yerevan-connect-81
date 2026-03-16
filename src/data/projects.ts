@@ -145,6 +145,8 @@ export const projects: Project[] = [
     displayBudget: 'N/A',
     budgetLabel: '\u0411\u044E\u0434\u0436\u0435\u0442 \u043D\u0430 \u043F\u0440\u043E\u0435\u043A\u0442:',
     buttonLabel: '\u0421\u043F\u043E\u043D\u0441\u043E\u0440 \u043D\u0430\u0439\u0434\u0435\u043D',
+    buttonLabelAm: '\u0540\u0578\u057E\u0561\u0576\u0561\u057E\u0578\u0580 \u056F\u0561',
+    buttonLabelEn: 'Sponsor Found',
     address: '\u0415\u0440\u0435\u0432\u0430\u043D, \u041A\u0435\u043D\u0442\u0440\u043E\u043D',
     addressAm: '\u0535\u0580\u0587\u0561\u0576, \u053F\u0565\u0576\u057F\u0580\u0578\u0576',
     addressEn: 'Yerevan, Kentron',
