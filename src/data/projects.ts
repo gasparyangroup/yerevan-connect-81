@@ -76,12 +76,6 @@ import kirakosyan1 from '@/assets/kirakosyan-1.png';
 import kirakosyan2 from '@/assets/kirakosyan-2.png';
 import kirakosyan3 from '@/assets/kirakosyan-3.png';
 import kirakosyan4 from '@/assets/kirakosyan-4.png';
-import abovyan1 from '@/assets/abovyan-1.png';
-import abovyan2 from '@/assets/abovyan-2.png';
-import abovyan3 from '@/assets/abovyan-3.png';
-import abovyan4 from '@/assets/abovyan-4.png';
-import abovyan5 from '@/assets/abovyan-5.png';
-import abovyan6 from '@/assets/abovyan-6.png';
 import razdanSport1 from '@/assets/razdan-sport-1.jpg';
 import razdanSport2 from '@/assets/razdan-sport-2.jpg';
 import razdanSport3 from '@/assets/razdan-sport-3.jpg';
@@ -484,27 +478,6 @@ export const projects: Project[] = [
     addressEn: 'Yerevan, Charents St.',
     coordinates: { lat: 40.180530, lng: 44.528273 },
     presentationUrl: 'https://drive.google.com/file/d/12Lx_0ySvmH1ze0A7t_TAs6fOBh6dQufT/view?usp=sharing',
-  },
-  {
-    id: '12b',
-    title: '\u041A\u0430\u0440\u043C\u0430\u043D\u043D\u044B\u0439 \u043F\u0430\u0440\u043A \u043D\u0430 \u0443\u043B. \u0410\u0431\u043E\u0432\u044F\u043D\u0430',
-    titleAm: '\u0533\u0580\u057A\u0561\u0576\u0561\u0575\u056B\u0576 \u0561\u0575\u0563\u056B \u0531\u0562\u0578\u057E\u0575\u0561\u0576 \u0583\u0578\u0572\u0578\u0581\u0578\u0582\u0574',
-    titleEn: 'Pocket Park on Abovyan Street',
-    location: '\u0415\u0440\u0435\u0432\u0430\u043D, \u0443\u043B. \u0410\u0431\u043E\u0432\u044F\u043D\u0430',
-    locationAm: '\u0535\u0580\u0587\u0561\u0576, \u0531\u0562\u0578\u057E\u0575\u0561\u0576 \u0583\u0578\u0572\u0578\u0581',
-    locationEn: 'Yerevan, Abovyan St.',
-    description: '\u041A\u043E\u043D\u0446\u0435\u043F\u0442 \u043A\u0430\u0440\u043C\u0430\u043D\u043D\u043E\u0433\u043E \u043F\u0430\u0440\u043A\u0430 \u043E\u0442 Electric Architects.',
-    descriptionAm: '\u0533\u0580\u057A\u0561\u0576\u0561\u0575\u056B\u0576 \u0561\u0575\u0563\u0578\u0582 \u056F\u0578\u0576\u0581\u0565\u057A\u057F Electric Architects-\u056B\u0581:',
-    descriptionEn: 'Pocket park concept by Electric Architects.',
-    stage: 'sponsorship',
-    image: abovyan4,
-    gallery: [abovyan1, abovyan2, abovyan3, abovyan4, abovyan5, abovyan6],
-    budget: 0,
-    displayBudget: 'N/A',
-    address: '\u0415\u0440\u0435\u0432\u0430\u043D, \u0443\u043B. \u0410\u0431\u043E\u0432\u044F\u043D\u0430',
-    addressAm: '\u0535\u0580\u0587\u0561\u0576, \u0531\u0562\u0578\u057E\u0575\u0561\u0576 \u0583\u0578\u0572\u0578\u0581',
-    addressEn: 'Yerevan, Abovyan St.',
-    coordinates: { lat: 40.183910, lng: 44.519329 },
   },
   {
     id: '13b',
