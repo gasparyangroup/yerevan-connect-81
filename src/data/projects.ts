@@ -538,7 +538,7 @@ export const projects: Project[] = [
   {
     id: '18',
     title: 'Реконструкция площади Сахарова',
-    titleAm: 'Սախdelays\u0561\u0580\u0578\u057E\u056B \u0570\u0580\u0561\u057A\u0561\u0580\u0561\u056F\u056B \u057E\u0565\u0580\u0561\u056F\u0561\u057C\u0578\u0582\u0581\u0578\u0582\u0574',
+    titleAm: 'Սախարովի հdelays\u0561\u057A\u0561\u0580\u0561\u056F\u056B \u057E\u0565\u0580\u0561\u056F\u0561\u057C\u0578\u0582\u0581\u0578\u0582\u0574',
     titleEn: 'Sakharov Square Reconstruction',
     location: 'Кентрон, площадь Сахарова',
     locationAm: 'Կենdelays\u057F\u0580\u0578\u0576, \u054D\u0561\u056D\u0561\u0580\u0578\u057E\u056B \u0570\u0580\u0561\u057A\u0561\u0580\u0561\u056F',
