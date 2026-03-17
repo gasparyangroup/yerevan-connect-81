@@ -475,7 +475,7 @@ export const projects: Project[] = [
     image: kirakosyan1,
     gallery: [kirakosyan1, kirakosyan2, kirakosyan3, kirakosyan4],
     displayBudget: 'N/A',
-    budgetLabel: '\u0411\u044E\u0434\u0436\u0435\u0442:',
+    budgetLabel: '\u0411\u044E\u0434\u0436\u0435\u0442 \u043D\u0430 \u043F\u0440\u043E\u0435\u043A\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435: ',
     budgetLabelAm: '\u0532\u0575\u0578\u0582\u057B\u0565\u055D',
     budgetLabelEn: 'Budget:',
     buttonLabel: '\u0421\u0442\u0430\u0442\u044C \u0421\u043F\u043E\u043D\u0441\u043E\u0440\u043E\u043C',
