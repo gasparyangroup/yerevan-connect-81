@@ -82,6 +82,15 @@ import razdanSport3 from '@/assets/razdan-sport-3.jpg';
 import razdanSport4 from '@/assets/razdan-sport-4.jpg';
 import razdanSport5 from '@/assets/razdan-sport-5.jpg';
 import razdanSport6 from '@/assets/razdan-sport-6.jpg';
+import sakharov1 from '@/assets/sakharov-1.jpg';
+import sakharov2 from '@/assets/sakharov-2.jpg';
+import sakharov3 from '@/assets/sakharov-3.jpg';
+import sakharov4 from '@/assets/sakharov-4.jpg';
+import sakharov5 from '@/assets/sakharov-5.jpg';
+import sakharov6 from '@/assets/sakharov-6.jpg';
+import sakharov7 from '@/assets/sakharov-7.jpg';
+import sakharov8 from '@/assets/sakharov-8.jpg';
+import sakharov9 from '@/assets/sakharov-9.jpg';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
