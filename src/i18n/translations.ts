@@ -246,5 +246,11 @@ export const translations: Record<Language, Record<string, string>> = {
     mapLegendSponsorship: 'Seeking Sponsor',
     mapLegendConcept: 'Seeking Concept',
     viewOnMap: 'View Details',
+    sortDefault: 'Default',
+    sortCheapFirst: 'Cheapest first',
+    sortExpensiveFirst: 'Most expensive first',
+    filterAll: 'All',
+    filterSponsorFound: 'Sponsor found',
+    filterSponsorNeeded: 'Seeking sponsor',
   },
 };
