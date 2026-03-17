@@ -82,6 +82,15 @@ import razdanSport3 from '@/assets/razdan-sport-3.jpg';
 import razdanSport4 from '@/assets/razdan-sport-4.jpg';
 import razdanSport5 from '@/assets/razdan-sport-5.jpg';
 import razdanSport6 from '@/assets/razdan-sport-6.jpg';
+import sakharov1 from '@/assets/sakharov-1.jpg';
+import sakharov2 from '@/assets/sakharov-2.jpg';
+import sakharov3 from '@/assets/sakharov-3.jpg';
+import sakharov4 from '@/assets/sakharov-4.jpg';
+import sakharov5 from '@/assets/sakharov-5.jpg';
+import sakharov6 from '@/assets/sakharov-6.jpg';
+import sakharov7 from '@/assets/sakharov-7.jpg';
+import sakharov8 from '@/assets/sakharov-8.jpg';
+import sakharov9 from '@/assets/sakharov-9.jpg';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
@@ -525,6 +534,27 @@ export const projects: Project[] = [
     addressAm: '\u0535\u0580\u0587\u0561\u0576, \u0540\u0580\u0561\u0566\u0564\u0561\u0576\u056B \u056F\u056B\u0580\u0573',
     addressEn: 'Yerevan, Hrazdan Gorge',
     coordinates: { lat: 40.206016, lng: 44.490689 },
+  },
+  {
+    id: '18',
+    title: 'Реконструкция площади Сахарова',
+    titleAm: '\u054D\u0561\u056D\u0561\u0580\u0578\u057E\u056B \u0570\u0580\u0561\u057A\u0561\u0580\u0561\u056F\u056B \u057E\u0565\u0580\u0561\u056F\u0561\u057C\u0578\u0582\u0581\u0578\u0582\u0574',
+    titleEn: 'Sakharov Square Reconstruction',
+    location: 'Кентрон, площадь Сахарова',
+    locationAm: '\u053F\u0565\u0576\u057F\u0580\u0578\u0576, \u054D\u0561\u056D\u0561\u0580\u0578\u057E\u056B \u0570\u0580\u0561\u057A\u0561\u0580\u0561\u056F',
+    locationEn: 'Kentron, Sakharov Square',
+    description: 'Площадь Сахарова на сегодняшний день превратилась в сплошную проезжую часть и парковку для машин. Но данная территория имеет большой потенциал стать излюбленным местом горожан. TL Bureau сделало свой концепт благоустройства, но хотелось бы еще получить варианты для этой уникальной территории.',
+    descriptionAm: '\u054D\u0561\u056D\u0561\u0580\u0578\u057E\u056B \u0570\u0580\u0561\u057A\u0561\u0580\u0561\u056F\u0568 \u0561\u0575\u057D\u0585\u0580 \u057E\u0565\u0580\u0561\u056E\u057E\u0565\u056C \u0567 \u0561\u0576\u0568\u0576\u0564\u0570\u0561\u057F \u0565\u0580\u0569\u0587\u0565\u056F\u0578\u0582\u0569\u0575\u0561\u0576 \u0587 \u0574\u0565\u0584\u0565\u0576\u0561\u0576\u0565\u0580\u056B \u056F\u0561\u0575\u0561\u0576\u0561\u057F\u0565\u0572\u056B\u0589 \u054D\u0561\u056F\u0561\u0575\u0576 \u0561\u0575\u057D \u057F\u0561\u0580\u0561\u056E\u0584\u0568 \u0574\u0565\u056E \u0576\u0565\u0580\u0578\u0582\u056A \u0578\u0582\u0576\u056B \u0564\u0561\u057C\u0576\u0561\u056C\u0578\u0582 \u0584\u0561\u0572\u0561\u0584\u0561\u0581\u056B\u0576\u0565\u0580\u056B \u057D\u056B\u0580\u0565\u056C\u056B \u057E\u0561\u0575\u0580\u0568\u0589 TL Bureau-\u0576 \u0561\u0580\u0565\u056C \u0567 \u056B\u0580 \u0562\u0561\u0580\u0565\u056F\u0561\u0580\u0563\u0574\u0561\u0576 \u056F\u0578\u0576\u0581\u0565\u057A\u057F\u0568, \u0562\u0561\u0575\u0581 \u056F\u0578\u0582\u0566\u0565\u0576\u0561\u0576\u0584 \u0576\u0561\u0587 \u0561\u0575\u056C \u057F\u0561\u0580\u0562\u0565\u0580\u0561\u056F\u0576\u0565\u0580 \u057D\u057F\u0561\u0576\u0561\u056C\u0589',
+    descriptionEn: 'Sakharov Square has turned into a continuous roadway and parking lot. However, this territory has great potential to become a beloved place for citizens. TL Bureau has created its improvement concept, but we would like to receive more options for this unique territory.',
+    stage: 'concept',
+    image: sakharov1,
+    gallery: [sakharov1, sakharov2, sakharov3, sakharov4, sakharov5, sakharov6, sakharov7, sakharov8, sakharov9],
+    budget: 0,
+    displayBudget: 'N/A',
+    address: 'Ереван, Кентрон, площадь Сахарова',
+    addressAm: '\u0535\u0580\u0587\u0561\u0576, \u053F\u0565\u0576\u057F\u0580\u0578\u0576, \u054D\u0561\u056D\u0561\u0580\u0578\u057E\u056B \u0570\u0580\u0561\u057A\u0561\u0580\u0561\u056F',
+    addressEn: 'Yerevan, Kentron, Sakharov Square',
+    coordinates: { lat: 40.179824, lng: 44.517208 },
   },
 ];
 
