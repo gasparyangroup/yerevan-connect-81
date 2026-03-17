@@ -91,6 +91,8 @@ import sakharov6 from '@/assets/sakharov-6.jpg';
 import sakharov7 from '@/assets/sakharov-7.jpg';
 import sakharov8 from '@/assets/sakharov-8.jpg';
 import sakharov9 from '@/assets/sakharov-9.jpg';
+import cablecar1 from '@/assets/cablecar-1.jpg';
+import cablecar2 from '@/assets/cablecar-2.png';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
