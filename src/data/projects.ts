@@ -552,7 +552,7 @@ export const projects: Project[] = [
     budget: 0,
     displayBudget: 'N/A',
     address: 'Ереван, Кентрон, площадь Сахарова',
-    addressAm: 'Երdelays\u0587\u0561\u0576, \u053F\u0565\u0576\u057F\u0580\u0578\u0576, \u054D\u0561\u056D\u0561\u0580\u0578\u057E\u056B \u0570\u0580\u0561\u057A\u0561\u0580\u0561\u056F',
+    addressAm: '\u0535\u0580\u0587\u0561\u0576, \u053F\u0565\u0576\u057F\u0580\u0578\u0576, \u054D\u0561\u056D\u0561\u0580\u0578\u057E\u056B \u0570\u0580\u0561\u057A\u0561\u0580\u0561\u056F',
     addressEn: 'Yerevan, Kentron, Sakharov Square',
     coordinates: { lat: 40.179824, lng: 44.517208 },
   },
