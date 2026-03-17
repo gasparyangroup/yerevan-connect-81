@@ -145,11 +145,13 @@ export function ProjectModal({ project, isOpen, onClose, onAction }: ProjectModa
             <div className="w-full lg:w-96 border-t lg:border-t-0 lg:border-l border-border bg-secondary/30 flex flex-col p-6">
               <h3 className="font-semibold text-foreground mb-4">{t('info')}</h3>
 
-              {project.stage === 'sponsorship' && project.budget && (
+              {project.stage === 'sponsorship' && (project.budget || project.displayBudget) && (
                 <div className="space-y-4 mb-6">
                   <div className="p-4 rounded-2xl bg-background">
                     <p className="text-xs text-muted-foreground mb-1">{t('totalBudget')}</p>
-                    <p className="text-2xl font-bold text-foreground">{formatCurrency(project.budget)}</p>
+                    <p className="text-2xl font-bold text-foreground">
+                      {project.displayBudget || (project.budget ? formatCurrency(project.budget) : '')}
+                    </p>
                   </div>
                   {project.presentationUrl && (
                     <a
