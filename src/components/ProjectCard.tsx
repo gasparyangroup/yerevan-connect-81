@@ -71,7 +71,7 @@ export function ProjectCard({ project, index, onViewDetails, onAction }: Project
             <div className="flex items-center justify-between">
               <div className="text-sm">
                 <span className="text-muted-foreground">
-                  {budgetLabel || t('budget')}{" "}
+                  {budgetLabel || t('budget')}
                 </span>
                 <span className="font-semibold text-foreground">
                   {project.displayBudget !== undefined
