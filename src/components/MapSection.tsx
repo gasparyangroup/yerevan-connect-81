@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { useState } from 'react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MapPin } from 'lucide-react';
@@ -41,6 +41,8 @@ const createCustomIcon = (stage: 'sponsorship' | 'concept') => {
   });
 };
 
+type MapFilter = 'all' | 'sponsorship' | 'concept';
+
 interface MapSectionProps {
   projects: Project[];
   onViewDetails: (project: Project) => void;
@@ -48,30 +50,56 @@ interface MapSectionProps {
 
 export function MapSection({ projects, onViewDetails }: MapSectionProps) {
   const { t, lang } = useLanguage();
+  const [mapFilter, setMapFilter] = useState<MapFilter>('all');
 
-  const projectsWithCoords = projects.filter(p => p.coordinates);
+  const projectsWithCoords = projects.filter(
+    (p) => p.coordinates && (mapFilter === 'all' || p.stage === mapFilter)
+  );
 
-  const getTitle = (p: Project) => lang === 'en' ? p.titleEn : lang === 'am' ? p.titleAm : p.title;
-  const getAddress = (p: Project) => lang === 'en' ? (p.addressEn || p.locationEn) : lang === 'am' ? (p.addressAm || p.locationAm) : (p.address || p.location);
+  const getTitle = (p: Project) =>
+    lang === 'en' ? p.titleEn : lang === 'am' ? p.titleAm : p.title;
+  const getAddress = (p: Project) =>
+    lang === 'en'
+      ? p.addressEn || p.locationEn
+      : lang === 'am'
+        ? p.addressAm || p.locationAm
+        : p.address || p.location;
+
+  const filterButtons: { value: MapFilter; label: string; dotClass?: string }[] = [
+    { value: 'all', label: t('mapFilterAll') },
+    { value: 'sponsorship', label: t('mapLegendSponsorship'), dotClass: 'bg-primary' },
+    { value: 'concept', label: t('mapLegendConcept'), dotClass: 'bg-accent' },
+  ];
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-foreground mb-3">{t('mapTitle')}</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto mb-4">{t('mapSubtitle')}</p>
-        <div className="flex items-center justify-center gap-6">
-          <div className="flex items-center gap-2">
-            <span className="w-4 h-4 rounded-full bg-primary inline-block" />
-            <span className="text-sm text-muted-foreground">{t('mapLegendSponsorship')}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="w-4 h-4 rounded-full bg-accent inline-block" />
-            <span className="text-sm text-muted-foreground">{t('mapLegendConcept')}</span>
-          </div>
+        <div className="flex items-center justify-center gap-2 flex-wrap">
+          {filterButtons.map((btn) => (
+            <button
+              key={btn.value}
+              onClick={() => setMapFilter(btn.value)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                mapFilter === btn.value
+                  ? 'bg-primary text-primary-foreground shadow-md'
+                  : 'bg-muted text-muted-foreground hover:bg-muted/80'
+              }`}
+            >
+              {btn.dotClass && (
+                <span className={`w-3 h-3 rounded-full ${btn.dotClass} inline-block`} />
+              )}
+              {btn.label}
+            </button>
+          ))}
         </div>
       </div>
 
-      <div className="rounded-3xl overflow-hidden shadow-card border border-border" style={{ height: '500px' }}>
+      <div
+        className="rounded-3xl overflow-hidden shadow-card border border-border"
+        style={{ height: '500px' }}
+      >
         <MapContainer
           center={[40.1872, 44.5152]}
           zoom={13}
