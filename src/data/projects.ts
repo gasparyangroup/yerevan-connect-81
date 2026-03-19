@@ -337,7 +337,7 @@ export const projects: Project[] = [
     locationAm: '\u0540\u0580\u0561\u0566\u0564\u0561\u0576\u056B \u056F\u056B\u0580\u0573',
     locationEn: 'Razdan Gorge',
     description: 'Проект разработан по заказу застройщика Kamertoon у Proforma Studio. Застройщик Kamertoon готов покрыть 15% бюджета.',
-    descriptionAm: 'Նախագիծը մdelays մdelays մdelays մShaked մdelays մdelays',
+    descriptionAm: '\u0546\u0561\u056D\u0561\u0563\u056B\u056E\u0568 \u0574\u0577\u0561\u056F\u057E\u0565\u056C \u0567 Kamertoon \u056F\u0561\u057C\u0578\u0582\u0581\u0561\u057A\u0561\u057F\u056B \u057A\u0561\u057F\u057E\u0565\u0580\u0578\u057E\u055D Proforma Studio-\u056B \u056F\u0578\u0572\u0574\u056B\u0581\u0589 Kamertoon \u056F\u0561\u057C\u0578\u0582\u0581\u0561\u057A\u0561\u057F\u0568 \u057A\u0561\u057F\u0580\u0561\u057D\u057F \u0567 \u056E\u0561\u056E\u056F\u0565\u056C \u0562\u0575\u0578\u0582\u057B\u0565\u056B 15%-\u0568\u0589',
     descriptionEn: 'Project developed by Proforma Studio, commissioned by Kamertoon developer. Kamertoon is ready to cover 15% of the budget.',
     stage: 'sponsorship',
     image: razdan1,
