@@ -152,6 +152,20 @@ export function ProjectModal({ project, isOpen, onClose, onAction }: ProjectModa
                     <p className="text-2xl font-bold text-foreground">
                       {project.displayBudget || (project.budget ? formatCurrency(project.budget) : '')}
                     </p>
+                    {project.raised != null && project.budget != null && project.budget > 0 && (
+                      <div className="mt-3">
+                        <div className="flex justify-between text-xs text-muted-foreground mb-1.5">
+                          <span>{t('raised')}: {formatCurrency(project.raised)}</span>
+                          <span>{Math.round((project.raised / project.budget) * 100)}%</span>
+                        </div>
+                        <div className="w-full h-2.5 bg-secondary rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-primary rounded-full transition-all duration-500"
+                            style={{ width: `${Math.min((project.raised / project.budget) * 100, 100)}%` }}
+                          />
+                        </div>
+                      </div>
+                    )}
                   </div>
                   {project.presentationUrl && (
                     <a
