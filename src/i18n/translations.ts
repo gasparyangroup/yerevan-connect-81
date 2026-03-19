@@ -238,7 +238,6 @@ export const translations: Record<Language, Record<string, string>> = {
     info: 'Info',
     aiAssistant: 'AI Assistant',
     totalBudget: 'Total Budget',
-    raised: 'Raised',
     openPresentation: 'Open Presentation',
     documents: 'Documents',
     askAboutProject: 'Ask about the project...',
