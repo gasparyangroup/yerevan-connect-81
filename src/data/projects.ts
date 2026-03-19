@@ -9,10 +9,6 @@ import poplavok4 from '@/assets/poplavok-4.png';
 import poplavok5 from '@/assets/poplavok-5.png';
 import poplavok6 from '@/assets/poplavok-6.png';
 import poplavok7 from '@/assets/poplavok-7.png';
-import komitasCover from '@/assets/komitas-cover.png';
-import komitas1 from '@/assets/komitas-1.png';
-import komitas2 from '@/assets/komitas-2.png';
-import komitas3 from '@/assets/komitas-3.png';
 import yespace1 from '@/assets/yespace-1.png';
 import yespace2 from '@/assets/yespace-2.png';
 import yespace3 from '@/assets/yespace-3.png';
@@ -138,37 +134,6 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
-    id: '1',
-    title: '\u0420\u0435\u043A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F \u0441\u043A\u0432\u0435\u0440\u0430 \u041A\u043E\u043C\u0438\u0442\u0430\u0441\u0430',
-    titleAm: '\u053F\u0578\u0574\u056B\u057F\u0561\u057D\u056B \u057A\u0578\u0582\u0580\u0561\u056F\u056B \u057E\u0565\u0580\u0561\u056F\u0561\u057C\u0578\u0582\u0581\u0578\u0582\u0574',
-    titleEn: 'Komitas Park Reconstruction',
-    location: '\u0415\u0440\u0435\u0432\u0430\u043D, \u041A\u0435\u043D\u0442\u0440\u043E\u043D',
-    locationAm: '\u0535\u0580\u0587\u0561\u0576, \u053F\u0565\u0576\u057F\u0580\u0578\u0576',
-    locationEn: 'Yerevan, Kentron',
-    description: '\u041F\u043E \u0438\u043D\u0438\u0446\u0438\u0430\u0442\u0438\u0432\u0435 \u0430\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438 \u041A\u0435\u043D\u0442\u0440\u043E\u043D\u0430 \u0438 \u043C\u044D\u0440\u0438\u0438 \u0415\u0440\u0435\u0432\u0430\u043D\u0430 \u043D\u0430\u0447\u0430\u043B\u0430\u0441\u044C \u0440\u0435\u043A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F \u043F\u0430\u0440\u043A\u0430. \u041F\u0440\u043E\u0435\u043A\u0442 UrUrban. \u0421\u043F\u043E\u043D\u0441\u043E\u0440: ACBA bank.',
-    descriptionAm: '\u053F\u0565\u0576\u057F\u0580\u0578\u0576 \u057E\u0561\u0580\u0579\u0561\u056F\u0561\u0576 \u0577\u0580\u057B\u0561\u0576\u056B \u0572\u0565\u056F\u0561\u057E\u0561\u0580\u0578\u0582\u0569\u0575\u0561\u0576 \u0587 \u0535\u0580\u0587\u0561\u0576\u056B \u0584\u0561\u0572\u0561\u0584\u0561\u057A\u0565\u057F\u0561\u0580\u0561\u0576\u056B \u0576\u0561\u056D\u0561\u0571\u0565\u057C\u0576\u0578\u0582\u0569\u0575\u0561\u0574\u0562 \u057D\u056F\u057D\u057E\u0565\u056C \u0567 \u0561\u0575\u0563\u0578\u0582 \u057E\u0565\u0580\u0561\u056F\u0561\u057C\u0578\u0582\u0581\u0578\u0582\u0574\u0568\u0589 \u0546\u0561\u056D\u0561\u0563\u056B\u056E\u0568\u055D UrUrban-\u056B\u0589 \u0540\u0578\u057E\u0561\u0576\u0561\u057E\u0578\u0580\u055D ACBA \u0562\u0561\u0576\u056F\u0589',
-    descriptionEn: 'Initiated by the Kentron district administration and Yerevan municipality, the park reconstruction has begun. Project by UrUrban. Sponsor: ACBA bank.',
-    stage: 'sponsorship',
-    image: komitasCover,
-    gallery: [komitasCover, komitas1, komitas2, komitas3],
-    budget: 0,
-    displayBudget: 'N/A',
-    budgetLabel: '\u0411\u044E\u0434\u0436\u0435\u0442: ',
-    budgetLabelAm: '\u0546\u0561\u056D\u0561\u0563\u056E\u056B \u0562\u0575\u0578\u0582\u057B\u0565\u055D',
-    budgetLabelEn: 'Project budget:',
-    buttonLabel: '\u0421\u043F\u043E\u043D\u0441\u043E\u0440 \u043D\u0430\u0439\u0434\u0435\u043D',
-    buttonLabelAm: '\u0540\u0578\u057E\u0561\u0576\u0561\u057E\u0578\u0580 \u056F\u0561',
-    buttonLabelEn: 'Sponsor Found',
-    address: '\u0415\u0440\u0435\u0432\u0430\u043D, \u041A\u0435\u043D\u0442\u0440\u043E\u043D',
-    addressAm: '\u0535\u0580\u0587\u0561\u0576, \u053F\u0565\u0576\u057F\u0580\u0578\u0576',
-    addressEn: 'Yerevan, Kentron',
-    coordinates: { lat: 40.187331, lng: 44.516373 },
-    documents: [
-      { name: '\u041F\u0440\u0435\u0437\u0435\u043D\u0442\u0430\u0446\u0438\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430', url: 'https://drive.google.com/file/d/1UOkpkPxUoKH-hSceGBw1Qc_AYhC0yWF2/view?usp=drive_link' },
-    ],
-    presentationUrl: 'https://drive.google.com/file/d/1UOkpkPxUoKH-hSceGBw1Qc_AYhC0yWF2/view?usp=drive_link',
-  },
   {
     id: '2',
     title: '\u0420\u0435\u0432\u0438\u0442\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u043F\u0430\u0440\u043A\u0430 2750-\u043B\u0435\u0442\u0438\u044F \u0415\u0440\u0435\u0432\u0430\u043D\u0430',
