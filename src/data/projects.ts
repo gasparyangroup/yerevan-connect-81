@@ -93,6 +93,9 @@ import sakharov8 from '@/assets/sakharov-8.jpg';
 import sakharov9 from '@/assets/sakharov-9.jpg';
 import cablecar1 from '@/assets/cablecar-1.jpg';
 import cablecar2 from '@/assets/cablecar-2.png';
+import fountainMetro1 from '@/assets/fountain-metro-1.jpg';
+import fountainMetro2 from '@/assets/fountain-metro-2.jpg';
+import fountainMetro3 from '@/assets/fountain-metro-3.jpg';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
