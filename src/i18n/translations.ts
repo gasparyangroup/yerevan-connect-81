@@ -247,6 +247,7 @@ export const translations: Record<Language, Record<string, string>> = {
     mapSubtitle: 'Click on a marker to learn more about a project',
     mapLegendSponsorship: 'Seeking Sponsor',
     mapLegendConcept: 'Seeking Concept',
+    mapFilterAll: 'All Projects',
     viewOnMap: 'View Details',
     sortDefault: 'Default',
     sortCheapFirst: 'Budget ascending',
