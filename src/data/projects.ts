@@ -584,7 +584,7 @@ export const projects: Project[] = [
     image: childRailway1,
     gallery: [childRailway1, childRailway2],
     address: 'Разданское ущелье, ул. Дзорапи, Ереван',
-    addressAm: 'Hrazdelays delays, delays',
+    addressAm: 'Հրազդանի կիրճ, Ձորապի փողոց, Երևան',
     addressEn: 'Hrazdan Gorge, Dzorapi St, Yerevan',
     coordinates: { lat: 40.1870, lng: 44.5076 },
   },
