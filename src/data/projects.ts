@@ -89,6 +89,8 @@ import fountainMetro3 from '@/assets/fountain-metro-3.jpg';
 import yerevantsu1 from '@/assets/yerevantsu-1.png';
 import yerevantsu2 from '@/assets/yerevantsu-2.png';
 import yerevantsu3 from '@/assets/yerevantsu-3.png';
+import childRailway1 from '@/assets/child-railway-1.jpg';
+import childRailway2 from '@/assets/child-railway-2.jpg';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
@@ -566,6 +568,25 @@ export const projects: Project[] = [
     addressAm: '\u0540\u056B\u0576 \u0535\u0580\u0587\u0561\u0576\u0581\u0578\u0582 \u0583\u0578\u0572\u0578\u0581, \u0535\u0580\u0587\u0561\u0576',
     addressEn: 'Hin Yerevantsu Street, Yerevan',
     coordinates: { lat: 40.182603, lng: 44.515274 },
+  },
+  {
+    id: '20',
+    title: 'Ревитализация парка Детской Железной Дороги',
+    titleAm: 'Մանկական երկաթուղու այգու վերակենդանացում',
+    titleEn: 'Revitalization of Children\'s Railway Park',
+    location: 'Разданское ущелье',
+    locationAm: 'Հրազդանի կիրճ',
+    locationEn: 'Hrazdan Gorge',
+    description: 'Ревитализация исторического парка Детской железной дороги в Разданском ущелье — уникального объекта советского наследия Еревана.',
+    descriptionAm: 'Հրազդանի կիրճում Մանկական երկաթուղու պատմական այգու վերակենդանացումը — Երևանի խորհրդային ժամանակաշրջանի յուրահատուկ օբյեկտ:',
+    descriptionEn: 'Revitalization of the historic Children\'s Railway Park in Hrazdan Gorge — a unique Soviet-era heritage site of Yerevan.',
+    stage: 'concept',
+    image: childRailway1,
+    gallery: [childRailway1, childRailway2],
+    address: 'Разданское ущелье, ул. Дзорапи, Ереван',
+    addressAm: 'Հրազդանի կիրճ, Ձորապի փողոց, Երևան',
+    addressEn: 'Hrazdan Gorge, Dzorapi St, Yerevan',
+    coordinates: { lat: 40.1870, lng: 44.5076 },
   },
 ];
 
