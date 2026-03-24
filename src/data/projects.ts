@@ -1,5 +1,5 @@
 import operaCover from '@/assets/opera-cover.png';
-import moskovyanCover from '@/assets/moskovyan-cover.png';
+
 import saryanPlot1 from '@/assets/saryan-plot-1.jpg';
 import poplavokCover from '@/assets/poplavok-cover.png';
 import poplavok1 from '@/assets/poplavok-1.png';
