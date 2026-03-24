@@ -1,5 +1,5 @@
 import operaCover from '@/assets/opera-cover.png';
-import moskovyanCover from '@/assets/moskovyan-cover.png';
+
 import saryanPlot1 from '@/assets/saryan-plot-1.jpg';
 import poplavokCover from '@/assets/poplavok-cover.png';
 import poplavok1 from '@/assets/poplavok-1.png';
@@ -55,13 +55,6 @@ import puppet6 from '@/assets/puppet-6.png';
 import puppet7 from '@/assets/puppet-7.png';
 import puppet8 from '@/assets/puppet-8.png';
 import puppet9 from '@/assets/puppet-9.png';
-import moskovyan1 from '@/assets/moskovyan-1.png';
-import moskovyan2 from '@/assets/moskovyan-2.png';
-import moskovyan3 from '@/assets/moskovyan-3.png';
-import moskovyan4 from '@/assets/moskovyan-4.png';
-import moskovyan5 from '@/assets/moskovyan-5.png';
-import moskovyan6 from '@/assets/moskovyan-6.png';
-import moskovyan7 from '@/assets/moskovyan-7.png';
 import republic1 from '@/assets/republic-1.png';
 import republic2 from '@/assets/republic-2.png';
 import republic3 from '@/assets/republic-3.png';
@@ -353,36 +346,6 @@ export const projects: Project[] = [
       { name: '\u041F\u0440\u0435\u0437\u0435\u043D\u0442\u0430\u0446\u0438\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430', url: 'https://drive.google.com/file/d/1hY5oHWQokUoEcqpF6u50kQKokIRGUTrQ/view?usp=sharing' },
     ],
     presentationUrl: 'https://drive.google.com/file/d/1hY5oHWQokUoEcqpF6u50kQKokIRGUTrQ/view?usp=sharing',
-  },
-  {
-    id: '13',
-    title: '\u0420\u0435\u043A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F \u043F\u0430\u0440\u043A\u0430 \u041C\u043E\u0441\u043A\u043E\u0432\u044F\u043D',
-    titleAm: '\u0544\u0578\u057D\u056F\u0578\u057E\u0575\u0561\u0576 \u0561\u0575\u0563\u0578\u0582 \u057E\u0565\u0580\u0561\u056F\u0561\u057C\u0578\u0582\u0581\u0578\u0582\u0574',
-    titleEn: 'Moskovyan Park Reconstruction',
-    location: '\u0443\u043B. \u0413\u0435\u0432\u043E\u0440\u0433\u0430 \u041A\u043E\u0447\u0430\u0440\u0430',
-    locationAm: '\u0533\u0587\u0578\u0580\u0563 \u0554\u0578\u0579\u0561\u0580\u056B \u0583\u0578\u0572\u0578\u0581',
-    locationEn: 'Gevorg Kochar St.',
-    description: '\u041A\u043E\u043D\u0446\u0435\u043F\u0442 \u0440\u0435\u043A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u0438 \u041C\u043E\u0441\u043A\u043E\u0432\u0441\u043A\u043E\u0433\u043E \u0411\u0443\u043B\u044C\u0432\u0430\u0440\u0430 \u043E\u0442 Electric Architects',
-    descriptionAm: '\u0544\u0578\u057D\u056F\u0578\u057E\u0575\u0561\u0576 \u0566\u0562\u0578\u057D\u0561\u0575\u0563\u0578\u0582 \u057E\u0565\u0580\u0561\u056F\u0561\u057C\u0578\u0582\u0581\u0574\u0561\u0576 \u0570\u0561\u0575\u0565\u0581\u0561\u056F\u0561\u0580\u0563 Electric Architects-\u056B\u0581',
-    descriptionEn: 'Moscow Boulevard reconstruction concept by Electric Architects',
-    stage: 'sponsorship',
-    image: moskovyanCover,
-    gallery: [moskovyan1, moskovyan2, moskovyan3, moskovyan4, moskovyan5, moskovyan6, moskovyan7],
-    displayBudget: 'N/A',
-    budgetLabel: '\u0411\u044E\u0434\u0436\u0435\u0442 \u043D\u0430 \u0441\u0442\u0440\u043E\u0439\u043A\u0443:',
-    budgetLabelAm: '\u0547\u056B\u0576\u0561\u0580\u0561\u0580\u0578\u0582\u0569\u0575\u0561\u0576 \u0562\u0575\u0578\u0582\u057B\u0565\u055D',
-    budgetLabelEn: 'Construction budget:',
-    buttonLabel: '\u0421\u043F\u043E\u043D\u0441\u043E\u0440 \u043D\u0430\u0439\u0434\u0435\u043D',
-    buttonLabelAm: '\u0540\u0578\u057E\u0561\u0576\u0561\u057E\u0578\u0580 \u056F\u0561',
-    buttonLabelEn: 'Sponsor Found',
-    address: '\u0415\u0440\u0435\u0432\u0430\u043D, \u0443\u043B. \u0413\u0435\u0432\u043E\u0440\u0433\u0430 \u041A\u043E\u0447\u0430\u0440\u0430',
-    addressAm: '\u0535\u0580\u0587\u0561\u0576, \u0533\u0587\u0578\u0580\u0563 \u0554\u0578\u0579\u0561\u0580\u056B \u0583\u0578\u0572\u0578\u0581',
-    addressEn: 'Yerevan, Gevorg Kochar St.',
-    coordinates: { lat: 40.189295, lng: 44.520153 },
-    documents: [
-      { name: '\u041F\u0440\u0435\u0437\u0435\u043D\u0442\u0430\u0446\u0438\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430', url: 'https://drive.google.com/file/d/1wFCINSVdMH4-nfuzAzWguiycA32M1thP/view?usp=sharing' },
-    ],
-    presentationUrl: 'https://drive.google.com/file/d/1wFCINSVdMH4-nfuzAzWguiycA32M1thP/view?usp=sharing',
   },
   {
     id: '14',
