@@ -570,7 +570,7 @@ export const projects: Project[] = [
     coordinates: { lat: 40.182603, lng: 44.515274 },
   },
   {
-    id: '16',
+    id: '20',
     title: 'Ревитализация парка Детской Железной Дороги',
     titleAm: 'Մանկական երկաթուղու այգու վերակենդdelays',
     titleEn: 'Revitalization of Children\'s Railway Park',
