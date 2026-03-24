@@ -315,7 +315,7 @@ export const projects: Project[] = [
     documents: [
       { name: '\u041F\u0440\u0435\u0437\u0435\u043D\u0442\u0430\u0446\u0438\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430', url: 'https://drive.google.com/file/d/1VCRlCnSR5yNLUdG6xysW6oOY9uqbCUPv/view?usp=sharing' },
     ],
-    presentationUrl: 'https://drive.google.com/file/d/1Yl-bAcZ4dTtvv_ts-kT2oVkZ24NaV9g3/view?usp=sharing',
+    presentationUrl: 'https://drive.google.com/file/d/1YA1d2qfOKY_Lmh_RI-UytGWMkvfh63TQ/view',
   },
   {
     id: '12',
