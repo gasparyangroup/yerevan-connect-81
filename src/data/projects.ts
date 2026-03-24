@@ -89,6 +89,8 @@ import fountainMetro3 from '@/assets/fountain-metro-3.jpg';
 import yerevantsu1 from '@/assets/yerevantsu-1.png';
 import yerevantsu2 from '@/assets/yerevantsu-2.png';
 import yerevantsu3 from '@/assets/yerevantsu-3.png';
+import childRailway1 from '@/assets/child-railway-1.jpg';
+import childRailway2 from '@/assets/child-railway-2.jpg';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
