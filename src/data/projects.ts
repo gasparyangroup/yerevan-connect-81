@@ -586,7 +586,7 @@ export const projects: Project[] = [
     address: 'Разданское ущелье, ул. Дзорапи, Ереван',
     addressAm: 'Հրազդանի կիրճ, Ձորապի փողոց, Երևան',
     addressEn: 'Hrazdan Gorge, Dzorapi St, Yerevan',
-    coordinates: { lat: 40.1870, lng: 44.5076 },
+    coordinates: { lat: 40.186420, lng: 44.500198 },
   },
 ];
 
