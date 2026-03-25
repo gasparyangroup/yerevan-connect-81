@@ -91,6 +91,8 @@ import yerevantsu2 from '@/assets/yerevantsu-2.png';
 import yerevantsu3 from '@/assets/yerevantsu-3.png';
 import childRailway1 from '@/assets/child-railway-1.jpg';
 import childRailway2 from '@/assets/child-railway-2.jpg';
+import aragil1 from '@/assets/aragil-1.jpg';
+import aragil2 from '@/assets/aragil-2.jpg';
 
 export type ProjectStage = 'sponsorship' | 'concept';
 
