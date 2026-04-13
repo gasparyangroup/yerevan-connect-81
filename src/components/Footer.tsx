@@ -24,15 +24,6 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4 text-primary-foreground">{t('platform')}</h4>
-            <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">{t('howItWorks')}</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">{t('forSponsors')}</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">{t('forArchitects')}</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">{t('successStories')}</a></li>
-            </ul>
-          </div>
 
           <div>
             <h4 className="font-semibold mb-4 text-primary-foreground">{t('contacts')}</h4>
