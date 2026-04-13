@@ -62,7 +62,9 @@ const Index = () => {
         />
       </div>
 
-      <VacanciesSection />
+      <div ref={vacanciesRef}>
+        <VacanciesSection />
+      </div>
 
       <MapSection
         projects={projects}
