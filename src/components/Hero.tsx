@@ -85,7 +85,7 @@ export function Hero({ activeFilter, onFilterChange }: HeroProps) {
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
             {t('heroTitle')}
-            <span className="gradient-text inline-block min-w-[200px] sm:min-w-[280px] ml-2">
+            <span className="gradient-text inline-block min-w-[200px] sm:min-w-[280px] ml-2 text-left px-[7px]">
               {displayText}
               <motion.span
                 animate={{ opacity: [1, 0] }}
