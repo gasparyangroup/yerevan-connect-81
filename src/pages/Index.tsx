@@ -4,6 +4,7 @@ import { Hero } from '@/components/Hero';
 import { ProjectsGrid } from '@/components/ProjectsGrid';
 import { Footer } from '@/components/Footer';
 import { MapSection } from '@/components/MapSection';
+import { VacanciesSection } from '@/components/VacanciesSection';
 import { ProjectModal } from '@/components/ProjectModal';
 import { AboutModal } from '@/components/AboutModal';
 import { ContactModal } from '@/components/ContactModal';
@@ -55,6 +56,8 @@ const Index = () => {
           onAction={handleAction}
         />
       </div>
+
+      <VacanciesSection />
 
       <MapSection
         projects={projects}
