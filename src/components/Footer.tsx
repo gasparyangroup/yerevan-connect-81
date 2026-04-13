@@ -19,9 +19,6 @@ export function Footer() {
               </div>
             </div>
             <p className="text-muted-foreground max-w-sm mb-6">{t('footerDesc')}</p>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              {t('madeWithLove')} <Heart className="w-4 h-4 text-accent fill-accent" /> Yerevan
-            </div>
           </div>
 
         </div>
