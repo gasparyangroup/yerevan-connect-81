@@ -57,6 +57,8 @@ const Index = () => {
         />
       </div>
 
+      <VacanciesSection />
+
       <MapSection
         projects={projects}
         onViewDetails={handleViewDetails}
