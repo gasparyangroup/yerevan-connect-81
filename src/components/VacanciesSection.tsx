@@ -17,7 +17,7 @@ const vacancies: Vacancy[] = [
     titleKey: 'vacArchitectTitle',
     descriptionKey: 'vacArchitectDesc',
     icon: Briefcase,
-    tags: ['Кентрон', 'Архитектура', 'Full-time'],
+    tags: ['Кентрон', 'Архитектура', 'Part-time'],
   },
   {
     id: 'supervisor',

@@ -21,8 +21,13 @@ const Index = () => {
   const [contactType, setContactType] = useState<'sponsor' | 'architect'>('sponsor');
 
   const projectsRef = useRef<HTMLDivElement>(null);
+  const vacanciesRef = useRef<HTMLDivElement>(null);
 
   const handleNavigate = (section: string) => {
+    if (section === 'vacancies') {
+      vacanciesRef.current?.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
     setActiveFilter(section as ProjectStage);
     projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -57,7 +62,9 @@ const Index = () => {
         />
       </div>
 
-      <VacanciesSection />
+      <div ref={vacanciesRef}>
+        <VacanciesSection />
+      </div>
 
       <MapSection
         projects={projects}
