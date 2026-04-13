@@ -1,59 +1,17 @@
 
-# Отправка данных форм в Telegram
+## Plan: Fix spacing before animated text in Hero
 
-## Что будет сделано
+**Problem**: Line 87 in `Hero.tsx` has `{t('heroTitle')}{' '}` which adds an explicit space before the animated word (e.g. "вместе"). This creates inconsistent spacing.
 
-Все три формы (Спонсировать, Я архитектор, Предложить идею) будут отправлять данные в Telegram-бот при нажатии кнопки "Отправить".
+**Fix**: In `src/components/Hero.tsx`, line 87 — remove the `{' '}` between `{t('heroTitle')}` and the `<span>`, and instead add a line break (`<br />`) or handle the spacing via CSS/layout so the animated text block sits consistently below or beside the title without an extra space character.
 
-## Шаги
+Since the title and animated text are on the same line visually ("Создаем город вместе"), the cleanest fix is to simply remove `{' '}` and let the natural inline spacing of the `<span>` handle it — or add the space inside the `heroTitle` translation values themselves for consistent control.
 
-### 1. Добавить секреты
-Сохранить токен бота и ID чата как секреты Lovable Cloud:
-- `TELEGRAM_BOT_TOKEN` = `8431524815:AAFR4g2r-G2DNlgylWB3MA0JAUk1fJQWh8c`
-- `TELEGRAM_CHAT_ID` = `112447154`
+**Changes**:
+1. **`src/components/Hero.tsx`** (line 87): Change `{t('heroTitle')}{' '}` to `{t('heroTitle')} ` — actually, the simplest approach: remove `{' '}` and add a trailing space to each `heroTitle` translation value in the translations file, ensuring uniform spacing across all languages.
 
-### 2. Создать backend-функцию `send-telegram`
-Функция принимает JSON с данными формы и отправляет сообщение в Telegram через Bot API (`sendMessage`).
+Alternatively, just keep `{t('heroTitle')}{' '}` but ensure CSS whitespace is consistent — however the user wants the space removed, so:
 
-Формат сообщения будет различаться в зависимости от типа формы:
-- **Спонсор/Архитектор** -- проект, имя/компания, номер/telegram, тип заявки
-- **Предложить идею** -- название проекта, локация, описание
+1. **`src/components/Hero.tsx`** line 87: Remove `{' '}` → change to just `{t('heroTitle')}` followed by the span on a new line (natural inline whitespace from JSX line break will add one space).
 
-### 3. Обновить `ContactModal.tsx`
-Заменить текущий `handleSubmit` (который просто показывает галочку) на реальный вызов backend-функции с данными формы. Добавить обработку ошибок.
-
-### 4. Обновить `SuggestionModal.tsx`
-Аналогично -- при отправке формы вызывать backend-функцию с полями: название, локация, описание.
-
-## Технические детали
-
-### Backend-функция `supabase/functions/send-telegram/index.ts`
-
-```text
-Входные данные (POST JSON):
-{
-  "type": "sponsor" | "architect" | "suggestion",
-  "project": "Название проекта",
-  "name": "Имя / Компания",
-  "phone": "Номер / Telegram",
-  "title": "Название идеи",
-  "location": "Локация",
-  "description": "Описание"
-}
-```
-
-Функция формирует текстовое сообщение и отправляет его через `https://api.telegram.org/bot{TOKEN}/sendMessage` в указанный чат.
-
-### Изменения в компонентах
-
-- `ContactModal.tsx`: вызов `supabase.functions.invoke('send-telegram', { body: { type, project, name, phone } })` в `handleSubmit`
-- `SuggestionModal.tsx`: вызов `supabase.functions.invoke('send-telegram', { body: { type: 'suggestion', title, location, description } })` в `handleSubmit`
-- Добавить состояние загрузки (`isLoading`) и обработку ошибок с toast-уведомлением
-
-### Конфигурация
-
-В `supabase/config.toml` добавить:
-```text
-[functions.send-telegram]
-verify_jwt = false
-```
+This single change ensures consistent single-space separation across all languages.
