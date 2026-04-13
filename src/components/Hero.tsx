@@ -84,7 +84,7 @@ export function Hero({ activeFilter, onFilterChange }: HeroProps) {
           className="text-center max-w-4xl mx-auto"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            {t('heroTitle')}{' '}
+            {t('heroTitle')}
             <span className="gradient-text inline-block min-w-[200px] sm:min-w-[280px]">
               {displayText}
               <motion.span
