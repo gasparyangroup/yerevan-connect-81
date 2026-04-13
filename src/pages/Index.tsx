@@ -4,7 +4,6 @@ import { Hero } from '@/components/Hero';
 import { ProjectsGrid } from '@/components/ProjectsGrid';
 import { Footer } from '@/components/Footer';
 import { MapSection } from '@/components/MapSection';
-import { VacanciesSection } from '@/components/VacanciesSection';
 import { ProjectModal } from '@/components/ProjectModal';
 import { AboutModal } from '@/components/AboutModal';
 import { ContactModal } from '@/components/ContactModal';
@@ -21,13 +20,8 @@ const Index = () => {
   const [contactType, setContactType] = useState<'sponsor' | 'architect'>('sponsor');
 
   const projectsRef = useRef<HTMLDivElement>(null);
-  const vacanciesRef = useRef<HTMLDivElement>(null);
 
   const handleNavigate = (section: string) => {
-    if (section === 'vacancies') {
-      vacanciesRef.current?.scrollIntoView({ behavior: 'smooth' });
-      return;
-    }
     setActiveFilter(section as ProjectStage);
     projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -60,10 +54,6 @@ const Index = () => {
           onViewDetails={handleViewDetails}
           onAction={handleAction}
         />
-      </div>
-
-      <div ref={vacanciesRef}>
-        <VacanciesSection />
       </div>
 
       <MapSection

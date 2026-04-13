@@ -28,7 +28,6 @@ export function Header({ onOpenAbout, onOpenSuggest, onNavigate }: HeaderProps) 
   const navLinks = [
     { id: 'sponsorship', label: t('navSponsorship') },
     { id: 'concept', label: t('navConcept') },
-    { id: 'vacancies', label: t('navVacancies') },
   ];
 
   useEffect(() => {
